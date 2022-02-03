@@ -17,13 +17,20 @@ div#preview{
 }
 
 div#preview > h1{
-    font-size: 70px;
+    font-size: 75px;
     padding: 0px;
+    margin-bottom:0px;
 }
+
+@media only screen and (max-width: 550px) {
+    div#preview > h1 {
+      font-size: 50px;
+    }
+  }
 
 div#preview > h2{
     font-size: 40px;
-    padding-top: 55px;
+    padding-top: 10px;
 }
 
 
@@ -33,11 +40,11 @@ html {
     background: #040404;
   }
   .perspective-text {
+    width: calc(100% + 60px);
     display: block;
     margin-left: auto;
     margin-right:auto;
     transform: translateX(-60px);
-    width:350px;
     font-family: Arial;
     font-size: 58px;
     font-weight: 900;
@@ -46,6 +53,9 @@ html {
     white-space: nowrap;
     color: transparent;
     -webkit-text-stroke: 2px #eeeeee;
+    overflow: hidden;
+    padding-bottom: 80px;
+    padding-top: 70px;
   }
   
   .perspective-line {
