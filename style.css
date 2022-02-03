@@ -34,7 +34,7 @@ html {
     background: #040404;
   }
   .perspective-text {
-    width: calc(100% + 60px);
+    width: calc(100% + 90px);
     display: block;
     margin-left: auto;
     margin-right:auto;
