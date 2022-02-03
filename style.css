@@ -22,12 +22,6 @@ div#preview > h1{
     margin-bottom:0px;
 }
 
-@media only screen and (max-width: 550px) {
-    div#preview > h1 {
-      font-size: 50px;
-    }
-  }
-
 div#preview > h2{
     font-size: 40px;
     padding-top: 10px;
@@ -119,3 +113,11 @@ html {
   }
   
   
+  @media only screen and (max-width: 550px) {
+    div#preview > h1 {
+      font-size: 50px;
+    }
+    .perspective-text {
+        transform: translateX(-90px);
+    }
+  }
