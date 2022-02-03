@@ -38,7 +38,7 @@ html {
     display: block;
     margin-left: auto;
     margin-right:auto;
-    transform: translateX(-90px);
+    transform: translateX(-105px);
     font-family: Arial;
     font-size: 58px;
     font-weight: 900;
@@ -116,5 +116,9 @@ html {
   @media only screen and (max-width: 550px) {
     div#preview > h1 {
       font-size: 50px;
+    }
+    .perspective-text {
+        transform: translateX(-105px);
+        font-size: 54px;
     }
   }
