@@ -7,6 +7,8 @@
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px) saturate(100%);
+    -webkit-backdrop-filter: blur(5px) saturate(100%);
     display: block;
     position: fixed;
     z-index: 102;
@@ -60,16 +62,17 @@
 
 .mobilemenu-link {
     color: white;
-    font-family: "Takota";
+    font-family: "Takota", sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     margin-top: 6vh;
     margin-bottom: 6vh;
     padding: 10px 10px;
-    width: 15vw;
-    font-size: 45px;
+    width: 10vw;
+    min-width: 150px;
+    font-size: 35px;
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid transparent;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -120,8 +123,10 @@
     position: fixed;
     height: 100vh;
     z-index: 103;
-    right: -50vw;
-    width: 50vw;
+    right: -80vw;
+    width: 80vw;
+    max-width: 500px;
+    top: 0px;
 }
 
 .mobilemenu.active {
@@ -154,12 +159,12 @@
 .mobilebutton {
     cursor: pointer;
     height: 37px;
-    right: 18px;
-    top: 4px;
+    right: 25px;
+    top: 9px;
     position: fixed;
     text-align: center;
     transform: translateX(0%);
-    width: 37px;
+    width: 60px;
     z-index: 3;
     padding: 10px 14px 10px 14px;
 }
@@ -192,7 +197,6 @@
 .mobilebutton .burgerbottom {
     width: 100%;
     height: 2px;
-    background: white;
     margin: 8px auto;
     backface-visibility: hidden;
     -webkit-transition-duration: 0.5s;
@@ -277,4 +281,16 @@ ul>li>ul.activesubmenu {
 .cornerlogo>img:hover {
     transform: scale(1.2);
     transition: all 0.5s;
+}
+
+h3#headername {
+    position: fixed;
+    font-family: "Takota", sans-serif;
+    font-size: 35px;
+    width: 330px;
+    left: calc(10px + 3vw);
+    top: 15px;
+    margin: 0;
+    z-index: 10;
+    letter-spacing: 1px;
 }

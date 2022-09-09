@@ -9,7 +9,9 @@ function Navbar() {
 
     links =
         <div>
-            <Link className="mobilemenu-link" to="/" onClick={menutoggle}>Home</Link>
+            <Link className="mobilemenu-link text-black dark:text-white" to="/" onClick={Preloader}>Home</Link>
+            <Link className="mobilemenu-link text-black dark:text-white" to="/portfolio" onClick={Preloader}>Portfolio</Link>
+            <Link className="mobilemenu-link text-black dark:text-white" to="/about" onClick={Preloader}>About Me</Link>
         </div>
 
 
@@ -18,20 +20,18 @@ function Navbar() {
 
     return (
         <div>
-            <Link to="/" className="cornerlogo" onClick={Preloader}>
-                hi there
-            </Link>
+            <h3 id="headername" className='text-black dark:text-white ease-in duration-200'>Ryan Christopher</h3>
 
-            <div className="mobilenavbar">
+            <div className="mobilenavbar bg-white dark:bg-black ease-in duration-200">
             </div>
 
-            <div className="mobilemenu">
+            <div className="mobilemenu bg-white dark:bg-black">
                 <div className="mobilebutton">
-                    <div className="burgertop"></div>
-                    <div className="burgermiddle"></div>
-                    <div className="burgerbottom"></div>
+                    <div className="burgertop bg-black dark:bg-white ease-in duration-200"></div>
+                    <div className="burgermiddle bg-black dark:bg-white ease-in duration-200"></div>
+                    <div className="burgerbottom bg-black dark:bg-white ease-in duration-200"></div>
                 </div>
-                <div className="mobilemenu-body">
+                <div className="mobilemenu-body bg-white dark:bg-black">
                     <div className="mobilemenu-overlay"></div>
                     <div className="mobilemenu-container">
                         {links}
@@ -43,11 +43,11 @@ function Navbar() {
     )
 }
 
-function menutoggle() {
-    $('.mobilemenu').toggleClass('active');
-    $('.mask').toggleClass('active')
-    $('.mobilebutton').toggleClass('active');
-}
+//function menutoggle() {
+//    $('.mobilemenu').toggleClass('active');
+//    $('.mask').toggleClass('active')
+//    $('.mobilebutton').toggleClass('active');
+//}
 
 
 (function () {

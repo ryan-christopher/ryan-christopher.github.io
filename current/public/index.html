@@ -23,13 +23,23 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>Ryan Christopher</title>
+  <script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+
+  </script>
+
 </head>
 
-<body>
+<body style="background-color: black;">
 
   <div class="preload">
-    <div id="loadtext" class="load-anim">
-      <h1>hi there</h1>
+    <div style="opacity:0;" id="loadtext" class="load-anim">
+      <h2 id="preloadtext" style="font-family: 'Takota'; font-size: 50px; letter-spacing: 1px;">Ryan Christopher</h2>
     </div>
   </div>
 

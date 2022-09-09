@@ -1,9 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
     font-family: "Takota";
     src: url("./takota-font/Takota-BRa8.ttf") format("truetype");
 }
 
 html {
+    background-color: white;
+    color: black;
+    transition: all ease-in 200ms;
+}
+
+.dark{
     background-color: black;
-    color: white;
+    color:white;
+    transition: all ease-in 200ms;
 }
