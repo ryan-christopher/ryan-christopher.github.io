@@ -6,7 +6,13 @@
     font-family: "Takota";
     src: url("./takota-font/Takota-BRa8.ttf") format("truetype");
 }
-
+.scrollbar-track{
+    background: none !important;
+    width: 6px !important;
+}
+.scrollbar-thumb{
+    background: rgb(57, 57, 57) !important;
+}
 html {
     background-color: white;
     color: black;
@@ -18,3 +24,54 @@ html {
     color:white;
     transition: all ease-in 200ms;
 }
+
+#darkModeIcon, #lightModeIcon{
+    font-size: 50px;
+    padding: 2px;
+    cursor: pointer;
+    display: inline;
+    position: fixed;
+    top: 75px;
+    right: 30px;
+    border-radius: 50%;   
+    z-index: 100;
+}
+
+#lightModeIcon.inactiveTheme{
+    opacity: 0;
+    transform: translateX(-75px);
+}
+
+#darkModeIcon.inactiveTheme{
+    opacity: 0;
+    transform: translateX(75px);
+}
+
+#darkModeIcon.activeTheme{
+    color:white;
+    background-color: black;
+    border: 2px solid white;
+}
+
+#darkModeIcon.activeTheme:hover{
+    transform: scale(1.2);
+}
+#lightModeIcon.activeTheme:hover{
+    transform: scale(1.2);
+}
+
+#lightModeIcon.activeTheme{
+    color:black;
+    background-color:rgb(255, 255, 128);
+    border: 2px solid black;
+
+}
+
+.activeTheme{
+    opacity: 1;
+}
+
+#my-scrollbar {
+    width: 200px;
+    height: 200px;
+  }

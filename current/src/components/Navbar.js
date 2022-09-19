@@ -9,9 +9,9 @@ function Navbar() {
 
     links =
         <div>
-            <Link className="mobilemenu-link text-black dark:text-white" to="/" onClick={Preloader}>Home</Link>
-            <Link className="mobilemenu-link text-black dark:text-white" to="/portfolio" onClick={Preloader}>Portfolio</Link>
-            <Link className="mobilemenu-link text-black dark:text-white" to="/about" onClick={Preloader}>About Me</Link>
+            <Link className="mobilemenu-link text-black dark:text-white" to="/" onClick={() => { Preloader(); menutoggle(); }}>Home</Link>
+            <Link className="mobilemenu-link text-black dark:text-white" to="/portfolio" onClick={() => { Preloader(); menutoggle(); }}>Portfolio</Link>
+            <Link className="mobilemenu-link text-black dark:text-white" to="/about" onClick={() => { Preloader(); menutoggle(); }}>About Me</Link>
         </div>
 
 
@@ -43,11 +43,11 @@ function Navbar() {
     )
 }
 
-//function menutoggle() {
-//    $('.mobilemenu').toggleClass('active');
-//    $('.mask').toggleClass('active')
-//    $('.mobilebutton').toggleClass('active');
-//}
+function menutoggle() {
+    $('.mobilemenu').toggleClass('active');
+    $('.mask').toggleClass('active')
+    $('.mobilebutton').toggleClass('active');
+}
 
 
 (function () {

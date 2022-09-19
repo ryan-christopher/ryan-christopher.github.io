@@ -1,8 +1,10 @@
 import React from 'react'
+import { MdOutlineLightMode, MdOutlineNightlight } from 'react-icons/md'
 
 
 console.log(window.localStorage.getItem("theme"))
-
+let darkModeIcon;
+let lightModeIcon;
 
 function Darkmode() {
     const [darkToggle, setDarkToggle] = React.useState(true)
@@ -12,10 +14,18 @@ function Darkmode() {
         if (window.localStorage.getItem('theme') === "light") {
             window.localStorage.setItem('theme', 'dark')
             document.documentElement.classList.add('dark')
+            darkModeIcon.classList.toggle("activeTheme")
+            lightModeIcon.classList.toggle("inactiveTheme")
+            lightModeIcon.classList.toggle("activeTheme")
+            darkModeIcon.classList.toggle("inactiveTheme")
         }
         else {
             window.localStorage.setItem('theme', 'light')
             document.documentElement.classList.remove('dark')
+            darkModeIcon.classList.toggle("activeTheme")
+            lightModeIcon.classList.toggle("inactiveTheme")
+            lightModeIcon.classList.toggle("activeTheme")
+            darkModeIcon.classList.toggle("inactiveTheme")
         }
     }
 
@@ -26,9 +36,13 @@ function Darkmode() {
         // let's use it. Otherwise, this value will be null.
         if (hasPersistedPreference) {
             if (persistedColorPreference === "light") {
+                lightModeIcon.classList.toggle("activeTheme")
+                darkModeIcon.classList.toggle("inactiveTheme")
                 return setDarkToggle(false)
             }
             else {
+                darkModeIcon.classList.toggle("activeTheme")
+                lightModeIcon.classList.toggle("inactiveTheme")
                 return setDarkToggle(true)
             }
         }
@@ -44,38 +58,21 @@ function Darkmode() {
         setDarkToggle(false);
     }
     React.useEffect(() => {
+        darkModeIcon = document.getElementById("darkModeIcon")
+        lightModeIcon = document.getElementById("lightModeIcon");
         getInitialColorMode();
     }, [])
 
 
     return (
         <div>
-            <div
-                className={'h-{20vh} w-full flex items-center justify-center bg-gray-300 flex-col dark:bg-gray-900 ease-in duration-200'}
-            >
-                <label className="toggleDarkBtn fixed">
-                    <input type="checkbox" checked={darkToggle} onChange={() => switchTheme()} />
-                    <span className="slideBtnTg round"></span>
-                </label>
-                <div className="max-w-sm overflow-hidden bg-gray-100 p-5 rounded-lg mt-4 text-white dark:bg-gray-900 ease-in duration-200">
-                    <img
-                        className="w-full"
-                        src="https://v1.tailwindcss.com/img/card-top.jpg"
-                        alt="Sunset in the mountains"
-                    />
-                    <div className="px-6 py-4">
-                        <div className="text-gray-800 dark:text-gray-200 font-bold text-xl mb-2 ease-in duration-200">
-                            The Coldest Sunset
-                        </div>
-                        <p className="text-gray-800 dark:text-gray-200 ease-in duration-300">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                            exercitationem praesentium nihil.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <label className="toggleDarkBtn fixed top-[78px] right-[40.5px] z-[99]">
+                <input type="checkbox" checked={darkToggle} onChange={() => switchTheme()} />
+            </label>
+            <MdOutlineLightMode id='lightModeIcon' className='ease-in duration-200' onClick={() => switchTheme()} />
+            <MdOutlineNightlight id='darkModeIcon' className='ease-in duration-200' onClick={() => switchTheme()} />
         </div>
+
     )
 }
 export default Darkmode
