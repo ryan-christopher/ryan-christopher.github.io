@@ -6,6 +6,17 @@
     font-family: "Takota";
     src: url("./takota-font/Takota-BRa8.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Atami";
+  src: url("./Atami/Atami-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Atami Display";
+  src: url("./Atami/Atami-Display-Bold.otf") format("opentype");
+}
+
 .scrollbar-track{
     background: none !important;
     width: 6px !important;
@@ -26,13 +37,13 @@ html {
 }
 
 #darkModeIcon, #lightModeIcon{
-    font-size: 50px;
+    font-size: 45px;
     padding: 2px;
     cursor: pointer;
     display: inline;
     position: fixed;
-    top: 75px;
-    right: 30px;
+    top: 15px;
+    right: 90px;
     border-radius: 50%;   
     z-index: 100;
 }
@@ -74,4 +85,111 @@ html {
 #my-scrollbar {
     width: 200px;
     height: 200px;
+  }
+
+.marquee{
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.marqueeicon{
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+div#slantText{
+    text-align: center;
+}
+
+
+
+.perspective-text {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    transform: translateX(-78px);
+    font-family: "Atami Display";
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: transparent;
+    
+    overflow: hidden;
+    padding-bottom: 80px;
+    padding-top: 55px;
+  }
+  
+  .perspective-line {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    width: 380px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .perspective-line>p {
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+    transition: all 0.5s ease-in-out;
+  }
+  .perspective-line:nth-child(odd) {
+    transform: skew(60deg, -30deg) scaleY(0.667);
+  }
+  .perspective-line:nth-child(even) {
+    transform: skew(0deg, -30deg) scaleY(1.333);
+  }
+
+  .perspective-line:nth-child(1) {
+    left: 29px;
+  }
+  .perspective-line:nth-child(2) {
+    left: 58px;
+  }
+  .perspective-line:nth-child(3) {
+    left: 87px;
+  }
+  .perspective-line:nth-child(4) {
+    left: 116px;
+  }
+  .perspective-line:nth-child(5) {
+    left: 145px;
+  }
+  
+  /* Sliding text on all lines */
+  .perspective-text p{
+    transform: translate(0, -50px);
+    animation-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+    animation: text-anim 4s infinite;
+  }
+  
+
+    
+  @keyframes text-anim {
+    0% {
+      transform: translate(0, 0);
+    }
+      50% {
+      transform: translate(0, -50px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  
+  @media only screen and (max-width: 550px) {
+    div#slantText > h1 {
+      font-size: 50px;
+    }
+    .perspective-text {
+        font-size: 45px;
+        padding-right: 40px;
+        margin-left: 25px;
+    }
   }

@@ -1,7 +1,9 @@
 import React from 'react'
 import { MdOutlineLightMode, MdOutlineNightlight } from 'react-icons/md'
 
-
+if (window.localStorage.getItem("theme") === null) {
+    window.localStorage.setItem('theme', 'dark')
+}
 console.log(window.localStorage.getItem("theme"))
 let darkModeIcon;
 let lightModeIcon;
@@ -66,9 +68,6 @@ function Darkmode() {
 
     return (
         <div>
-            <label className="toggleDarkBtn fixed top-[78px] right-[40.5px] z-[99]">
-                <input type="checkbox" checked={darkToggle} onChange={() => switchTheme()} />
-            </label>
             <MdOutlineLightMode id='lightModeIcon' className='ease-in duration-200' onClick={() => switchTheme()} />
             <MdOutlineNightlight id='darkModeIcon' className='ease-in duration-200' onClick={() => switchTheme()} />
         </div>

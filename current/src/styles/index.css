@@ -105,23 +105,23 @@ code {
 }
 
 .content {
-  margin-top: 100px;
-  width: 80vw;
+  width: 100vw;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 #introtext {
-  font-size: 50px;
-  font-family: "Atkinson Hyperlegible";
+  font-family: "Atami";
 }
 
 #headerpic {
+  /*
   width: 8vw;
   height: 8vw;
   min-width: 200px;
   min-height: 200px;
+  */
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -179,4 +179,26 @@ input:checked + .slideBtnTg:before {
 }
 .slideBtnTg.round:before {
   border-radius: 50%;
+}
+
+.landing-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.landing-flex-item-left {
+  padding: 10px;
+  flex: 50%;
+}
+
+.landing-flex-item-right {
+  padding: 10px;
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .landing-flex-item-right, .landing-flex-item-left {
+    flex: 100%;
+  }
 }

@@ -20,9 +20,9 @@ function Navbar() {
 
     return (
         <div>
-            <h3 id="headername" className='text-black dark:text-white ease-in duration-200'>Ryan Christopher</h3>
+            <h3 id="headername" className='text-black dark:text-white ease-in duration-200'>RYAN CHRISTOPHER</h3>
 
-            <div className="mobilenavbar bg-white dark:bg-black ease-in duration-200">
+            <div className="mobilenavbar bg-[rgba(255,255,255,0.85)] dark:bg-[rgba(0,0,0,0.85)] ease-in duration-200">
             </div>
 
             <div className="mobilemenu bg-white dark:bg-black">

@@ -75,6 +75,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    letter-spacing: 1px;
     transition: all 0.25s;
 }
 
@@ -283,9 +284,9 @@ ul>li>ul.activesubmenu {
 h3#headername {
     position: fixed;
     font-family: "Takota", sans-serif;
-    font-size: 35px;
+    font-size: 32px;
     width: 330px;
-    left: calc(10px + 3vw);
+    left: calc(0px + 3vw);
     top: 15px;
     margin: 0;
     z-index: 10;
