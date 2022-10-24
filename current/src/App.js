@@ -9,6 +9,7 @@ import React from 'react'
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 
+
 function App() {
   return (
     <ParallaxProvider>
@@ -16,7 +17,6 @@ function App() {
         <Darkmode />
         <Navbar />
         <Routes>
-          {/*All our routes go here!*/}
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about" element={<About />} />

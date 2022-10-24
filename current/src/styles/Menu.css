@@ -68,8 +68,8 @@
     margin-bottom: 6vh;
     padding: 10px 10px;
     width: 10vw;
-    min-width: 150px;
-    font-size: 30px;
+    min-width: 200px;
+    font-size: 40px;
     text-align: center;
     border: 2px solid transparent;
     display: block;
@@ -79,9 +79,10 @@
     transition: all 0.25s;
 }
 
+
 .mobilemenu-link:hover {
-    border-bottom: 2px solid #ec5151;
-    border-top: 2px solid #ec5151;
+    border-bottom: 2px solid #dddddd;
+    border-top: 2px solid #dddddd;
     transform: scale(1.1);
     transition: all 0.45s;
 }
@@ -174,7 +175,9 @@
     -ms-transform: translateY(11px) rotate(45deg);
     -o-transform: translateY(11px) rotate(45deg);
     transform: translateY(11px) rotate(45deg);
+    /*
     background: #ec5151;
+    */
     ;
 }
 
@@ -188,7 +191,9 @@
     -ms-transform: translateY(-11px) rotate(-45deg);
     -o-transform: translateY(-11px) rotate(-45deg);
     transform: translateY(-11px) rotate(-45deg);
+    /*
     background: #ec5151;
+    */
 }
 
 .mobilebutton .burgertop,
@@ -213,7 +218,10 @@
 .mobilebutton:hover>.burgerbottom,
 .mobilebutton:hover>.burgermiddle,
 .mobilebutton:hover>.burgertop {
+    /*
     background-color: #ec5151;
+    */
+ 
 }
 
 @media screen and (max-width:10px) {
@@ -291,4 +299,11 @@ h3#headername {
     margin: 0;
     z-index: 10;
     letter-spacing: 1px;
+}
+
+@media (max-width: 410px ){
+    h3#headername{
+        font-size: 25px;
+        top: 20px;
+    }
 }
