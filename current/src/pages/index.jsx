@@ -8,6 +8,13 @@ import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 import CarouselText from '../components/CarouselText.tsx';
 import { motion } from 'framer-motion';
 
+//3D MODEL TEST
+import { Canvas } from '@react-three/fiber'
+import { useFrame } from '@react-three/fiber'
+import { useLoader } from "@react-three/fiber";
+import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
+import { Suspense } from 'react'
+
 //ICONS
 import {
     IoLogoPython, IoLogoHtml5, IoLogoCss3,
@@ -44,6 +51,29 @@ const variants = {
     })
 }
 
+const CoffeeCup = () => {
+    const fbx = useLoader(FBXLoader, "./coffee_cup_fbx/Paper_coffee_cup.fbx");
+
+    fbx.rotation.x = 0
+    fbx.rotation.z = 0
+
+    console.log(fbx.rotation.x)
+    fbx.rotation.x += 0.1;
+    console.log(fbx.rotation.z)
+    fbx.rotation.z -= 0.05
+
+    useFrame(() => {
+        // This function runs at the native refresh rate inside of a shared render-loop
+        fbx.rotation.y -= 0.0075
+    })
+
+    return <primitive object={fbx} scale={0.01} />;
+};
+
+
+
+
+
 function index() {
 
     return (
@@ -53,15 +83,18 @@ function index() {
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
                     <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] relative mt-[100px] md:w-[200px] xl:w-[250px]" />
 
-                    <h2 id="introtext" className='glitch text-center pt-[30px] pb-[30px] m:pt-[50px] m:pb-[50px] xl:pt-[100px] xl:pb-[100px] text-white text-[55px] dark:text-white ease-in duration-200 xl:text-[120px] lg:text-[80px] md:text-[60px] '>
-                        Hey, I'm Ryan
-                    </h2>
 
-                    <div className="content bg-transparent ease-in duration-200">
-                        <div className="landing-flex-container p-[30px] rounded-md md:mt-5 bg-[#ffffff77] dark:bg-[#00000055] ease-in duration-200">
+                    <div className="content w-[92vw] pb-[30px] rounded-md mt-[30px] md:mt-5 bg-[#ffffff77] dark:bg-[#00000055] ease-in duration-200">
+                        <h2 id="introtext" className='glitch text-center pt-[20px] pb-[20px] m:pt-[50px] m:pb-[50px] xl:pt-[100px] xl:pb-[100px] 
+                    text-black text-[55px] dark:text-white ease-in duration-200 xl:text-[120px] lg:text-[80px] md:text-[60px] '>
+                            Hey, I'm Ryan
+                        </h2>
+
+                        <div className="landing-flex-container p-[30px] rounded-md md:mt-5 ease-in duration-200">
 
                             <div className="landing-flex-item-left">
-                                <div id="slantText" className="scale-[0.9] min-w-[450px] w-[100vw] md:w-[100%] translate-x-[-130px] sm:translate-x-[-60px] xl:mt-[30px] xl:scale-[1.25] ease-in duration-200">
+                                <div id="slantText" className="scale-[0.9] min-w-[450px] w-[100vw] md:w-[100%] translate-x-[-130px] sm:translate-x-[-60px] 
+                                xl:mt-[30px] xl:scale-[1.25] ease-in duration-200">
                                     <div className="[-webkit-text-stroke:2px_black] perspective-text dark:[-webkit-text-stroke:2px_white]">
                                         <div className="perspective-line hover:text-black dark:hover:text-white ease-linear duration-200">
                                             <p>Coder</p>
@@ -80,7 +113,7 @@ function index() {
                             </div>
 
                             <div className="landing-flex-item-right">
-                                <p className="block ml-auto mr-auto w-[90%] m-[10px] text-[20px]">I'm a recent Boston University grad who studied computer science and music.</p>
+                                <p className="block ml-auto mr-auto w-[95%] lg:w-[80%] m-[10px] text-[20px]">I'm a recent Boston University grad who studied computer science and music.</p>
                                 <br />
                                 <hr className="h-[2px] w-[55%] min-w-[225px] block ml-auto mr-auto border-none rounded-sm bg-black dark:bg-white ease-in duration-200" />
                                 <div className="w-[50%] min-w-[225px] max-w-[500px] block ml-auto mr-auto pt-[10px] pb-[10px]">
@@ -92,18 +125,40 @@ function index() {
                                 </div>
                                 <hr className="h-[2px] w-[55%] min-w-[225px] block ml-auto mr-auto border-none rounded-sm bg-black dark:bg-white ease-in duration-200" />
                                 <br />
-                                <p className="block ml-auto mr-auto w-[90%] m-[10px] text-[20px]">I’m a classically trained musician turned programmer from Las Vegas aiming to use my interests in technology to build and design websites, web apps, and software.</p>
+                                <p className="block ml-auto mr-auto w-[95%] lg:w-[80%] m-[10px] text-[20px]">
+                                    I’m a classically trained musician turned programmer from Las Vegas aiming to use my
+                                    interests in technology to build and design websites, web apps, and software.</p>
 
                             </div>
                         </div>
                     </div>
 
-                </ParallaxBannerLayer>
+                    <span className='block ml-auto mr-auto w-[100vw] align-center text-center mt-[50px]'>
+                        <Parallax rotate={[0, 360]} className="w-[10vw] min-w-[40px] inline-block max-w-[55px] mt-[50px] ease-linear duration-[50ms] mr-[5vw] ml-[5vw]">
+                            <img src="whiteasterisk.png" alt="" className="asterisk absolute opacity-0 dark:opacity-100 ease-in duration-200" aria-hidden="true" />
+                            <img src="blackasterisk.png" alt="" className="asterisk opacity-100 dark:opacity-0 ease-in duration-200" aria-hidden="true" />
+                        </Parallax>
+                        <Parallax rotate={[0, -360]} className="w-[10vw] min-w-[40px] inline-block max-w-[55px] mt-[50px] ease-linear duration-[50ms] mr-[5vw] ml-[5vw]">
+                            <img src="whiteasterisk.png" alt="" className="asterisk absolute opacity-0 dark:opacity-100 ease-in duration-200" aria-hidden="true" />
+                            <img src="blackasterisk.png" alt="" className="asterisk opacity-100 dark:opacity-0 ease-in duration-200" aria-hidden="true" />
+                        </Parallax>
+                        <Parallax rotate={[0, 360]} className="w-[10vw] min-w-[40px] inline-block max-w-[55px] mt-[50px] ease-linear duration-[50ms] mr-[5vw] ml-[5vw]">
+                            <img src="whiteasterisk.png" alt="" className="asterisk absolute opacity-0 dark:opacity-100 ease-in duration-200" aria-hidden="true" />
+                            <img src="blackasterisk.png" alt="" className="asterisk opacity-100 dark:opacity-0 ease-in duration-200" aria-hidden="true" />
+                        </Parallax>
+                    </span>
 
+                </ParallaxBannerLayer>
             </ParallaxBanner>
 
-            <div className="fadeIn relative h-[30vh] mt-[-30vh] mb-[100px]  bg-gradient-to-b from-transparent to-white dark:bg-gradient-to-b dark:to-black"></div>
-            <section>
+
+
+            <div className="fadeIn relative h-[20vh] mt-[-20vh] mb-[100px]  bg-gradient-to-b from-transparent to-white dark:bg-gradient-to-b dark:to-black"></div>
+
+
+
+
+            <section className='mt-[-25px] pb-[100px]'>
                 <CarouselText baseVelocity={-2}>
                     <IoLogoPython className="marqueeicon text-[45px] xl:text-[60px] text-yellow-200" />
                     <IoLogoHtml5 className="marqueeicon text-[45px] xl:text-[60px] text-red-500" />
@@ -114,28 +169,45 @@ function index() {
                 </CarouselText>
             </section>
 
-            <Parallax rotate={[0, 360]} className="w-[10vw] min-w-[40px] max-w-[55px] ml-[30px] mt-[50px] ease-linear duration-[50ms]">
-                <img src="whiteasterisk.png" alt="" className="asterisk absolute opacity-0 dark:opacity-100 ease-in duration-200" aria-hidden="true" />
-                <img src="blackasterisk.png" alt="" className="asterisk opacity-100 dark:opacity-0 ease-in duration-200" aria-hidden="true" />
+            <Canvas className='!w-[250px] !h-[250px] lg:!w-[400px] lg:!h-[400px] block ml-auto mr-auto'>
+                <ambientLight intensity={1} />
+                <directionalLight color="#bbbbbb" position={[6, 3, 3]} />
+                <Suspense fallback={null}>
+                    <CoffeeCup />
+                </Suspense>
+            </Canvas>
+
+            <Parallax speed={10} className="rounded-lg bg-opacity-50">
+                <motion.div
+                    custom={100}
+                    animate="visible"
+                    initial={{ opacity: 0, transform: "translateX(-300px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        transform: "translateX(0px)",
+                        transition: { duration: 1 }
+                    }}
+                    viewport={{ once: true }}
+                    variants={variants}>
+                    <h2 className='text-right overflow-hidden uppercase w-[50vw] min-w-[400px] l:ml-[-100px] rounded-[10px] 
+                    font-[Takota] scale-y-[1.25] text-black bg-[rgba(255,255,255,0.71)] 
+                    dark:bg-[rgba(0,0,0,0.71)] text-[60px] dark:text-white ease-in duration-200 xl:text-[100px] lg:text-[80px] md:text-[60px] '>
+                        A bit about me
+                    </h2>
+                </motion.div>
             </Parallax>
-            <div className="landing-flex-container p-[30px] rounded-md md:mt-5 bg-[#ffffff77] dark:bg-[#00000055] ease-in duration-200">
 
-                <div className="landing-flex-item-left">
-                    <Parallax speed={10} className="rounded-lg bg-opacity-50">
-                        <h2 className='xl:ml-[10vw] font-[Takota] scale-y-[1.25] text-black text-[70px] dark:text-white ease-in duration-200 xl:text-[150px] lg:text-[80px] md:text-[60px] '>
-                            MYSELF
-                        </h2>
-                    </Parallax>
-                </div>
+            <Parallax speed={5} >
+                <section className='block ml-auto mr-auto mt-[100px] p-[30px] text-justify w-[50vw] min-w-[375px] md:mr-0 mb-[200px]'>
 
-                <div className="landing-flex-item-right">
                     <motion.div
                         custom={100}
                         animate="visible"
-                        initial={{ opacity: 0 }}
+                        initial={{ opacity: 0, transform: "translateY(100px)" }}
                         whileInView={{
                             opacity: 1,
-                            transition: { delay: 0.4, duration: 0.75 }
+                            transform: "translateY(0px)",
+                            transition: { delay: 0.4, duration: 1 }
                         }}
                         viewport={{ once: true }}
                         variants={variants}>
@@ -144,10 +216,11 @@ function index() {
                     <motion.div
                         custom={100}
                         animate="visible"
-                        initial={{ opacity: 0 }}
+                        initial={{ opacity: 0, transform: "translateY(100px)" }}
                         whileInView={{
                             opacity: 1,
-                            transition: { delay: 0.8, duration: 0.75 }
+                            transform: "translateY(0px)",
+                            transition: { delay: 0.8, duration: 1 }
                         }}
                         viewport={{ once: true }}
                         variants={variants}>
@@ -156,10 +229,11 @@ function index() {
                     <motion.div
                         custom={100}
                         animate="visible"
-                        initial={{ opacity: 0 }}
+                        initial={{ opacity: 0, transform: "translateY(100px)" }}
                         whileInView={{
                             opacity: 1,
-                            transition: { delay: 1.2, duration: 0.75 }
+                            transform: "translateY(0px)",
+                            transition: { delay: 1.2, duration: 1 }
                         }}
                         viewport={{ once: true }}
                         variants={variants}>
@@ -168,22 +242,150 @@ function index() {
                     <motion.div
                         custom={100}
                         animate="visible"
-                        initial={{ opacity: 0 }}
+                        initial={{ opacity: 0, transform: "translateY(100px)" }}
                         whileInView={{
                             opacity: 1,
-                            transition: { delay: 1.6, duration: 0.75 }
+                            transform: "translateY(0px)",
+                            transition: { delay: 1.6, duration: 1 }
                         }}
                         viewport={{ once: true }}
                         variants={variants}>
                         <h2>yoyoyoyoyoyoyo</h2>
                     </motion.div>
-                </div>
 
-            </div>
+                </section>
+            </Parallax>
 
-            <section>
-                <CarouselText baseVelocity={-3}><h2 className="min-w-[45vw] ml-[30px]">Hi, I'm Ryan</h2></CarouselText>
+
+
+            <section className='mt-[200px] mb-[10px]'>
+                <CarouselText baseVelocity={-3}>
+                    <h2 className="min-w-[45vw] ml-[30px]">console.log("Hello world -Ryan")</h2>
+                    <h2 className="text-red-500 ml-[30px] text-center xl:w-[30vw]">|</h2>
+                    <h2 className="min-w-[45vw] ml-[30px]">print("Hello world -Ryan")</h2>
+                    <h2 className="text-green-500 ml-[30px] text-center xl:w-[30vw]">|</h2>
+                    <h2 className="min-w-[45vw] ml-[30px]">System.out.print("Hello world -Ryan")</h2>
+                    <h2 className="text-blue-500 ml-[20px] text-center xl:w-[30vw]">|</h2>
+                </CarouselText>
+                <hr className='text-black border-black dark:border-white w-[95vw] block ml-auto mr-auto mt-[-10px]' />
             </section>
+
+
+            <ParallaxBanner style={{ aspectRatio: '2 / 1' }} className="min-h-[80vh]">
+                <ParallaxBannerLayer image="trylon.jpeg" speed={-20} />
+                <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
+                    <Parallax speed={10} className="rounded-lg bg-opacity-50 overflow-hidden pt-[50px] pb-[50px]">
+                        <motion.div
+                            custom={100}
+                            animate="visible"
+                            initial={{ opacity: 0, transform: "translateX(300px)" }}
+                            whileInView={{
+                                opacity: 1,
+                                transform: "translateX(30px)",
+                                transition: { duration: 1 }
+                            }}
+                            viewport={{ once: true }}
+                            variants={variants}>
+                            <h2 className='text-center uppercase z-[11] block ml-auto  overflow-hidden w-[40vw] min-w-[400px] rounded-[10px] font-[Takota] 
+                    scale-y-[1.25] text-black  bg-[rgba(255,255,255,0.71)] dark:bg-[rgba(0,0,0,0)] 
+                    text-[60px] dark:text-white ease-in duration-200 xl:text-[100px] lg:text-[80px] md:text-[60px] '>
+                                Projects
+                            </h2>
+                        </motion.div>
+                    </Parallax>
+
+                </ParallaxBannerLayer>
+            </ParallaxBanner>
+
+
+
+
+            <Parallax speed={5} >
+                <section className='block ml-auto mr-auto mt-[100px] p-[30px] text-justify w-[60vw] min-w-[375px] md:ml-0 mb-[200px]'>
+
+                    <motion.div
+                        custom={100}
+                        animate="visible"
+                        initial={{ opacity: 0, transform: "translateY(100px)" }}
+                        whileInView={{
+                            opacity: 1,
+                            transform: "translateY(0px)",
+                            transition: { delay: 0.4, duration: 1 }
+                        }}
+                        viewport={{ once: true }}
+                        variants={variants}>
+                        <h2>hihihihihiihi1</h2>
+                    </motion.div>
+                    <motion.div
+                        custom={100}
+                        animate="visible"
+                        initial={{ opacity: 0, transform: "translateY(100px)" }}
+                        whileInView={{
+                            opacity: 1,
+                            transform: "translateY(0px)",
+                            transition: { delay: 0.8, duration: 1 }
+                        }}
+                        viewport={{ once: true }}
+                        variants={variants}>
+                        <h2>heyheyheyheyhey1</h2>
+                    </motion.div>
+                    <motion.div
+                        custom={100}
+                        animate="visible"
+                        initial={{ opacity: 0, transform: "translateY(100px)" }}
+                        whileInView={{
+                            opacity: 1,
+                            transform: "translateY(0px)",
+                            transition: { delay: 1.2, duration: 1 }
+                        }}
+                        viewport={{ once: true }}
+                        variants={variants}>
+                        <h2>hellohellohellohello1</h2>
+                    </motion.div>
+                    <motion.div
+                        custom={100}
+                        animate="visible"
+                        initial={{ opacity: 0, transform: "translateY(100px)" }}
+                        whileInView={{
+                            opacity: 1,
+                            transform: "translateY(0px)",
+                            transition: { delay: 1.6, duration: 1 }
+                        }}
+                        viewport={{ once: true }}
+                        variants={variants}>
+                        <h2>yoyoyoyoyoyoyo1</h2>
+                    </motion.div>
+
+                </section>
+            </Parallax>
+            {/*
+OLD
+            <a href="#" className='p-0 rounded-[50px] border-white border-2 text-[20px] text-center inline-block ml-[10px]'>
+                <span className='absolute inline-block text-center m-0 p-0 border-0'>Planit</span>
+                <Marquee
+                    className='opacity-0 overflow-hidden rounded-[50px] hover:opacity-100 bg-black absolute top-0 left-0 text-[20px] ease-linear duration-200 w-[100%]'
+                    speed={75}
+                    gradient={false}
+                    direction={'right'}>
+                    Planit
+                </Marquee>
+            </a>
+                    */}
+
+            <a href="https://github.com/ryan-christopher/cs411-planit" target={"_blank"} rel="noreferrer" className='relative text-[30px] uppercase flex justify-center items-center h-[50px] border-2 border-white rounded-[50px] w-[175px] text-center'>
+                <span className='inline-block align-baseline text-center opacity-100 hover:opacity-0 ease-linear duration-200'>Planit</span>
+                <Marquee
+                    className='!absolute top-0 left-0 w-[100%] !h-[100%] rounded-[50px] bg-black opacity-0 hover:opacity-100 ease-linear duration-150'
+                    speed={75}
+                    gradient={false}
+                    direction={'right'}>
+                    <span className='pl-[15px] pr-[15px]'>Planit</span>
+                    <span className='pl-[15px] pr-[15px]'>Planit</span>
+
+                </Marquee>
+            </a>
+
+            <br /><br /><br /><br /><br /><br />
 
             <Marquee
                 className='marquee'

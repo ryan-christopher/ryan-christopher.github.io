@@ -49,11 +49,13 @@ html {
 }
 
 #lightModeIcon.inactiveTheme{
+    pointer-events: none;
     opacity: 0;
     transform: translateX(-75px);
 }
 
 #darkModeIcon.inactiveTheme{
+    pointer-events: none;
     opacity: 0;
     transform: translateX(75px);
 }
@@ -87,6 +89,7 @@ html {
     height: 200px;
   }
 
+  /*
 .marquee{
     font-size: 45px;
     height:90px;
@@ -94,6 +97,7 @@ html {
     margin-bottom: 15px;
     overflow-y: hidden;
 }
+*/
 
 .marqueeicon{
   margin-left: 10vw;
@@ -210,3 +214,10 @@ div#slantText{
     }
   }
 
+  @media only screen and (max-width: 400px) {
+    .perspective-text {
+        font-size: 45px;
+        padding-right: 40px;
+        margin-left: -5px;
+    }
+  }

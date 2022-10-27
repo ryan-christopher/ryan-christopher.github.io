@@ -158,8 +158,8 @@
 
 .mobilebutton {
     cursor: pointer;
-    height: 37px;
-    right: 25px;
+    height: 58px;
+    right: 15px;
     top: 9px;
     position: fixed;
     text-align: center;
@@ -215,14 +215,14 @@
     transition: all 0.5s;
 }
 
+
+    /*
 .mobilebutton:hover>.burgerbottom,
 .mobilebutton:hover>.burgermiddle,
 .mobilebutton:hover>.burgertop {
-    /*
     background-color: #ec5151;
-    */
- 
 }
+*/
 
 @media screen and (max-width:10px) {
     .mobilebutton {
