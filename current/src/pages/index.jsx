@@ -78,7 +78,7 @@ function index() {
 
     return (
         <div className='bg-white dark:bg-black ease-in duration-200'>
-            <ParallaxBanner style={{ aspectRatio: '2 / 1' }} className="min-h-[1600px] lg:h-[110vh] xl:h-[130vh]">
+            <ParallaxBanner style={{ aspectRatio: '2 / 1' }} className="min-h-[1600px] lg:h-[110vh] xl:h-[130vh] max-w-[100vw]">
                 <ParallaxBannerLayer image="boston2.jpg" speed={-40} />
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
                     <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] relative mt-[100px] md:w-[200px] xl:w-[250px]" />
@@ -271,7 +271,7 @@ function index() {
             </section>
 
 
-            <ParallaxBanner style={{ aspectRatio: '2 / 1' }} className="min-h-[80vh]">
+            <ParallaxBanner style={{ aspectRatio: '2 / 1' }} className="min-h-[80vh] max-w-[100vw]">
                 <ParallaxBannerLayer image="trylon.jpeg" speed={-20} />
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
                     <Parallax speed={10} className="rounded-lg bg-opacity-50 overflow-hidden pt-[50px] pb-[50px]">
