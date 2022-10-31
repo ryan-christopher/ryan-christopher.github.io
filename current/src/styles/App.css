@@ -25,14 +25,14 @@
     background: rgb(57, 57, 57) !important;
 }
 html {
-    background-color: white;
-    color: black;
+    background-color: #f9f5e9;
+    color: #1f1f1f;
     transition: all ease-in 200ms;
 }
 
 .dark{
-    background-color: black;
-    color:white;
+    background-color: #1f1f1f;
+    color:#f9f5e9;
     transition: all ease-in 200ms;
 }
 
@@ -62,7 +62,7 @@ html {
 
 #darkModeIcon.activeTheme{
     color:white;
-    background-color: black;
+    background-color: #1f1f1f;
     border: 2px solid white;
 }
 
