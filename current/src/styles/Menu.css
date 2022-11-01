@@ -54,7 +54,7 @@
 
 .mobilemenu-link-back:before {
     font-size: 15px;
-    color: white;
+    color: #f9f5e9;
     float: right;
     position: absolute;
     right: 12px;
@@ -137,7 +137,7 @@
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    background-color: black;
+    background-color: #171717;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -271,7 +271,7 @@ ul>li>ul.activesubmenu {
     text-decoration: none;
     position: fixed;
     font-size: 15px;
-    color: white;
+    color: #f9f5e9;
     top: 0px;
     left: 18px;
     z-index: 100;

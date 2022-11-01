@@ -10,6 +10,8 @@ window.addEventListener('load', () => {
   preload.classList.add('preload-finish');
 })
 
+console.log(`⬆️⬆️⬇️⬇️⬅️➡️⬅️➡️🅱️🅰️`)
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>

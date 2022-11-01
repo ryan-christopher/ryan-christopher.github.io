@@ -13,6 +13,7 @@ import { Canvas } from '@react-three/fiber'
 import { useFrame } from '@react-three/fiber'
 import { useLoader } from "@react-three/fiber";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
+import { OrbitControls } from "@react-three/drei"
 import { Suspense } from 'react'
 
 //ICONS
@@ -54,12 +55,14 @@ const variants = {
 const CoffeeCup = () => {
     const fbx = useLoader(FBXLoader, "./coffee_cup_fbx/Paper_coffee_cup.fbx");
 
+    fbx.position.y = -0.5
+
     fbx.rotation.x = 0
     fbx.rotation.z = 0
 
-    console.log(fbx.rotation.x)
+    //console.log(fbx.rotation.x)
     fbx.rotation.x += 0.1;
-    console.log(fbx.rotation.z)
+    //console.log(fbx.rotation.z)
     fbx.rotation.z -= 0.05
 
     useFrame(() => {
@@ -67,7 +70,7 @@ const CoffeeCup = () => {
         fbx.rotation.y -= 0.0075
     })
 
-    return <primitive object={fbx} scale={0.01} />;
+    return <primitive object={fbx} scale={0.011} />;
 };
 
 
@@ -169,12 +172,14 @@ function index() {
                 </CarouselText>
             </section>
 
-            <Canvas className='!w-[250px] !h-[250px] lg:!w-[400px] lg:!h-[400px] block ml-auto mr-auto'>
+            <Canvas className='!w-[200px] !h-[200px] lg:!w-[400px] lg:!h-[400px] block ml-auto mr-auto'>
                 <ambientLight intensity={1} />
                 <directionalLight color="#bbbbbb" position={[6, 3, 3]} />
                 <Suspense fallback={null}>
+                    <OrbitControls enableZoom={false} enablePan={false} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} />
                     <CoffeeCup />
                 </Suspense>
+
             </Canvas>
 
             <Parallax speed={10} className="rounded-lg bg-opacity-50">
@@ -186,12 +191,12 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateX(0px)",
-                        transition: { duration: 1 }
+                        transition: { duration: 0.7 }
                     }}
                     viewport={{ once: true }}
                     variants={variants}>
-                    <h2 className='text-right overflow-hidden uppercase w-[50vw] min-w-[400px] l:ml-[-100px] rounded-[10px] 
-                    font-[Takota] scale-y-[1.25] text-[#171717] text-[60px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[100px] lg:text-[80px] md:text-[60px] '>
+                    <h2 className='text-right overflow-hidden uppercase w-[40vw] min-w-[375px] l:ml-[-100px] rounded-[10px] 
+                    font-[Takota] scale-y-[1.25] text-[#171717] text-[55px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[100px] lg:text-[80px] md:text-[60px] '>
                         A bit about me
                     </h2>
                 </motion.div>
@@ -206,7 +211,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 0.4, duration: 1 }
+                        transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}
                     variants={variants}>
@@ -217,7 +222,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 0.8, duration: 1 }
+                        transition: { delay: 0.4, duration: 0.7 }
                     }}
                     viewport={{ once: true }}
                     variants={variants}>
@@ -228,7 +233,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 1.2, duration: 1 }
+                        transition: { delay: 0.6, duration: 0.7 }
                     }}
                     viewport={{ once: true }}
                     variants={variants}>
@@ -239,7 +244,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 1.6, duration: 1 }
+                        transition: { delay: 0.8, duration: 0.7 }
                     }}
                     viewport={{ once: true }}
                     variants={variants}>
@@ -262,11 +267,11 @@ function index() {
                     <h2 className="min-w-[45vw] ml-[30px]">System.out.print("Hello world -Ryan")</h2>
                     <h2 className="text-blue-500 ml-[20px] text-center xl:w-[30vw]">|</h2>
                 </CarouselText>
-                <hr className='text-[#171717] border-[#171717] dark:border-[#f9f5e9] w-[95vw] block ml-auto mr-auto mt-[-10px]' />
+                <hr className='text-[#171717] border-[#171717] dark:border-[#f9f5e9] w-[95vw] block ml-auto mr-auto mt-[0px] pb-[5px]' />
             </section>
 
 
-            <ParallaxBanner style={{ aspectRatio: '2 / 1' }} className="min-h-[80vh] max-w-[100vw]">
+            <ParallaxBanner style={{ aspectRatio: '2 / 1' }} className="h-[2000px] lg:h-[100vh]">
                 <ParallaxBannerLayer image="trylon.jpeg" speed={-20} />
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
                     <Parallax speed={10} className="rounded-lg bg-opacity-50 overflow-hidden pt-[50px] pb-[50px]">
@@ -275,7 +280,7 @@ function index() {
                             whileInView={{
                                 opacity: 1,
                                 transform: "translateX(30px)",
-                                transition: { duration: 1 }
+                                transition: { duration: 0.7 }
                             }}
                             viewport={{ once: true }}
                             variants={variants}>
@@ -286,6 +291,45 @@ function index() {
                             </h2>
                         </motion.div>
                     </Parallax>
+
+                    <div className="flex flex-col lg:flex-row justify-between w-[90vw] ml-[5vw]">
+
+                        <motion.div
+                            className='w-[85vw] lg:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex justify-center text-center rounded-[10px] bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-md'
+                            initial={{ opacity: 0, transform: "translateY(100px)" }}
+                            whileInView={{
+                                opacity: 1,
+                                transform: "translateY(0px)",
+                                transition: { delay: 0, duration: 0.7 }
+                            }}
+                            viewport={{ once: true }}>
+                            <h3 className="text-[45px] uppercase font-['Atami']">Portfolio</h3>
+                        </motion.div>
+                        <motion.div
+                            className='w-[85vw] lg:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex justify-center text-center rounded-[10px] bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-md'
+                            initial={{ opacity: 0, transform: "translateY(100px)" }}
+                            whileInView={{
+                                opacity: 1,
+                                transform: "translateY(0px)",
+                                transition: { delay: 0.25, duration: 0.7 }
+                            }}
+                            viewport={{ once: true }}>
+                            <h3 className="text-[45px] uppercase font-['Atami']">Planit</h3>
+                        </motion.div>
+                        <motion.div
+                            className='w-[85vw] lg:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex justify-center text-center rounded-[10px] bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-md'
+                            initial={{ opacity: 0, transform: "translateY(100px)" }}
+                            whileInView={{
+                                opacity: 1,
+                                transform: "translateY(0px)",
+                                transition: { delay: 0.5, duration: 0.7 }
+                            }}
+                            viewport={{ once: true }}>
+                            <h3 className="text-[45px] uppercase font-['Atami']">TCS Curriculum</h3>
+                        </motion.div>
+                    </div>
+
+
 
                 </ParallaxBannerLayer>
             </ParallaxBanner>
@@ -302,7 +346,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 0.4, duration: 1 }
+                        transition: { duration: 0.7 }
                     }}
                     viewport={{ once: true }}
                     variants={variants}>
@@ -313,7 +357,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 0.8, duration: 1 }
+                        transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}
                     variants={variants}>
@@ -324,7 +368,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 1.2, duration: 1 }
+                        transition: { delay: 0.4, duration: 0.7 }
                     }}
                     viewport={{ once: true }}
                     variants={variants}>
@@ -335,7 +379,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 1.6, duration: 1 }
+                        transition: { delay: 0.6, duration: 0.7 }
                     }}
                     viewport={{ once: true }}
                     variants={variants}>

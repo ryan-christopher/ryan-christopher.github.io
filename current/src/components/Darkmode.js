@@ -4,7 +4,7 @@ import { MdOutlineLightMode, MdOutlineNightlight } from 'react-icons/md'
 if (window.localStorage.getItem("theme") === null) {
     window.localStorage.setItem('theme', 'dark')
 }
-console.log(window.localStorage.getItem("theme"))
+//console.log(window.localStorage.getItem("theme"))
 let darkModeIcon;
 let lightModeIcon;
 

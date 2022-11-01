@@ -9,25 +9,25 @@ function Navbar() {
 
     links =
         <div>
-            <Link className="mobilemenu-link text-black dark:text-white" to="/" onClick={() => { Preloader(); menutoggle(); }}>Home</Link>
-            <Link className="mobilemenu-link text-black dark:text-white" to="/portfolio" onClick={() => { Preloader(); menutoggle(); }}>Portfolio</Link>
-            <Link className="mobilemenu-link text-black dark:text-white" to="/about" onClick={() => { Preloader(); menutoggle(); }}>About Me</Link>
+            <Link className="mobilemenu-link text-[#171717] dark:text-[#f9f5e9]" to="/" onClick={() => { Preloader(); menutoggle(); }}>Home</Link>
+            <Link className="mobilemenu-link text-[#171717] dark:text-[#f9f5e9]" to="/portfolio" onClick={() => { Preloader(); menutoggle(); }}>Portfolio</Link>
+            <Link className="mobilemenu-link text-[#171717] dark:text-[#f9f5e9]" to="/about" onClick={() => { Preloader(); menutoggle(); }}>About Me</Link>
         </div>
 
     return (
         <div>
-            <h3 id="headername" className='text-black dark:text-white ease-in duration-200'>RYAN CHRISTOPHER</h3>
+            <h3 id="headername" className='text-[#171717] dark:text-[#f9f5e9] ease-in duration-200'>RYAN CHRISTOPHER</h3>
 
             <div className="mobilenavbar bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.5)] backdrop-blur-sm ease-in duration-200">
             </div>
 
-            <div className="mobilemenu bg-white dark:bg-black">
+            <div className="mobilemenu bg-[#f9f5e9] dark:bg-[#171717]">
                 <div className="mobilebutton">
-                    <div className="burgertop bg-black dark:bg-white ease-in duration-200"></div>
-                    <div className="burgermiddle bg-black dark:bg-white ease-in duration-200"></div>
-                    <div className="burgerbottom bg-black dark:bg-white ease-in duration-200"></div>
+                    <div className="burgertop bg-[#171717] dark:bg-[#f9f5e9] ease-in duration-200"></div>
+                    <div className="burgermiddle bg-[#171717] dark:bg-[#f9f5e9] ease-in duration-200"></div>
+                    <div className="burgerbottom bg-[#171717] dark:bg-[#f9f5e9] ease-in duration-200"></div>
                 </div>
-                <div className="mobilemenu-body bg-white dark:bg-black">
+                <div className="mobilemenu-body bg-[#f9f5e9] dark:bg-[#171717]">
                     <div className="mobilemenu-overlay"></div>
                     <div className="mobilemenu-container">
                         {links}
