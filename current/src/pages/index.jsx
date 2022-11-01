@@ -295,7 +295,7 @@ function index() {
                     <div className="flex flex-col lg:flex-row justify-between w-[90vw] ml-[5vw]">
 
                         <motion.div
-                            className='w-[85vw] lg:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex justify-center text-center rounded-[10px] bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-md'
+                            className='w-[100%] lg:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex justify-center text-center rounded-[10px] bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-md'
                             initial={{ opacity: 0, transform: "translateY(100px)" }}
                             whileInView={{
                                 opacity: 1,
@@ -303,10 +303,10 @@ function index() {
                                 transition: { delay: 0, duration: 0.7 }
                             }}
                             viewport={{ once: true }}>
-                            <h3 className="text-[45px] uppercase font-['Atami']">Portfolio</h3>
+                            <h3 className="text-[45px] uppercase font-['Atami'] pt-[20px]">Portfolio</h3>
                         </motion.div>
                         <motion.div
-                            className='w-[85vw] lg:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex justify-center text-center rounded-[10px] bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-md'
+                            className='w-[100%] lg:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex justify-center text-center rounded-[10px] bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-md'
                             initial={{ opacity: 0, transform: "translateY(100px)" }}
                             whileInView={{
                                 opacity: 1,
@@ -314,10 +314,10 @@ function index() {
                                 transition: { delay: 0.25, duration: 0.7 }
                             }}
                             viewport={{ once: true }}>
-                            <h3 className="text-[45px] uppercase font-['Atami']">Planit</h3>
+                            <h3 className="text-[45px] uppercase font-['Atami'] pt-[20px]">Planit</h3>
                         </motion.div>
                         <motion.div
-                            className='w-[85vw] lg:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex justify-center text-center rounded-[10px] bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-md'
+                            className='w-[100%] lg:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex justify-center text-center rounded-[10px] bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-md'
                             initial={{ opacity: 0, transform: "translateY(100px)" }}
                             whileInView={{
                                 opacity: 1,
@@ -325,7 +325,7 @@ function index() {
                                 transition: { delay: 0.5, duration: 0.7 }
                             }}
                             viewport={{ once: true }}>
-                            <h3 className="text-[45px] uppercase font-['Atami']">TCS Curriculum</h3>
+                            <h3 className="text-[45px] uppercase font-['Atami'] pt-[20px]">TCS Curriculum</h3>
                         </motion.div>
                     </div>
 
