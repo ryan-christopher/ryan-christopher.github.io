@@ -1,22 +1,29 @@
 import React from 'react'
 import Footer from '../components/Footer'
+import Credits from '../components/Credits'
 import "../styles/App.css"
 import "../styles/index.css"
+
+
+// Moving Text
 import Marquee from "react-fast-marquee";
 import { Parallax } from 'react-scroll-parallax';
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 import CarouselText from '../components/CarouselText.tsx';
 import { motion } from 'framer-motion';
 
-//3D MODEL TEST
-import { Canvas } from '@react-three/fiber'
-import { useFrame } from '@react-three/fiber'
-import { useLoader } from "@react-three/fiber";
+// 3D Models
+import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { OrbitControls } from "@react-three/drei"
 import { Suspense } from 'react'
 
-//ICONS
+// Icons
+import {
+    SiSolidity, SiJavascript, SiEthereum,
+    SiVisualstudio, SiUnity, SiNextdotjs,
+    SiDjango, SiWeb3Dotjs
+} from "react-icons/si"
 import {
     IoLogoPython, IoLogoHtml5, IoLogoCss3,
     IoLogoGithub, IoIosTennisball
@@ -27,10 +34,6 @@ import {
 import {
     FaJava, FaReact
 } from "react-icons/fa"
-import {
-    SiSolidity, SiJavascript, SiEthereum, SiVisualstudio,
-    SiUnity, SiNextdotjs, SiDjango, SiWeb3Dotjs
-} from "react-icons/si"
 import {
     CgMusicSpeaker, CgMusic
 } from "react-icons/cg"
@@ -54,27 +57,16 @@ const variants = {
 
 const CoffeeCup = () => {
     const fbx = useLoader(FBXLoader, "./coffee_cup_fbx/Paper_coffee_cup.fbx");
-
     fbx.position.y = -0.5
-
     fbx.rotation.x = 0
     fbx.rotation.z = 0
-
-    //console.log(fbx.rotation.x)
     fbx.rotation.x += 0.1;
-    //console.log(fbx.rotation.z)
     fbx.rotation.z -= 0.05
-
     useFrame(() => {
-        // This function runs at the native refresh rate inside of a shared render-loop
         fbx.rotation.y -= 0.0075
     })
-
     return <primitive object={fbx} scale={0.011} />;
 };
-
-
-
 
 
 function index() {
@@ -85,7 +77,6 @@ function index() {
                 <ParallaxBannerLayer image="boston2.jpg" speed={-40} />
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
                     <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] relative mt-[100px] md:w-[200px] xl:w-[250px]" />
-
 
                     <div className="content w-[92vw] pb-[30px] rounded-md mt-[30px] md:mt-5 bg-[#ffffff77] dark:bg-[#00000055] ease-in duration-200">
                         <h2 id="introtext" className='glitch text-center pt-[20px] pb-[20px] m:pt-[50px] m:pb-[50px] xl:pt-[100px] xl:pb-[100px] 
@@ -154,13 +145,6 @@ function index() {
                 </ParallaxBannerLayer>
             </ParallaxBanner>
 
-
-            {/*
-            <div className="fadeIn relative h-[20vh] mt-[-20vh] mb-[100px]  bg-gradient-to-b from-transparent to-white dark:bg-gradient-to-b dark:to-[#171717]"></div>
-    */}
-
-
-
             <section className='mt-[25px] pb-[100px]'>
                 <CarouselText baseVelocity={-2}>
                     <IoLogoPython className="marqueeicon text-[45px] xl:text-[60px] text-yellow-200" />
@@ -171,16 +155,6 @@ function index() {
                     <IoLogoGithub className="marqueeicon text-[45px] xl:text-[60px] text-purple-400" />
                 </CarouselText>
             </section>
-
-            <Canvas className='!w-[200px] !h-[200px] lg:!w-[400px] lg:!h-[400px] block ml-auto mr-auto'>
-                <ambientLight intensity={1} />
-                <directionalLight color="#bbbbbb" position={[6, 3, 3]} />
-                <Suspense fallback={null}>
-                    <OrbitControls enableZoom={false} enablePan={false} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} />
-                    <CoffeeCup />
-                </Suspense>
-
-            </Canvas>
 
             <Parallax speed={10} className="rounded-lg bg-opacity-50">
 
@@ -195,15 +169,22 @@ function index() {
                     }}
                     viewport={{ once: true }}
                     variants={variants}>
-                    <h2 className='text-right overflow-hidden uppercase w-[40vw] min-w-[375px] l:ml-[-100px] rounded-[10px] 
-                    font-[Takota] scale-y-[1.25] text-[#171717] text-[55px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[100px] lg:text-[80px] md:text-[60px] '>
+                    <h2 className='text-right overflow-hidden uppercase w-[45vw] min-w-[375px] l:ml-[-100px] rounded-[10px] 
+                    font-[Takota] scale-y-[1.25] text-[#171717] text-[55px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[90px] lg:text-[70px] md:text-[60px] '>
                         A bit about me
                     </h2>
                 </motion.div>
             </Parallax>
-            {/*
-            <Parallax speed={5} >
-            */}
+
+            <Canvas className='!w-[200px] !h-[200px] lg:!w-[400px] lg:!h-[400px] block ml-auto mr-auto'>
+                <ambientLight intensity={1} />
+                <directionalLight color="#bbbbbb" position={[6, 3, 3]} />
+                <Suspense fallback={null}>
+                    <OrbitControls enableZoom={false} enablePan={false} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} />
+                    <CoffeeCup />
+                </Suspense>
+            </Canvas>
+
             <section className='block ml-auto mr-auto mt-[100px] p-[30px] text-justify w-[50vw] min-w-[375px] md:mr-0 mb-[200px]'>
 
                 <motion.div
@@ -252,10 +233,6 @@ function index() {
                 </motion.div>
 
             </section>
-            {/*
-            </Parallax>
-            */}
-
 
 
             <section className='mt-[200px] mb-[10px]'>
@@ -271,7 +248,7 @@ function index() {
             </section>
 
 
-            <ParallaxBanner style={{ aspectRatio: '2 / 1' }} className="h-[2000px] lg:h-[100vh]">
+            <ParallaxBanner style={{ aspectRatio: '2 / 1' }} className="h-[2000px] xl:h-[100vh]">
                 <ParallaxBannerLayer image="trylon.jpeg" speed={-20} />
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
                     <Parallax speed={10} className="rounded-lg bg-opacity-50 overflow-hidden pt-[50px] pb-[50px]">
@@ -292,10 +269,10 @@ function index() {
                         </motion.div>
                     </Parallax>
 
-                    <div className="flex flex-col lg:flex-row justify-between w-[90vw] ml-[5vw]">
+                    <div className="flex flex-col xl:flex-row justify-between w-[90vw] ml-[5vw]">
 
                         <motion.div
-                            className='w-[100%] lg:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex justify-center text-center rounded-[10px] bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-md'
+                            className='w-[100%] xl:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex-col justify-center text-center rounded-[10px] bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-md'
                             initial={{ opacity: 0, transform: "translateY(100px)" }}
                             whileInView={{
                                 opacity: 1,
@@ -304,9 +281,18 @@ function index() {
                             }}
                             viewport={{ once: true }}>
                             <h3 className="text-[45px] uppercase font-['Atami'] pt-[20px]">Portfolio</h3>
+                            <hr className='text-[#171717] border-[#171717] dark:border-[#f9f5e9] w-[75%] block ml-auto mr-auto pb-[10px]' />
+                            <p className='text-[20px]'>The site that you're on.</p>
+                            <span className='mt-[10px] w-[80%] flex ml-[10%] justify-between text-[30px]'>
+                                <IoLogoHtml5 className=" text-red-500" />
+                                <IoLogoCss3 className=" text-blue-500" />
+                                <FaReact className=" text-blue-400" />
+                                <SiJavascript className=" text-yellow-400" />
+                                <IoLogoGithub className=" text-purple-400" />
+                            </span>
                         </motion.div>
                         <motion.div
-                            className='w-[100%] lg:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex justify-center text-center rounded-[10px] bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-md'
+                            className='w-[100%] xl:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex justify-center text-center rounded-[10px] bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-md'
                             initial={{ opacity: 0, transform: "translateY(100px)" }}
                             whileInView={{
                                 opacity: 1,
@@ -317,7 +303,7 @@ function index() {
                             <h3 className="text-[45px] uppercase font-['Atami'] pt-[20px]">Planit</h3>
                         </motion.div>
                         <motion.div
-                            className='w-[100%] lg:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex justify-center text-center rounded-[10px] bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-md'
+                            className='w-[100%] xl:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex justify-center text-center rounded-[10px] bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-md'
                             initial={{ opacity: 0, transform: "translateY(100px)" }}
                             whileInView={{
                                 opacity: 1,
@@ -329,18 +315,11 @@ function index() {
                         </motion.div>
                     </div>
 
-
-
                 </ParallaxBannerLayer>
             </ParallaxBanner>
 
 
-
-            {/*
-            <Parallax speed={5} >
-            */}
             <section className='block ml-auto mr-auto mt-[100px] p-[30px] text-justify w-[60vw] min-w-[375px] md:ml-0 mb-[200px]'>
-
                 <motion.div
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
@@ -387,22 +366,6 @@ function index() {
                 </motion.div>
 
             </section>
-            {/*
-            </Parallax>
-            */}
-            {/*
-OLD
-            <a href="#" className='p-0 rounded-[50px] border-white border-2 text-[20px] text-center inline-block ml-[10px]'>
-                <span className='absolute inline-block text-center m-0 p-0 border-0'>Planit</span>
-                <Marquee
-                    className='opacity-0 overflow-hidden rounded-[50px] hover:opacity-100 bg-black absolute top-0 left-0 text-[20px] ease-linear duration-200 w-[100%]'
-                    speed={75}
-                    gradient={false}
-                    direction={'right'}>
-                    Planit
-                </Marquee>
-            </a>
-                    */}
 
             <a href="https://github.com/ryan-christopher/cs411-planit" target={"_blank"} rel="noreferrer" className='relative text-[30px] uppercase flex justify-center items-center h-[50px] border-2 border-[#f9f5e9] rounded-[50px] w-[175px] text-center'>
                 <span className='inline-block align-baseline text-center opacity-100 hover:opacity-0 ease-linear duration-200'>Planit</span>
@@ -413,11 +376,10 @@ OLD
                     direction={'right'}>
                     <span className='pl-[15px] pr-[15px]'>Planit</span>
                     <span className='pl-[15px] pr-[15px]'>Planit</span>
-
                 </Marquee>
             </a>
 
-            <br /><br /><br /><br /><br /><br />
+            <br />
 
             <Marquee
                 className='marquee'
@@ -444,6 +406,7 @@ OLD
                 <MdDesignServices className="marqueeicon" />
                 <RiPlantFill className="marqueeicon" />
             </Marquee>
+            <Credits />
             <Footer />
         </div >
     )
