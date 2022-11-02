@@ -1,18 +1,23 @@
 import React from 'react'
-import '../styles/Menu.css';
+import '../styles/credits.css';
 import $ from 'jquery'
 
-function Credits() {
+function Navbar() {
 
     return (
         <div>
+
+            <div className="creditnavbar bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.5)] backdrop-blur-sm ease-in duration-200">
+            </div>
+            <div className="creditbutton">
+                Credits
+            </div>
             <div className="creditmenu bg-[#f9f5e9] dark:bg-[#171717]">
-                <div className="creditbutton">
-                    CREDITS
-                </div>
+
                 <div className="creditmenu-body bg-[#f9f5e9] dark:bg-[#171717]">
                     <div className="creditmenu-overlay"></div>
                     <div className="creditmenu-container">
+                        hihihi
                     </div>
                 </div>
             </div>
@@ -20,6 +25,7 @@ function Credits() {
         </div >
     )
 }
+
 
 (function () {
     $(document).on("click", ".creditmenu-group", function () {
@@ -49,4 +55,4 @@ function Credits() {
     });
 }).call(this);
 
-export default Credits
+export default Navbar

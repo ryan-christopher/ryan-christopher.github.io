@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Takota";
+    src: url("./takota-font/Takota-BRa8.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Atami";
+  src: url("./Atami/Atami-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Atami Display";
+  src: url("./Atami/Atami-Display-Bold.otf") format("opentype");
+}
+
+h5 {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left:0;
+  width:100%;
+  text-align: center;
+  overflow:hidden;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  pointer-events: none;
+  font-family: "Atami";
+}

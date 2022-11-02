@@ -1,0 +1,84 @@
+.creditmask {
+    height: 100%;
+    width: 100%;
+    background: rgba(28, 28, 28, 0.5);
+    backdrop-filter: blur(5px) saturate(100%);
+    -webkit-backdrop-filter: blur(5px) saturate(100%);
+    display: block;
+    position: fixed;
+    z-index: 102;
+    top: 0;
+    left: 100vw;
+    transition: all 0.25s;
+}
+
+.creditmask.active {
+    left: 0;
+    transition: all 0.25s;
+}
+
+.creditmenu-body {
+    width: 100%;
+    height: 100vh;
+    margin-top: 80px;
+}
+
+
+.creditmenu-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    display: none;
+    z-index: -1;
+}
+
+.creditmenu-overlay:before {
+    height: 8px;
+    width: 25px;
+    top: 40px;
+    right: 5px;
+    content: "";
+    background-repeat: no-repeat !important;
+    position: absolute;
+}
+
+.creditmenu-overlay.active {
+    display: block;
+}
+
+.creditmenu {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    height: 100vh;
+    z-index: 103;
+    right: -80vw;
+    width: 80vw;
+    max-width: 500px;
+    top: 0px;
+}
+
+.creditmenu.active {
+    right: 0;
+}
+
+
+.creditbutton {
+    height: 58px;
+    position: relative;
+    text-align: center;
+    transform: translateX(0%);
+    width: 60px;
+    z-index: 3;
+    padding: 10px 14px 10px 14px;
+}
+
+.creditbutton {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s;
+}
+

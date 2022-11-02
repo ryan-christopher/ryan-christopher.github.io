@@ -1,5 +1,6 @@
 import React from 'react'
 import Footer from '../components/Footer'
+import Laptop from '../components/Laptop'
 import Credits from '../components/Credits'
 import "../styles/App.css"
 import "../styles/index.css"
@@ -176,7 +177,7 @@ function index() {
                 </motion.div>
             </Parallax>
 
-            <Canvas className='!w-[200px] !h-[200px] lg:!w-[400px] lg:!h-[400px] block ml-auto mr-auto'>
+            <Canvas className='!w-[200px] !h-[200px] lg:!w-[400px] lg:!h-[400px] block ml-[20vw]'>
                 <ambientLight intensity={1} />
                 <directionalLight color="#bbbbbb" position={[6, 3, 3]} />
                 <Suspense fallback={null}>
@@ -185,7 +186,7 @@ function index() {
                 </Suspense>
             </Canvas>
 
-            <section className='block ml-auto mr-auto mt-[100px] p-[30px] text-justify w-[50vw] min-w-[375px] md:mr-0 mb-[200px]'>
+            <section className='block ml-auto mr-auto mt-[20px] p-[30px] text-justify w-[50vw] min-w-[375px] md:mr-0 mb-[200px]'>
 
                 <motion.div
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
@@ -233,6 +234,8 @@ function index() {
                 </motion.div>
 
             </section>
+
+            <Laptop />
 
 
             <section className='mt-[200px] mb-[10px]'>
@@ -380,6 +383,7 @@ function index() {
             </a>
 
             <br />
+
 
             <Marquee
                 className='marquee'
