@@ -93,7 +93,7 @@ function index() {
     return (
         <div className='bg-[#f9f5e9] dark:bg-[#171717] ease-in duration-200'>
             <ParallaxBanner style={{ aspectRatio: '2 / 1' }} className="min-h-[1500px] lg:h-[110vh] xl:h-[115vh] max-w-[100vw]">
-                <ParallaxBannerLayer image="boston2.jpg" speed={-40} />
+                <ParallaxBannerLayer image="boston2.jpg" speed={0} />
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
                     <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] relative mt-[100px] md:w-[200px] xl:w-[250px]" />
                     <div className="content w-[92vw] pb-[30px] rounded-sm mt-[30px] md:mt-5 bg-[#ffffff77] dark:bg-[#00000045] backdrop-blur-[2px] border-[1px] 
@@ -269,7 +269,7 @@ function index() {
             </section>
 
             <ParallaxBanner style={{ aspectRatio: '2 / 1' }} className="h-[3000px] min-h-[1250px] xl:h-[100vh]">
-                <ParallaxBannerLayer image="trylon.jpeg" speed={-20} />
+                <ParallaxBannerLayer image="trylon.jpeg" speed={0} />
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
                     <Parallax speed={10} className="rounded-lg bg-opacity-50 overflow-hidden pt-[50px] pb-[50px]">
                         <motion.div
