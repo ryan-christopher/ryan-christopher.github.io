@@ -198,7 +198,6 @@ input:checked + .slideBtnTg:before {
 }
 
 .landing-flex-item-right {
-  padding: 10px;
   flex: 50%;
 }
 

@@ -35,7 +35,7 @@ function Model({ open, hinge, ...props }) {
             onPointerOver={(e) => (handleOver(e))}
             onPointerOut={(e) => setHovered(false)}
             dispose={null}>
-            <three.group rotation-x={hinge} position={[0, 0.04, 0.41]}>
+            <three.group rotation-x={hinge} position={[0, -0.04, 0.41]}>
                 <group position={[0, 2.96, -0.13]} rotation={[Math.PI / 2, 0, 0]}>
                     <mesh material={materials.aluminium} geometry={nodes['Cube008'].geometry} />
                     <mesh material={materials['matte.001']} geometry={nodes['Cube008_1'].geometry} />
@@ -55,11 +55,8 @@ function Model({ open, hinge, ...props }) {
 
 
 export default function Laptop() {
-    // This flag controls open state, alternates between true & false
     const [open, setOpen] = useState(false)
-    // We turn this into a spring animation that interpolates between 0 and 1
     const props = useSpring({ open: Number(open) })
-
 
     function handleClick(e) {
         e.stopPropagation();
@@ -67,8 +64,10 @@ export default function Laptop() {
     }
 
     return (
-        <web.main className="!w-[90vw] block ml-auto mr-auto !h-[600px] lg:!h-[900px] rounded-[10px] border-2 border-white" style={{ background: props.open.to([0, 1], ['#2b2422', '#60504C']) }}>
-            <web.h5 className="lg:!translate-y-[300px] font-['Atami_Display'] text-[55px] uppercase" style={{ opacity: props.open.to([0, 1], [1, 0]), transform: props.open.to((o) => `translateY(${o * 50 + 150}px)`) }}>
+        <web.main className="!w-[90vw] block ml-auto mr-auto !h-[600px] lg:!h-[900px] rounded-[10px] border-[1px] border-white text-white"
+            style={{ background: props.open.to([0, 1], ['#2b2422', '#60504C']) }}>
+            <web.h5 className="font-['Atami_Display'] text-[55px] lg:text-[80px] uppercase"
+                style={{ opacity: props.open.to([0, 1], [1, 0]), transform: props.open.to((o) => `translateY(${o * 50 + 150}px)`) }}>
                 I like to <br /> use this...
             </web.h5>
             <Canvas dpr={[1, 2]} camera={{ position: [0, 0, -30], fov: 35 }}>
@@ -82,10 +81,12 @@ export default function Laptop() {
                 </Suspense>
                 <ContactShadows position={[0, -4.5, 0]} opacity={0.4} scale={20} blur={1.75} far={4.5} />
             </Canvas>
-            <web.h5 className="lg:!translate-y-[-160px]" style={{ opacity: props.open.to([0, 1], [1, 0]), transform: props.open.to((o) => `translateY(${o * -50 - 100}px)`) }}>
+            <web.h5 className="lg:!translate-y-[-160px]"
+                style={{ opacity: props.open.to([0, 1], [1, 0]), transform: props.open.to((o) => `translateY(${o * -50 - 100}px)`) }}>
                 (psst, click me!)
             </web.h5>
-            <web.h5 className="font-['Atami_Display'] text-[40px] uppercase" style={{ opacity: props.open.to([0, 1], [0, 1]), transform: props.open.to((o) => `translateY(${o * 50 - 200}px)`) }}>
+            <web.h5 className="font-['Atami_Display'] text-[45px] uppercase lg:mt-[-50px]"
+                style={{ opacity: props.open.to([0, 1], [0, 1]), transform: props.open.to((o) => `translateY(${o * 50 - 225}px)`) }}>
                 To make <br /> cool things
             </web.h5>
         </web.main>
