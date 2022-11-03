@@ -294,7 +294,7 @@ function index() {
                                 and NPM packages such as THREE.js, Framer Motion, and React Scroll
                                 Parallax.</p>
                             <img src="portfoliopreview.png" alt="Landing page of this website."
-                                className='w-[65%] min-w-[200px] block ml-auto mr-auto mt-[30px] mb-[30px] rounded-md' />
+                                className='w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] rounded-md' />
                             <a href="https://github.com/ryan-christopher/ryan-christopher.github.io" target={"_blank"} rel="noreferrer"
                                 className='relative ml-[50%] translate-x-[-125px] text-[30px] uppercase flex justify-center items-center h-[50px] 
                                 border-2 border-[#E1251E] rounded-[50px] w-[250px] text-center mb-[30px]'>
@@ -337,7 +337,7 @@ function index() {
                                 used by teachers at The Coder School.
                             </p>
                             <img src="tcspreview.png" alt="A snippet of a coding tutorial I made."
-                                className='w-[65%] min-w-[200px] block ml-auto mr-auto mt-[30px] mb-[30px] rounded-md' />
+                                className='w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] rounded-md' />
                             <a href="https://github.com/ryan-christopher/tcs" target={"_blank"} rel="noreferrer"
                                 className='relative ml-[50%] translate-x-[-125px] text-[30px] uppercase flex justify-center items-center h-[50px] 
                                 border-2 border-[#24DB3F] rounded-[50px] w-[250px] text-center mb-[30px]'>
@@ -380,7 +380,7 @@ function index() {
                                 the front end developer and frequently assisted back end development as well.
                             </p>
                             <img src="planitpreview.png" alt="Landing page of the web app Planit I helped make as a college project."
-                                className='w-[65%] min-w-[200px] block ml-auto mr-auto mt-[30px] mb-[30px] rounded-md' />
+                                className='w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] rounded-md' />
                             <a href="https://github.com/ryan-christopher/cs411-planit" target={"_blank"} rel="noreferrer"
                                 className='relative ml-[50%] translate-x-[-125px] text-[30px] uppercase flex justify-center items-center h-[50px] 
                                 border-2 border-[#0F60F0] rounded-[50px] w-[250px] text-center mb-[30px]'>
