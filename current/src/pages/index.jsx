@@ -63,17 +63,31 @@ const variants = {
 }
 
 const CoffeeCup = () => {
-    const fbx = useLoader(FBXLoader, "./coffee_cup_fbx/Paper_coffee_cup.fbx");
-    fbx.position.y = -0.5
-    fbx.rotation.x = 0
-    fbx.rotation.z = 0
-    fbx.rotation.x += 0.1;
-    fbx.rotation.z -= 0.05
+    const coffeefbx = useLoader(FBXLoader, "./coffee_cup_fbx/Paper_coffee_cup.fbx");
+    coffeefbx.position.y = -0.5
+    coffeefbx.rotation.x = 0
+    coffeefbx.rotation.z = 0
+    coffeefbx.rotation.x += 0.1;
+    coffeefbx.rotation.z -= 0.05
     useFrame(() => {
-        fbx.rotation.y -= 0.0075
+        coffeefbx.rotation.y -= 0.0075
     })
-    return <primitive object={fbx} scale={0.011} />;
+    return <primitive object={coffeefbx} scale={0.011} />;
 };
+
+const Midi = () => {
+    const midi = useLoader(FBXLoader, "./midi/source/midi_03_exp.fbx");
+    midi.position.z = 0;
+    midi.position.x = 0
+    midi.position.y = 0
+    midi.rotation.x = -0.55
+    midi.rotation.z = -0.75
+    useFrame(() => {
+        midi.rotation.y += 0.005
+    })
+    return <primitive object={midi} scale={0.055} />;
+};
+
 
 function index() {
     return (
@@ -176,7 +190,7 @@ function index() {
                     </h2>
                 </motion.div>
             </Parallax>
-            <section className='block ml-auto mr-auto mt-[20px] p-[30px] text-justify w-[50vw] min-w-[375px] md:mr-0 mb-[200px]'>
+            <section className='block ml-auto mr-auto mt-[20px] p-[30px] text-justify w-[50vw] min-w-[375px] mb-[200px]'>
                 <motion.div
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
@@ -186,12 +200,12 @@ function index() {
                     }}
                     viewport={{ once: true }}
                     variants={variants}>
-                    <h2 className="uppercase text-[25px] text-left lg:text-[45px] max-w-[500px] lg:mt-[-200px]">
-                        I'm an aspiring developer who became intrigued with coding and technology
+                    <h2 className="uppercase text-[25px] text-left lg:text-[45px] max-w-[600px] lg:mt-[00px]">
+                        I'm an aspiring developer who became intrigued with programming and technology
                         in my first year of college.
                     </h2>
                 </motion.div>
-                <Canvas className='!w-[200px] !h-[200px] lg:!w-[300px] lg:!h-[300px] block ml-[10vw]'>
+                <Canvas className='!w-[200px] !h-[200px] lg:!w-[300px] lg:!h-[300px] block ml-auto mr-auto mt-[50px] mb-[50px]'>
                     <ambientLight intensity={1} />
                     <directionalLight color="#bbbbbb" position={[6, 3, 3]} />
                     <Suspense fallback={null}>
@@ -204,26 +218,36 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 0.4, duration: 0.7 }
+                        transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}
                     variants={variants}>
-                    <h2 className="uppercase text-[25px] text-right lg:text-[45px] max-w-[600px] lg:ml-[150px]">
+                    <h2 className="uppercase text-[25px] text-right lg:text-[45px] max-w-[600px] ml-auto">
                         I started off taking a web design class which
                         then quickly turned to classes on algorithms, python,
                         java, web app development, and software engineering.
                     </h2>
                 </motion.div>
+                <Canvas camera={{ position: [0, 0, -20] }}
+                    className='!w-[200px] !h-[300px] lg:!w-[500px] lg:!h-[400px] block lg:mt-[50px] lg:mb-[20px] ml-auto mr-auto'>
+                    <ambientLight intensity={1} />
+                    <directionalLight color="#bbbbbb" position={[6, 3, 3]} />
+                    <Suspense fallback={null}>
+                        <OrbitControls enableZoom={false} enablePan={false} />
+                        <Midi />
+                    </Suspense>
+                </Canvas>
+
                 <motion.div
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 0.6, duration: 0.7 }
+                        transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}
                     variants={variants}>
-                    <h2 className="uppercase text-[25px] text-left lg:text-[45px] max-w-[600px] lg:ml-[-300px]">
+                    <h2 className="uppercase text-left text-[25px] lg:text-[45px] max-w-[600px]">
                         Some of my interests are web development, software design, blockchain,
                         music, tennis, skating, and video games.
                     </h2>
@@ -286,7 +310,7 @@ function index() {
                                 <IoLogoGithub className=" text-purple-400" />
                             </span>
                             <hr className='text-[#171717] border-[#171717] dark:border-[#f9f5e9] w-[75%] block ml-auto mr-auto mt-[20px]' />
-                            <p className='text-[18px] w-[85%] text-justify block ml-auto mr-auto mt-[20px] leading-[28px]'>
+                            <p className='text-[18px] w-[85%] text-justify block ml-auto mr-auto mt-[20px] leading-[28px] xl:h-[300px]'>
                                 This site is a culmination of many sketches, debugging sessions, trial and error,
                                 and of course stack overflow pages viewed between the hours of 8pm and 4am.
                                 It was made to host my portfolio as well as serve as an entry in my
@@ -294,7 +318,7 @@ function index() {
                                 and NPM packages such as THREE.js, Framer Motion, and React Scroll
                                 Parallax.</p>
                             <img src="portfoliopreview.png" alt="Landing page of this website."
-                                className='w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] rounded-md' />
+                                className='w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] xl:mb-[60px] rounded-md' />
                             <a href="https://github.com/ryan-christopher/ryan-christopher.github.io" target={"_blank"} rel="noreferrer"
                                 className='relative ml-[50%] translate-x-[-125px] text-[30px] uppercase flex justify-center items-center h-[50px] 
                                 border-2 border-[#E1251E] rounded-[50px] w-[250px] text-center mb-[30px]'>
@@ -319,7 +343,7 @@ function index() {
                                 transition: { delay: 0.25, duration: 0.7 }
                             }}
                             viewport={{ once: true }}>
-                            <h3 className="text-[37px] lg:text-[45px] uppercase font-['Atami'] pt-[20px]">TCS Curriculum</h3>
+                            <h3 className="text-[37px] mt-[5px] pb-[10px] uppercase font-['Atami'] pt-[20px]">TCS Curriculum</h3>
                             <hr className='text-[#171717] border-[#171717] dark:border-[#f9f5e9] w-[75%] block ml-auto mr-auto pb-[10px]' />
                             <p className='text-[20px]'>I like to teach things.</p>
                             <span className='mt-[20px] w-[74%] flex ml-[13%] justify-between text-[30px]'>
@@ -330,14 +354,14 @@ function index() {
                                 <SiJavascript className=" text-yellow-400" />
                             </span>
                             <hr className='text-[#171717] border-[#171717] dark:border-[#f9f5e9] w-[75%] block ml-auto mr-auto mt-[20px]' />
-                            <p className='text-[18px] w-[85%] text-justify block ml-auto mr-auto mt-[20px] leading-[28px]'>
+                            <p className='text-[18px] w-[85%] text-justify block ml-auto mr-auto mt-[20px] leading-[28px] xl:h-[300px]'>
                                 I am encouraged to have unique projects to teach students at The Coder School, and as such I have created a
                                 list of 30+ self made and open source projects. Material includes scratch programs, python games, web apps, and more.
                                 There are also some step by step tutorials on how to create certain projects. The curriculum I have made is now regularly
                                 used by teachers at The Coder School.
                             </p>
                             <img src="tcspreview.png" alt="A snippet of a coding tutorial I made."
-                                className='w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] rounded-md' />
+                                className='w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] xl:mb-[60px] rounded-md' />
                             <a href="https://github.com/ryan-christopher/tcs" target={"_blank"} rel="noreferrer"
                                 className='relative ml-[50%] translate-x-[-125px] text-[30px] uppercase flex justify-center items-center h-[50px] 
                                 border-2 border-[#24DB3F] rounded-[50px] w-[250px] text-center mb-[30px]'>
@@ -373,14 +397,14 @@ function index() {
                                 <IoLogoCss3 className=" text-blue-500" />
                             </span>
                             <hr className='text-[#171717] border-[#171717] dark:border-[#f9f5e9] w-[75%] block ml-auto mr-auto mt-[20px]' />
-                            <p className='text-[18px] w-[85%] text-justify block ml-auto mr-auto mt-[20px] leading-[28px]'>
+                            <p className='text-[18px] w-[85%] text-justify block ml-auto mr-auto mt-[20px] leading-[28px] xl:h-[300px]'>
                                 For my final semester of college I was placed in a team for a software engineering course. Planit is a web app with
                                 a decoupled architecture using a React front end and Flask back end. It allows users to quickly see
                                 areas of interest near to them with step by step instructions through API calls to Yelp and GraphHopper. I was
                                 the front end developer and frequently assisted back end development as well.
                             </p>
                             <img src="planitpreview.png" alt="Landing page of the web app Planit I helped make as a college project."
-                                className='w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] rounded-md' />
+                                className='w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] xl:mb-[60px] rounded-md' />
                             <a href="https://github.com/ryan-christopher/cs411-planit" target={"_blank"} rel="noreferrer"
                                 className='relative ml-[50%] translate-x-[-125px] text-[30px] uppercase flex justify-center items-center h-[50px] 
                                 border-2 border-[#0F60F0] rounded-[50px] w-[250px] text-center mb-[30px]'>

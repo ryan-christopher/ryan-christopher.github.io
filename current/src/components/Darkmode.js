@@ -45,19 +45,22 @@ function Darkmode() {
             else {
                 darkModeIcon.classList.toggle("activeTheme")
                 lightModeIcon.classList.toggle("inactiveTheme")
+                document.documentElement.classList.add('dark')
                 return setDarkToggle(true)
             }
         }
         // If they haven't been explicit, let's check the media
         // query
+        /*
         const mql = window.matchMedia('(prefers-color-scheme: dark)');
         const hasMediaQueryPreference = typeof mql.matches === 'boolean';
         if (hasMediaQueryPreference) {
             return mql.matches ? setDarkToggle(true) : setDarkToggle(false);
         }
+        */
         // If they are using a browser/OS that doesn't support
         // color themes, let's default to 'light'.
-        setDarkToggle(false);
+        setDarkToggle(true);
     }
     React.useEffect(() => {
         darkModeIcon = document.getElementById("darkModeIcon")
