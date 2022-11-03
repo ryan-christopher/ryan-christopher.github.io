@@ -244,7 +244,7 @@ function index() {
                 <hr className='text-[#171717] border-[#171717] dark:border-[#f9f5e9] w-[95vw] block ml-auto mr-auto mt-[0px] pb-[5px]' />
             </section>
 
-            <ParallaxBanner style={{ aspectRatio: '2 / 1' }} className="h-[3000px] xl:h-[100vh]">
+            <ParallaxBanner style={{ aspectRatio: '2 / 1' }} className="h-[3000px] min-h-[1250px] xl:h-[100vh]">
                 <ParallaxBannerLayer image="trylon.jpeg" speed={-20} />
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
                     <Parallax speed={10} className="rounded-lg bg-opacity-50 overflow-hidden pt-[50px] pb-[50px]">
