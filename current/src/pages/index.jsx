@@ -92,8 +92,8 @@ function index() {
                     <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] relative mt-[100px] md:w-[200px] xl:w-[250px]" />
                     <div className="content w-[92vw] pb-[30px] rounded-sm mt-[30px] md:mt-5 bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-[6px] border-[1px] 
                         border-[#171717] dark:border-[#dfd5c1] ease-in duration-200">
-                        <h2 id="introtext" className='glitch text-center pt-[20px] pb-[20px] m:pt-[50px] m:pb-[50px] xl:pt-[100px] xl:pb-[100px] 
-                            text-[#171717] text-[52px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[120px] lg:text-[80px] md:text-[60px] uppercase'>
+                        <h2 id="introtext" className='glitch text-center pt-[40px] pb-[0px] m:pt-[50px] m:pb-[50px] xl:pt-[100px] xl:pb-[100px] 
+                            text-[#171717] text-[48px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[120px] lg:text-[80px] md:text-[60px] uppercase'>
                             Hey, I'm Ryan
                         </h2>
                         <div className="landing-flex-container p-[30px] rounded-md md:mt-5 ease-in duration-200">
