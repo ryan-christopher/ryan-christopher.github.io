@@ -6,7 +6,6 @@ function Navbar() {
 
     return (
         <div>
-
             <div className="creditnavbar bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.5)] backdrop-blur-sm ease-in duration-200">
             </div>
             <div className="creditbutton hover:cursor-pointer">

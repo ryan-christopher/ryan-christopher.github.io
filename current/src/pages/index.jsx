@@ -87,7 +87,7 @@ function index() {
     return (
         <div className='bg-[#dfd5c1] dark:bg-[#171717] ease-in duration-200'>
             <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="min-h-[1500px] lg:h-[110vh] xl:h-[115vh] max-w-[100vw]">
-                <ParallaxBannerLayer image="boston2.jpg" speed={15} />
+                <ParallaxBannerLayer image="boston2.jpg" speed={0} />
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
                     <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] relative mt-[100px] md:w-[200px] xl:w-[250px]" />
                     <div className="content w-[92vw] pb-[30px] rounded-sm mt-[30px] md:mt-5 bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-[6px] border-[1px] 
@@ -254,7 +254,7 @@ function index() {
             </section>
 
             <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="h-[3000px] min-h-[1350px] xl:h-[100vh]">
-                <ParallaxBannerLayer image="birmingham.jpg" speed={15} />
+                <ParallaxBannerLayer image="birmingham.jpg" speed={0} />
                 <ParallaxBannerLayer className='bg-[#75757544] dark:bg-[#00000066] ease-in duration-200' speed={0}>
                     <Parallax speed={8} className="rounded-lg bg-opacity-50 overflow-hidden pt-[70px] pb-[30px]">
                         <motion.div
@@ -407,7 +407,6 @@ function index() {
                 </ParallaxBannerLayer>
             </ParallaxBanner>
 
-
             <h2 className='text-[47px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] w-[200px] bg-[#dfd5c1] 
             dark:bg-[#171717] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[100px]'>
                 More
@@ -448,7 +447,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 0.2, duration: 0.5 }
+                        transition: { delay: 0, duration: 0.5 }
                     }}
                     viewport={{ once: true }}>
                     <a href="https://ryan-christopher.github.io/beaconstreetrecords/" target={"_blank"} rel="noreferrer"
@@ -474,7 +473,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 0.4, duration: 0.5 }
+                        transition: { delay: 0, duration: 0.5 }
                     }}
                     viewport={{ once: true }}>
                     <a href="https://github.com/ryan-christopher/tcs/blob/main/python/games/gameoflife.py" target={"_blank"} rel="noreferrer"
@@ -500,7 +499,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 0.6, duration: 0.5 }
+                        transition: { delay: 0, duration: 0.5 }
                     }}
                     viewport={{ once: true }}>
                     <a href="https://ryan-christopher.github.io/fa550project/" target={"_blank"} rel="noreferrer"
@@ -526,7 +525,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 0.8, duration: 0.5 }
+                        transition: { delay: 0, duration: 0.5 }
                     }}
                     viewport={{ once: true }}>
                     <a href="https://github.com/ryan-christopher/tcs/blob/main/python/games/shakespearebot.py" target={"_blank"} rel="noreferrer"
@@ -552,7 +551,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 1, duration: 0.5 }
+                        transition: { delay: 0, duration: 0.5 }
                     }}
                     viewport={{ once: true }}>
                     <a href="https://github.com/ryan-christopher/tcs/tree/main/webroxcamp/ourcamp" target={"_blank"} rel="noreferrer"
@@ -579,7 +578,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 1.2, duration: 0.5 }
+                        transition: { delay: 0, duration: 0.5 }
                     }}
                     viewport={{ once: true }}>
                     <a href="https://github.com/ryan-christopher/tcs/blob/main/python/applications/fizzbuzz.py" target={"_blank"} rel="noreferrer"
@@ -605,7 +604,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 1.4, duration: 0.5 }
+                        transition: { delay: 0, duration: 0.5 }
                     }}
                     viewport={{ once: true }}>
                     <a href="https://scratch.mit.edu/projects/622549017/" target={"_blank"} rel="noreferrer"
@@ -631,7 +630,7 @@ function index() {
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 1.6, duration: 0.5 }
+                        transition: { delay: 0, duration: 0.5 }
                     }}
                     viewport={{ once: true }}>
                     <a href="https://github.com/ryan-christopher/walletwatch" target={"_blank"} rel="noreferrer"
@@ -680,6 +679,7 @@ function index() {
                 <MdDesignServices className="marqueeicon" />
                 <RiPlantFill className="marqueeicon" />
             </Marquee>
+
             <Credits />
             <Footer />
         </div >
