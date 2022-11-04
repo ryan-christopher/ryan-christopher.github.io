@@ -154,7 +154,6 @@ function index() {
                     </span>
                 </ParallaxBannerLayer>
             </ParallaxBanner>
-            {/*}
             <section className='mt-[25px] pb-[100px]'>
                 <CarouselText baseVelocity={-2}>
                     <IoLogoPython className="marqueeicon text-[45px] xl:text-[60px] text-yellow-200" />
@@ -165,7 +164,6 @@ function index() {
                     <IoLogoGithub className="marqueeicon text-[45px] xl:text-[60px] text-purple-400" />
                 </CarouselText>
             </section>
-    */}
 
             <Parallax speed={10} className="rounded-lg bg-opacity-50">
                 <motion.div

@@ -23,7 +23,7 @@ function CarouselText({ children, baseVelocity = 100 }: ParallaxProps) {
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
   const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 50,
+    damping: 0,
     stiffness: 200
   });
   const velocityFactor = useTransform(smoothVelocity, [0, 1500], [0, 4], {
