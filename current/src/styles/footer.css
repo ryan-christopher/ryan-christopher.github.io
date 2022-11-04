@@ -7,8 +7,6 @@ h3.footertext {
 }
 
 .flex-container {
-    background-color: #171717;
-    color: #f9f5e9;
     display: flex;
     flex-direction: row;
     font-size: 30px;
@@ -71,12 +69,10 @@ img#footerpicture {
 }
 
 .social-link {
-    color: #f9f5e9;
     display: block;
     padding: 10px;
     width: 65px;
     height: 65px;
-    border: 2px solid #f9f5e9;
     border-radius: 50%;
     transform: scale(1);
     transition: all 0.4s;
@@ -84,6 +80,7 @@ img#footerpicture {
 
 .social-link:hover {
     background-color: rgb(22, 27, 34);
+    color: #f9f5e9;
     border: 2px solid #6e5494;
     transform: scale(1.1);
     transition: all 0.4s;

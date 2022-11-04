@@ -5,10 +5,11 @@ import "../styles/footer.css"
 function Footer() {
     return (
         <div>
-            <div className="flex-container text-[#171717] bg-[#f9f5e9] dark:text-[#f9f5e9] dark:bg-[#171717] ease-in duration-200">
+            <div className="flex-container text-[#171717] bg-[#dfd5c1] dark:text-[#f9f5e9] dark:bg-[#171717] ease-in duration-200">
                 <div className="flex-item-left">
                     <div className="flex-container-social">
-                        <a href="https://github.com/ryan-christopher/" rel="noreferrer" target="_blank"><IoLogoGithub className="social-link text-black dark:text-white ease-in duration-200" id="github" />
+                        <a href="https://github.com/ryan-christopher/" rel="noreferrer" target="_blank"><IoLogoGithub
+                            className="social-link text-black dark:text-white ease-in duration-200 border-2 border-[#171717] dark:border-[#f9f5e9]" id="github" />
                         </a>
                     </div>
                 </div>

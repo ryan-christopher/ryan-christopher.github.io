@@ -178,7 +178,7 @@ function index() {
                     </h2>
                 </motion.div>
             </Parallax>
-            <section className='block ml-auto mr-auto mt-[20px] p-[30px] text-justify w-[50vw] min-w-[375px] mb-[200px]'>
+            <section className='block ml-auto mr-auto mt-[20px] p-[30px] text-justify w-[50vw] min-w-[300px] mb-[200px]'>
                 <motion.div
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
@@ -192,7 +192,7 @@ function index() {
                         in my first year of college.
                     </h2>
                 </motion.div>
-                <Canvas className='!w-[200px] !h-[200px] lg:!w-[300px] lg:!h-[300px] block ml-auto mr-auto mt-[50px] mb-[50px]'>
+                <Canvas className='!w-[200px] !h-[200px] lg:!w-[300px] lg:!h-[300px] block ml-auto mr-auto mt-[50px] mb-[50px] hover:cursor-pointer'>
                     <ambientLight intensity={1} />
                     <directionalLight color="#bbbbbb" position={[6, 3, 3]} />
                     <Suspense fallback={null}>
@@ -215,7 +215,7 @@ function index() {
                     </h2>
                 </motion.div>
                 <Canvas camera={{ position: [0, 0, -20] }}
-                    className='!w-[200px] !h-[300px] lg:!w-[500px] lg:!h-[400px] block lg:mt-[50px] lg:mb-[20px] ml-auto mr-auto'>
+                    className='!w-[200px] !h-[300px] lg:!w-[500px] lg:!h-[400px] block lg:mt-[50px] lg:mb-[20px] ml-auto mr-auto hover:cursor-pointer'>
                     <ambientLight intensity={1} />
                     <directionalLight color="#bbbbbb" position={[6, 3, 3]} />
                     <Suspense fallback={null}>
@@ -239,7 +239,7 @@ function index() {
                 </motion.div>
             </section>
 
-            <Laptop />
+            <Laptop className="hover:cursor-pointer" />
 
             <section className='mt-[250px] mb-[10px]'>
                 <CarouselText baseVelocity={-3}>
@@ -253,7 +253,7 @@ function index() {
                 <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[95vw] block ml-auto mr-auto mt-[0px] pb-[5px]' />
             </section>
 
-            <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="h-[3000px] min-h-[1250px] xl:h-[100vh]">
+            <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="h-[3000px] min-h-[1350px] xl:h-[100vh]">
                 <ParallaxBannerLayer image="birmingham.jpg" speed={15} />
                 <ParallaxBannerLayer className='bg-[#75757544] dark:bg-[#00000066] ease-in duration-200' speed={0}>
                     <Parallax speed={8} className="rounded-lg bg-opacity-50 overflow-hidden pt-[70px] pb-[30px]">
@@ -302,7 +302,7 @@ function index() {
                                 and NPM packages such as THREE.js, Framer Motion, and React Scroll
                                 Parallax.</p>
                             <img src="portfoliopreview.png" alt="Landing page of this website."
-                                className='w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] xl:mb-[60px] rounded-md' />
+                                className='w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] xl:mb-[60px] rounded-md border-2 border-[#E1251E]' />
                             <a href="https://github.com/ryan-christopher/ryan-christopher.github.io" target={"_blank"} rel="noreferrer"
                                 className='relative ml-[50%] translate-x-[-125px] text-[30px] uppercase flex justify-center items-center h-[50px] 
                                 border-2 border-[#E1251E] rounded-[50px] w-[250px] text-center mb-[30px]'>
@@ -345,7 +345,7 @@ function index() {
                                 used by teachers at The Coder School.
                             </p>
                             <img src="tcspreview.png" alt="A snippet of a coding tutorial I made."
-                                className='w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] xl:mb-[60px] rounded-md' />
+                                className='w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] xl:mb-[60px] rounded-md border-2 border-[#24DB3F]' />
                             <a href="https://github.com/ryan-christopher/tcs" target={"_blank"} rel="noreferrer"
                                 className='relative ml-[50%] translate-x-[-125px] text-[30px] uppercase flex justify-center items-center h-[50px] 
                                 border-2 border-[#24DB3F] rounded-[50px] w-[250px] text-center mb-[30px]'>
@@ -388,7 +388,7 @@ function index() {
                                 the front end developer and frequently assisted back end development as well.
                             </p>
                             <img src="planitpreview.png" alt="Landing page of the web app Planit I helped make as a college project."
-                                className='w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] xl:mb-[60px] rounded-md' />
+                                className='w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] xl:mb-[60px] rounded-md border-2 border-[#0F60F0]' />
                             <a href="https://github.com/ryan-christopher/cs411-planit" target={"_blank"} rel="noreferrer"
                                 className='relative ml-[50%] translate-x-[-125px] text-[30px] uppercase flex justify-center items-center h-[50px] 
                                 border-2 border-[#0F60F0] rounded-[50px] w-[250px] text-center mb-[30px]'>
@@ -407,48 +407,253 @@ function index() {
                 </ParallaxBannerLayer>
             </ParallaxBanner>
 
-            <section className='block ml-auto mr-auto mt-[100px] p-[30px] text-justify w-[60vw] min-w-[375px] md:ml-0 mb-[200px]'>
+
+            <h2 className='text-[47px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] w-[200px] bg-[#dfd5c1] 
+            dark:bg-[#171717] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[100px]'>
+                More
+            </h2>
+            <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
+            block ml-auto mr-auto relative top-[-40px] z-0 overflow-hidden' />
+
+            <div className='flex flex-wrap justify-center pt-[50px] w-[90vw] md:w-[50vw] min-w-[320px] ml-auto mr-auto'>
                 <motion.div
+                    className='lg:m-[10px]'
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { duration: 0.7 }
+                        transition: { delay: 0, duration: 0.5 }
                     }}
                     viewport={{ once: true }}>
-                    <h2>hihihihihiihi1</h2>
+                    <a href="https://ryan-christopher.github.io/wordle/" target={"_blank"} rel="noreferrer"
+                        className='relative text-[20px] md:text-[25px]  uppercase flex justify-center items-center h-[50px] 
+                                border-2 border-[#171717] dark:border-[#dfd5c1] rounded-[50px] w-[150px] md:w-[200px] text-center mb-[5px] md:mb-[30px]'>
+                        <span className='inline-block align-baseline text-center opacity-100 hover:opacity-0 
+                        ease-linear duration-200'>
+                            My Wordle
+                        </span>
+                        <Marquee
+                            className='!absolute top-0 left-0 w-[100%] !h-[100%] rounded-[50px] bg-[#171717] text-[#f9f5e9] opacity-0 hover:opacity-100 ease-linear duration-150'
+                            speed={125}
+                            gradient={false}
+                            direction={'left'}>
+                            <span className='pl-[15px] pr-[15px]'>My Wordle</span>
+                            <span className='pl-[15px] pr-[15px]'>My Wordle</span>
+                        </Marquee>
+                    </a>
                 </motion.div>
                 <motion.div
+                    className='lg:m-[10px]'
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 0.2, duration: 0.7 }
+                        transition: { delay: 0.2, duration: 0.5 }
                     }}
                     viewport={{ once: true }}>
-                    <h2>heyheyheyheyhey1</h2>
+                    <a href="https://ryan-christopher.github.io/beaconstreetrecords/" target={"_blank"} rel="noreferrer"
+                        className='relative text-[20px] md:text-[25px] uppercase flex justify-center items-center h-[50px] 
+                                border-2 border-[#171717] dark:border-[#dfd5c1] rounded-[50px] w-[295px] md:w-[380px] text-center mb-[5px] md:mb-[30px]'>
+                        <span className='inline-block align-baseline text-center opacity-100 hover:opacity-0 
+                        ease-linear duration-200'>
+                            Beacon Street Records
+                        </span>
+                        <Marquee
+                            className='!absolute top-0 left-0 w-[100%] !h-[100%] rounded-[50px] bg-[#171717] text-[#f9f5e9] opacity-0 hover:opacity-100 ease-linear duration-150'
+                            speed={125}
+                            gradient={false}
+                            direction={'left'}>
+                            <span className='pl-[15px] pr-[15px]'>Beacon Street Records</span>
+                            <span className='pl-[15px] pr-[15px]'>Beacon Street Records</span>
+                        </Marquee>
+                    </a>
                 </motion.div>
                 <motion.div
+                    className='lg:m-[10px]'
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 0.4, duration: 0.7 }
+                        transition: { delay: 0.4, duration: 0.5 }
                     }}
                     viewport={{ once: true }}>
-                    <h2>hellohellohellohello1</h2>
+                    <a href="https://github.com/ryan-christopher/tcs/blob/main/python/games/gameoflife.py" target={"_blank"} rel="noreferrer"
+                        className='relative text-[20px] md:text-[25px]  uppercase flex justify-center items-center h-[50px] 
+                                border-2 border-[#171717] dark:border-[#dfd5c1] rounded-[50px] w-[280px] md:w-[350px] text-center mb-[5px] md:mb-[30px]'>
+                        <span className='inline-block align-baseline text-center opacity-100 hover:opacity-0 
+                        ease-linear duration-200'>
+                            Conway's Game of Life
+                        </span>
+                        <Marquee
+                            className='!absolute top-0 left-0 w-[100%] !h-[100%] rounded-[50px] bg-[#171717] text-[#f9f5e9] opacity-0 hover:opacity-100 ease-linear duration-150'
+                            speed={125}
+                            gradient={false}
+                            direction={'left'}>
+                            <span className='pl-[15px] pr-[15px]'>Conway's Game of Life</span>
+                            <span className='pl-[15px] pr-[15px]'>Conway's Game of Life</span>
+                        </Marquee>
+                    </a>
                 </motion.div>
                 <motion.div
+                    className='lg:m-[10px]'
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
                         opacity: 1,
                         transform: "translateY(0px)",
-                        transition: { delay: 0.6, duration: 0.7 }
+                        transition: { delay: 0.6, duration: 0.5 }
                     }}
                     viewport={{ once: true }}>
-                    <h2>yoyoyoyoyoyoyo1</h2>
+                    <a href="https://ryan-christopher.github.io/fa550project/" target={"_blank"} rel="noreferrer"
+                        className='relative text-[20px] md:text-[25px]  uppercase flex justify-center items-center h-[50px] 
+                                border-2 border-[#171717] dark:border-[#dfd5c1] rounded-[50px] w-[260px] md:w-[330px] text-center mb-[5px] md:mb-[30px]'>
+                        <span className='inline-block align-baseline text-center opacity-100 hover:opacity-0 
+                        ease-linear duration-200'>
+                            Arts Internship Site
+                        </span>
+                        <Marquee
+                            className='!absolute top-0 left-0 w-[100%] !h-[100%] rounded-[50px] bg-[#171717] text-[#f9f5e9] opacity-0 hover:opacity-100 ease-linear duration-150'
+                            speed={125}
+                            gradient={false}
+                            direction={'left'}>
+                            <span className='pl-[15px] pr-[15px]'>Arts Internship Site</span>
+                            <span className='pl-[15px] pr-[15px]'>Arts Internship Site</span>
+                        </Marquee>
+                    </a>
                 </motion.div>
-            </section>
+                <motion.div
+                    className='lg:m-[10px]'
+                    initial={{ opacity: 0, transform: "translateY(100px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        transform: "translateY(0px)",
+                        transition: { delay: 0.8, duration: 0.5 }
+                    }}
+                    viewport={{ once: true }}>
+                    <a href="https://github.com/ryan-christopher/tcs/blob/main/python/games/shakespearebot.py" target={"_blank"} rel="noreferrer"
+                        className='relative text-[20px] md:text-[25px]  uppercase flex justify-center items-center h-[50px] 
+                                border-2 border-[#171717] dark:border-[#dfd5c1] rounded-[50px] w-[225px] md:w-[290px] text-center mb-[5px] md:mb-[30px]'>
+                        <span className='inline-block align-baseline text-center opacity-100 hover:opacity-0 
+                        ease-linear duration-200'>
+                            Shakespeare Bot
+                        </span>
+                        <Marquee
+                            className='!absolute top-0 left-0 w-[100%] !h-[100%] rounded-[50px] bg-[#171717] text-[#f9f5e9] opacity-0 hover:opacity-100 ease-linear duration-150'
+                            speed={125}
+                            gradient={false}
+                            direction={'left'}>
+                            <span className='pl-[15px] pr-[15px]'>Shakespeare Bot</span>
+                            <span className='pl-[15px] pr-[15px]'>Shakespeare Bot</span>
+                        </Marquee>
+                    </a>
+                </motion.div>
+                <motion.div
+                    className='lg:m-[10px]'
+                    initial={{ opacity: 0, transform: "translateY(100px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        transform: "translateY(0px)",
+                        transition: { delay: 1, duration: 0.5 }
+                    }}
+                    viewport={{ once: true }}>
+                    <a href="https://github.com/ryan-christopher/tcs/tree/main/webroxcamp/ourcamp" target={"_blank"} rel="noreferrer"
+                        className='relative text-[20px] md:text-[25px]  uppercase flex justify-center items-center h-[50px] 
+                                border-2 border-[#171717] dark:border-[#dfd5c1] rounded-[50px] w-[265px] md:w-[340px] text-center mb-[5px] md:mb-[30px]'>
+                        <span className='inline-block align-baseline text-center opacity-100 hover:opacity-0 
+                        ease-linear duration-200'>
+                            Modal HTML Tutorial
+                        </span>
+                        <Marquee
+                            className='!absolute top-0 left-0 w-[100%] !h-[100%] rounded-[50px] bg-[#171717] text-[#f9f5e9] opacity-0 hover:opacity-100 ease-linear duration-150'
+                            speed={125}
+                            gradient={false}
+                            direction={'left'}
+                        >
+                            <span className='pl-[15px] pr-[15px]'>Modal HTML Tutorial</span>
+                            <span className='pl-[15px] pr-[15px]'>Modal HTML Tutorial</span>
+                        </Marquee>
+                    </a>
+                </motion.div>
+                <motion.div
+                    className='lg:m-[10px]'
+                    initial={{ opacity: 0, transform: "translateY(100px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        transform: "translateY(0px)",
+                        transition: { delay: 1.2, duration: 0.5 }
+                    }}
+                    viewport={{ once: true }}>
+                    <a href="https://github.com/ryan-christopher/tcs/blob/main/python/applications/fizzbuzz.py" target={"_blank"} rel="noreferrer"
+                        className='relative text-[20px] md:text-[25px]  uppercase flex justify-center items-center h-[50px] 
+                                border-2 border-[#171717] dark:border-[#dfd5c1] rounded-[50px] w-[270px] md:w-[345px] text-center mb-[5px] md:mb-[30px]'>
+                        <span className='inline-block align-baseline text-center opacity-100 hover:opacity-0 
+                        ease-linear duration-200'>
+                            FizzBuzz (of course!)
+                        </span>
+                        <Marquee
+                            className='!absolute top-0 left-0 w-[100%] !h-[100%] rounded-[50px] bg-[#171717] text-[#f9f5e9] opacity-0 hover:opacity-100 ease-linear duration-150'
+                            speed={125}
+                            gradient={false}
+                            direction={'left'}>
+                            <span className='pl-[15px] pr-[15px]'>FizzBuzz (of course!)</span>
+                            <span className='pl-[15px] pr-[15px]'>FizzBuzz (of course!)</span>
+                        </Marquee>
+                    </a>
+                </motion.div>
+                <motion.div
+                    className='lg:m-[10px]'
+                    initial={{ opacity: 0, transform: "translateY(100px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        transform: "translateY(0px)",
+                        transition: { delay: 1.4, duration: 0.5 }
+                    }}
+                    viewport={{ once: true }}>
+                    <a href="https://scratch.mit.edu/projects/622549017/" target={"_blank"} rel="noreferrer"
+                        className='relative text-[20px] md:text-[25px]  uppercase flex justify-center items-center h-[50px] 
+                                border-2 border-[#171717] dark:border-[#dfd5c1] rounded-[50px] w-[255px] md:w-[320px] text-center mb-[5px] md:mb-[30px]'>
+                        <span className='inline-block align-baseline text-center opacity-100 hover:opacity-0 
+                        ease-linear duration-200'>
+                            Scratch Tic Tac Toe
+                        </span>
+                        <Marquee
+                            className='!absolute top-0 left-0 w-[100%] !h-[100%] rounded-[50px] bg-[#171717] text-[#f9f5e9] opacity-0 hover:opacity-100 ease-linear duration-150'
+                            speed={125}
+                            gradient={false}
+                            direction={'left'}>
+                            <span className='pl-[15px] pr-[15px]'>Scratch Tic Tac Toe</span>
+                            <span className='pl-[15px] pr-[15px]'>Scratch Tic Tac Toe</span>
+                        </Marquee>
+                    </a>
+                </motion.div>
+                <motion.div
+                    className='lg:m-[10px]'
+                    initial={{ opacity: 0, transform: "translateY(100px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        transform: "translateY(0px)",
+                        transition: { delay: 1.6, duration: 0.5 }
+                    }}
+                    viewport={{ once: true }}>
+                    <a href="https://github.com/ryan-christopher/walletwatch" target={"_blank"} rel="noreferrer"
+                        className='relative text-[20px] md:text-[25px]  uppercase flex justify-center items-center h-[50px] 
+                                border-2 border-[#171717] dark:border-[#dfd5c1] rounded-[50px] w-[250px] md:w-[320px] text-center mb-[5px] md:mb-[30px]'>
+                        <span className='inline-block align-baseline text-center opacity-100 hover:opacity-0 
+                        ease-linear duration-200'>
+                            Wallet Watch (WIP)
+                        </span>
+                        <Marquee
+                            className='!absolute top-0 left-0 w-[100%] !h-[100%] rounded-[50px] bg-[#171717] text-[#f9f5e9] opacity-0 hover:opacity-100 ease-linear duration-150'
+                            speed={125}
+                            gradient={false}
+                            direction={'left'}>
+                            <span className='pl-[15px] pr-[15px]'>Wallet Watch</span>
+                            <span className='pl-[15px] pr-[15px]'>Wallet Watch</span>
+                        </Marquee>
+                    </a>
+                </motion.div>
+
+            </div>
+
 
             <Marquee
                 className='marquee'
