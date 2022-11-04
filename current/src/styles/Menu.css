@@ -301,7 +301,7 @@ h3#headername {
     letter-spacing: 1px;
 }
 
-@media (max-width: 410px ){
+@media (max-width: 430px ){
     h3#headername{
         font-size: 25px;
         top: 20px;

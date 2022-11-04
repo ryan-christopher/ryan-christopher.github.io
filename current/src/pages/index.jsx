@@ -117,7 +117,7 @@ function index() {
                                 </div>
                             </div>
                             <div className="landing-flex-item-right">
-                                <p className="block ml-auto mr-auto w-[95%] lg:w-[80%] m-[10px] text-[22px] text-justify">
+                                <p className="block ml-auto mr-auto w-[95%] lg:w-[60%] lg:mt-[-10px] mb-[10px] text-[22px] text-justify">
                                     I'm a recent Boston University grad who studied computer science and music.
                                 </p>
                                 <br />
@@ -131,7 +131,7 @@ function index() {
                                 </div>
                                 <hr className="h-[2px] w-[55%] min-w-[225px] block ml-auto mr-auto border-none rounded-sm bg-[#171717] dark:bg-[#dfd5c1] ease-in duration-200" />
                                 <br />
-                                <p className="block ml-auto mr-auto w-[95%] lg:w-[80%] m-[10px] text-[22px] text-justify">
+                                <p className="block ml-auto mr-auto w-[95%] lg:w-[60%] m-[10px] text-[22px] text-justify">
                                     I’m a classically trained musician turned programmer from Las Vegas aiming to use my
                                     interests in technology to build and design websites, web apps, and software.
                                 </p>
