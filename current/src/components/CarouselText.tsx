@@ -36,7 +36,6 @@ function CarouselText({ children, baseVelocity = 100 }: ParallaxProps) {
    * calculate
    */
   const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
-
   const directionFactor = useRef<number>(1);
   useAnimationFrame((t, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 2500);
@@ -52,7 +51,6 @@ function CarouselText({ children, baseVelocity = 100 }: ParallaxProps) {
     }
 
     moveBy += directionFactor.current * moveBy * velocityFactor.get();
-
     baseX.set(baseX.get() + moveBy);
   });
 

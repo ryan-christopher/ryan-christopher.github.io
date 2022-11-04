@@ -83,11 +83,13 @@ const Midi = () => {
 };
 
 
+
+
 function index() {
     return (
         <div className='bg-[#dfd5c1] dark:bg-[#171717] ease-in duration-200'>
             <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="min-h-[1500px] lg:h-[110vh] xl:h-[115vh] max-w-[100vw]">
-                <ParallaxBannerLayer image="boston2.jpg" speed={0} />
+                <ParallaxBannerLayer image="boston2.jpg" speed={10} />
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
                     <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] relative mt-[100px] md:w-[200px] xl:w-[250px]" />
                     <div className="content w-[92vw] pb-[30px] rounded-sm mt-[30px] md:mt-5 bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-[6px] border-[1px] 
@@ -96,6 +98,7 @@ function index() {
                             text-[#171717] text-[48px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[120px] lg:text-[80px] md:text-[60px] uppercase'>
                             Hey, I'm Ryan
                         </h2>
+
                         <div className="landing-flex-container p-[30px] rounded-md md:mt-5 ease-in duration-200">
                             <div className="landing-flex-item-left">
                                 <div id="slantText" className="scale-[0.9] min-w-[450px] w-[100vw] md:w-[100%] translate-x-[-130px] sm:translate-x-[-60px] 
@@ -151,7 +154,7 @@ function index() {
                     </span>
                 </ParallaxBannerLayer>
             </ParallaxBanner>
-
+            {/*}
             <section className='mt-[25px] pb-[100px]'>
                 <CarouselText baseVelocity={-2}>
                     <IoLogoPython className="marqueeicon text-[45px] xl:text-[60px] text-yellow-200" />
@@ -162,6 +165,7 @@ function index() {
                     <IoLogoGithub className="marqueeicon text-[45px] xl:text-[60px] text-purple-400" />
                 </CarouselText>
             </section>
+    */}
 
             <Parallax speed={10} className="rounded-lg bg-opacity-50">
                 <motion.div
@@ -250,11 +254,13 @@ function index() {
                     <h2 className="min-w-[45vw] ml-[30px]">System.out.print("Hello world -Ryan")</h2>
                     <h2 className="text-blue-500 ml-[20px] text-center xl:w-[30vw]">|</h2>
                 </CarouselText>
+
                 <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[95vw] block ml-auto mr-auto mt-[0px] pb-[5px]' />
             </section>
 
+
             <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="h-[3000px] min-h-[1350px] xl:h-[100vh]">
-                <ParallaxBannerLayer image="birmingham.jpg" speed={0} />
+                <ParallaxBannerLayer image="birmingham.jpg" speed={10} />
                 <ParallaxBannerLayer className='bg-[#75757544] dark:bg-[#00000066] ease-in duration-200' speed={0}>
                     <Parallax speed={8} className="rounded-lg bg-opacity-50 overflow-hidden pt-[70px] pb-[30px]">
                         <motion.div
