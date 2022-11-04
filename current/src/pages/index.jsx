@@ -244,7 +244,7 @@ function index() {
             <Laptop className="hover:cursor-pointer" />
 
             <section className='mt-[250px] mb-[10px]'>
-                <CarouselText baseVelocity={-3}>
+                <CarouselText baseVelocity={-2}>
                     <h2 className="min-w-[45vw] ml-[30px]">console.log("Hello world -Ryan")</h2>
                     <h2 className="text-red-500 ml-[30px] text-center xl:w-[30vw]">|</h2>
                     <h2 className="min-w-[45vw] ml-[30px]">print("Hello world -Ryan")</h2>
