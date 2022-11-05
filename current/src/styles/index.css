@@ -218,7 +218,7 @@ input:checked + .slideBtnTg:before {
     -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
     0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
 
-  animation: glitch 1500ms infinite;
+  animation: glitch 2s infinite;
 }
 
 .glitch span {
@@ -227,19 +227,6 @@ input:checked + .slideBtnTg:before {
   left: 0;
 }
 
-.glitch span:first-child {
-  animation: glitch 1650ms infinite;
-  transform: translate(-0.00125em, -0.00625em);
-  /* color: green; */
-  opacity: 0.8;
-}
-
-.glitch span:last-child {
-  animation: glitch 1375ms infinite;
-  transform: translate(0.00625em, 0.00125em);
-  /* color: red; */
-  opacity: 0.8;
-}
 
 /* https://web.dev/prefers-reduced-motion/#(bonus)-forcing-reduced-motion-on-all-websites */
 

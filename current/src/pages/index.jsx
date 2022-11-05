@@ -1,63 +1,25 @@
-import React from 'react'
 // Styles
 import "../styles/App.css"
 import "../styles/index.css"
-
 // Components
 import Footer from '../components/Footer'
 import Laptop from '../components/Laptop'
 import Credits from '../components/Credits'
+import CoffeeCup from '../components/CoffeeCup'
+import Midi from '../components/Midi'
 import ProjectCard from '../components/ProjectCard'
 import MarqueeLink from '../components/MarqueeLink'
-
 // Moving Text
 import { Parallax } from 'react-scroll-parallax';
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 import CarouselText from '../components/CarouselText.tsx';
 import { motion } from 'framer-motion';
-
-// 3D Models
-import { Canvas, useFrame, useLoader } from '@react-three/fiber'
-import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
-import { OrbitControls } from "@react-three/drei"
-import { Suspense } from 'react'
-
 // Icons
 import { SiJavascript } from "react-icons/si"
 import { IoLogoPython, IoLogoHtml5, IoLogoCss3, IoLogoGithub } from "react-icons/io"
 import { IoCodeSlash } from "react-icons/io5"
 import { FaReact } from "react-icons/fa"
 import { CgMusic } from "react-icons/cg"
-
-
-const CoffeeCup = () => {
-    const coffeefbx = useLoader(FBXLoader, "./coffee_cup_fbx/Paper_coffee_cup.fbx");
-    coffeefbx.position.y = -0.5
-    coffeefbx.rotation.x = 0
-    coffeefbx.rotation.z = 0
-    coffeefbx.rotation.x += 0.1;
-    coffeefbx.rotation.z -= 0.05
-    useFrame(() => {
-        coffeefbx.rotation.y -= 0.0075
-    })
-    return <primitive object={coffeefbx} scale={0.011} />;
-};
-
-const Midi = () => {
-    const midi = useLoader(FBXLoader, "./midi/source/midi_03_exp.fbx");
-    midi.position.z = 0;
-    midi.position.x = 0
-    midi.position.y = 0
-    midi.rotation.x = -0.55
-    midi.rotation.z = -0.75
-    useFrame(() => {
-        midi.rotation.y += 0.005
-    })
-    return <primitive object={midi} scale={0.055} />;
-};
-
-
-
 
 function index() {
     return (
@@ -72,7 +34,6 @@ function index() {
                             text-[#171717] text-[48px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[120px] lg:text-[80px] md:text-[60px] uppercase'>
                             Hey, I'm Ryan
                         </h2>
-
                         <div className="landing-flex-container p-[30px] rounded-md md:mt-5 ease-in duration-200">
                             <div className="landing-flex-item-left">
                                 <div id="slantText" className="scale-[0.9] min-w-[450px] w-[100vw] md:w-[100%] translate-x-[-130px] sm:translate-x-[-60px] 
@@ -123,8 +84,7 @@ function index() {
                 </ParallaxBannerLayer>
             </ParallaxBanner>
             <section className='mt-[25px] pb-[100px]'>
-
-                <CarouselText baseVelocity={-2}>
+                <CarouselText baseVelocity={-3}>
                     <IoLogoPython className="marqueeicon text-[45px] xl:text-[60px] text-yellow-200" />
                     <IoLogoHtml5 className="marqueeicon text-[45px] xl:text-[60px] text-red-500" />
                     <IoLogoCss3 className="marqueeicon text-[45px] xl:text-[60px] text-blue-500" />
@@ -133,7 +93,6 @@ function index() {
                     <IoLogoGithub className="marqueeicon text-[45px] xl:text-[60px] text-purple-400" />
                 </CarouselText>
             </section>
-
             <Parallax speed={5} className="rounded-lg bg-opacity-50">
                 <motion.div
                     initial={{ opacity: 0, transform: "translateX(-300px)" }}
@@ -163,15 +122,7 @@ function index() {
                         in my first year of college.
                     </h2>
                 </motion.div>
-
-                <Canvas className='!w-[200px] !h-[200px] lg:!w-[300px] lg:!h-[300px] block ml-auto mr-auto mt-[50px] mb-[50px] hover:cursor-pointer'>
-                    <ambientLight intensity={1} />
-                    <directionalLight color="#bbbbbb" position={[6, 3, 3]} />
-                    <Suspense fallback={null}>
-                        <OrbitControls enableZoom={false} enablePan={false} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} />
-                        <CoffeeCup />
-                    </Suspense>
-                </Canvas>
+                <CoffeeCup />
                 <motion.div
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
@@ -186,16 +137,7 @@ function index() {
                         java, web app development, and software engineering.
                     </h2>
                 </motion.div>
-                <Canvas camera={{ position: [0, 0, -20] }}
-                    className='!w-[200px] !h-[300px] lg:!w-[500px] lg:!h-[400px] block lg:mt-[50px] lg:mb-[20px] ml-auto mr-auto hover:cursor-pointer'>
-                    <ambientLight intensity={1} />
-                    <directionalLight color="#bbbbbb" position={[6, 3, 3]} />
-                    <Suspense fallback={null}>
-                        <OrbitControls enableZoom={false} enablePan={false} />
-                        <Midi />
-                    </Suspense>
-                </Canvas>
-
+                <Midi />
                 <motion.div
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
@@ -210,9 +152,7 @@ function index() {
                     </h2>
                 </motion.div>
             </section>
-
             <Laptop className="hover:cursor-pointer" />
-
             <section className='mt-[250px] mb-[10px]'>
                 <CarouselText baseVelocity={-2}>
                     <h2 className="min-w-[45vw] ml-[30px]">console.log("Hello world -Ryan")</h2>
@@ -224,12 +164,10 @@ function index() {
                 </CarouselText>
                 <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[95vw] block ml-auto mr-auto mt-[0px] pb-[5px]' />
             </section>
-
             <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="h-[3000px] min-h-[1350px] xl:h-[100vh]">
                 <ParallaxBannerLayer image="birmingham.jpg" speed={10} />
                 <ParallaxBannerLayer className='bg-[#75757544] dark:bg-[#00000066] ease-in duration-200' speed={0}>
                     <Parallax speed={5} className="rounded-lg bg-opacity-50 overflow-hidden pt-[70px] pb-[30px]">
-
                         <motion.div
                             initial={{ opacity: 0, transform: "translateX(300px)" }}
                             whileInView={{
@@ -290,14 +228,12 @@ function index() {
                     </div>
                 </ParallaxBannerLayer>
             </ParallaxBanner>
-
             <h2 className='text-[47px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] w-[200px] bg-[#dfd5c1] 
             dark:bg-[#171717] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[100px]'>
                 More
             </h2>
             <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
             block ml-auto mr-auto relative top-[-40px] z-0 overflow-hidden' />
-
             <div className='flex flex-wrap justify-center pt-[50px] w-[90vw] md:w-[50vw] min-w-[320px] ml-auto mr-auto'>
                 <MarqueeLink title="My Wordle" link="https://ryan-christopher.github.io/wordle/" />
                 <MarqueeLink title="Beacon Street Records" link="https://ryan-christopher.github.io/beaconstreetrecords/" />
@@ -309,12 +245,9 @@ function index() {
                 <MarqueeLink title="Scratch Tic Tac Toe" link="https://scratch.mit.edu/projects/622549017/" />
                 <MarqueeLink title="Wallet Watch (WIP)" link="https://github.com/ryan-christopher/walletwatch" />
             </div>
-
             <Credits />
             <Footer />
-
         </div >
     )
 }
-
 export default index
