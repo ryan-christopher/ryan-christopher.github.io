@@ -10,7 +10,6 @@ let lightModeIcon;
 
 function Darkmode() {
     const [darkToggle, setDarkToggle] = React.useState(true)
-
     function switchTheme() {
         setDarkToggle(!darkToggle)
         if (window.localStorage.getItem('theme') === "light") {
