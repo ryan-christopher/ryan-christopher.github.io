@@ -84,6 +84,7 @@ function index() {
                     </span>
                 </ParallaxBannerLayer>
             </ParallaxBanner>
+
             <section className='mt-[25px] pb-[100px]'>
                 <CarouselText baseVelocity={-3}>
                     <IoLogoPython className="marqueeicon text-[45px] xl:text-[60px] text-yellow-200" />
@@ -94,6 +95,7 @@ function index() {
                     <IoLogoGithub className="marqueeicon text-[45px] xl:text-[60px] text-purple-400" />
                 </CarouselText>
             </section>
+
             <Parallax speed={5} className="rounded-lg bg-opacity-50">
                 <motion.div
                     initial={{ opacity: 0, transform: "translateX(-300px)" }}
@@ -119,7 +121,7 @@ function index() {
                     }}
                     viewport={{ once: true }}>
                     <h2 className="uppercase text-[25px] text-left lg:text-[45px] max-w-[600px]">
-                        I'm an aspiring developer who became intrigued with programming and technology
+                        I'm a developer who became intrigued with programming and technology
                         in my first year of college.
                     </h2>
                 </motion.div>
@@ -153,6 +155,7 @@ function index() {
                     </h2>
                 </motion.div>
             </section>
+
             <Laptop className="hover:cursor-pointer" />
             <section className='mt-[250px] mb-[10px]'>
                 <CarouselText baseVelocity={-2}>

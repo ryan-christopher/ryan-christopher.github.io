@@ -1,9 +1,4 @@
 @font-face {
-  font-family: "Atkinson Hyperlegible";
-  src: url("./Atkinson-Hyperlegible/WebFonts/TTF/Atkinson-Hyperlegible-Regular-102.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "Atami";
   src: url("./Atami/Atami-Bold.otf") format("opentype");
 }

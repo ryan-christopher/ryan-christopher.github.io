@@ -16,7 +16,42 @@ function Navbar() {
                 <div className="creditmenu-body bg-[#f9f5e9] dark:bg-[#171717]">
                     <div className="creditmenu-overlay"></div>
                     <div className="creditmenu-container">
-                        hihihi
+                        <h2 className='text-[25px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] w-fit bg-[#dfd5c1] 
+            dark:bg-[#171717] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[10px]'>
+                            Fonts
+                        </h2>
+                        <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
+            block ml-auto mr-auto relative top-[-29px] z-0 overflow-hidden' />
+                        <div className='pl-[25px] pt-[10px] text-[18px]'>
+                            <p className="font-[Atami]">Atami</p>
+                            <br />
+                            <p className="font-[Atami]">Takota</p>
+                        </div>
+
+                        <h2 className='text-[25px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] w-fit bg-[#dfd5c1] 
+            dark:bg-[#171717] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[10px]'>
+                            Images
+                        </h2>
+                        <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
+            block ml-auto mr-auto relative top-[-29px] z-0 overflow-hidden' />
+                        <div className='pl-[25px] pt-[10px] text-[18px]'>
+                            <p className="font-[Atami]">High-rise buildings by <br /> Todd Kent</p>
+                            <br />
+                            <p className="font-[Atami]">River Painting by <br /> Birmingham Museums Trust</p>
+                        </div>
+                        <h2 className='text-[25px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] w-fit bg-[#dfd5c1] 
+            dark:bg-[#171717] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[10px]'>
+                            3D Models
+                        </h2>
+                        <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
+            block ml-auto mr-auto relative top-[-29px] z-0 overflow-hidden' />
+                        <div className='pl-[25px] pt-[10px] text-[18px]'>
+                            <p className="font-[Atami]">Paper Coffee Cup by <br /> Crazy_8</p>
+                            <br />
+                            <p className="font-[Atami]">MIDI by <br /> igorsavchuk</p>
+                            <br />
+                            <p className="font-[Atami]">Floating Laptop by <br /> drcmda</p>
+                        </div>
                     </div>
                 </div>
             </div>
