@@ -27,7 +27,8 @@ function index() {
             <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="min-h-[1500px] lg:h-[110vh] xl:h-[115vh] max-w-[100vw]">
                 <ParallaxBannerLayer image="boston2.jpg" speed={10} />
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
-                    <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] relative mt-[100px] md:w-[200px] xl:w-[250px]" />
+                    <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] relative mt-[100px] md:w-[200px] xl:w-[250px] border-[1px] 
+                        border-[#171717]" />
                     <div className="content w-[92vw] pb-[30px] rounded-sm mt-[30px] md:mt-5 bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-sm border-[1px] 
                         border-[#171717] dark:border-[#dfd5c1] ease-in duration-200">
                         <h2 id="introtext" className='glitch text-center pt-[40px] pb-[0px] m:pt-[50px] m:pb-[50px] xl:pt-[100px] xl:pb-[100px] 
@@ -201,7 +202,7 @@ function index() {
                             marqueeText="You're already on it" />
                         <ProjectCard
                             name="TCS Curriculum"
-                            nameSize="text-[37px] mt-[10px] pt-[25px] pb-[8px]"
+                            nameSize="text-[37px] mt-[10px] pt-[19px] pb-[4px]"
                             phrase="I like to teach things."
                             description="I am encouraged to have unique projects to teach students at The Coder School, and as such I have created a
                             list of 30+ self made and open source projects. Material includes scratch programs, python games, web apps, and more.

@@ -20,7 +20,8 @@ function ProjectCard({ name, nameSize, phrase, description, iconList, imageUrl, 
         <div>
             <motion.div
                 className='w-[100%] xl:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex-col justify-center text-center rounded-[10px] 
-                            bg-[#e7e2d664] dark:bg-[rgba(0,0,0,0.3)] backdrop-blur-md'
+                            bg-[#e7e2d664] dark:bg-[rgba(0,0,0,0.3)] backdrop-blur-md border-[1px] 
+                            border-[#171717]'
                 initial={{ opacity: 0, transform: "translateY(100px)" }}
                 whileInView={{
                     opacity: 1,

@@ -65,7 +65,7 @@ function Laptop() {
     }
 
     return (
-        <web.main className="!w-[90vw] block ml-auto mr-auto !h-[600px] lg:!h-[900px] rounded-[10px] border-[1px] border-white text-white"
+        <web.main className="!w-[90vw] block ml-auto mr-auto !h-[600px] lg:!h-[900px] rounded-[10px] border-[1px] border-[#171717] dark:border-[#dfd5c1] text-[#f9f5e9]"
             style={{ background: props.open.to([0, 1], ['#2b2422', '#60504C']) }}>
             <web.h5 className="font-['Atami_Display'] text-[55px] lg:text-[80px] uppercase"
                 style={{ opacity: props.open.to([0, 1], [1, 0]), transform: props.open.to((o) => `translateY(${o * 50 + 150}px)`) }}>
