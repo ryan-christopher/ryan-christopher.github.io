@@ -14,7 +14,7 @@ function MarqueeLink({ title, link }) {
                     transition: { delay: 0, duration: 0.5 }
                 }}
                 viewport={{ once: true }}>
-                <a href={link} target={"_blank"} rel="noreferrer"
+                <a href={link} target="_blank" rel="noreferrer"
                     className='relative text-[20px] md:text-[25px]  uppercase flex justify-center items-center h-[50px] 
                                 border-2 border-[#171717] dark:border-[#dfd5c1] rounded-[50px] w-fit pl-[15px] pr-[15px] text-center mb-[5px] md:mb-[30px]'>
                     <span className='inline-block align-baseline text-center opacity-100 hover:opacity-0 

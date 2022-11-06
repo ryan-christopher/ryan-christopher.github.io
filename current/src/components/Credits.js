@@ -15,7 +15,7 @@ function Navbar() {
 
                 <div className="creditmenu-body bg-[#f9f5e9] dark:bg-[#171717]">
                     <div className="creditmenu-overlay"></div>
-                    <div className="creditmenu-container">
+                    <div className="creditmenu-container font-[Atami]">
                         <h2 className='text-[25px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] w-fit bg-[#dfd5c1] 
             dark:bg-[#171717] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[10px]'>
                             Fonts
@@ -23,7 +23,7 @@ function Navbar() {
                         <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
             block ml-auto mr-auto relative top-[-29px] z-0 overflow-hidden' />
                         <div className='pl-[25px] pt-[10px] text-[18px]'>
-                            <p className="font-[Atami]">Atami</p>
+                            <a className="underline decoration-inherit hover:decoration-gray-500 ease-in duration-100" href="https://andrewherndon.gumroad.com/l/atami" target="_blank" rel="noreferrer">Atami</a>
                             <br />
                             <p className="font-[Atami]">Takota</p>
                         </div>
