@@ -2,6 +2,10 @@
     font-family: "Takota";
     src: url("./takota-font/Takota-BRa8.ttf") format("truetype");
 }
+@font-face {
+    font-family: "Atami Display";
+    src: url("./Atami/Atami-Display-Bold.otf") format("opentype");
+  }
 
 .mask {
     height: 100%;

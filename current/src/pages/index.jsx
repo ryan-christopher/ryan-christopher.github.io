@@ -7,6 +7,7 @@ import Laptop from '../components/Laptop'
 import Credits from '../components/Credits'
 import CoffeeCup from '../components/CoffeeCup'
 import Midi from '../components/Midi'
+import InterestItem from '../components/InterestItem'
 import ProjectCard from '../components/ProjectCard'
 import MarqueeLink from '../components/MarqueeLink'
 // Moving Text
@@ -35,7 +36,7 @@ function index() {
                     <div className="content w-[85vw] max-w-[1800px] pb-[30px] rounded-sm mt-[30px] md:mt-5 bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-sm border-[1px] 
                         border-[#171717] dark:border-[#dfd5c1] ease-in duration-200">
                         <h2 id="introtext" className='glitch text-center pt-[40px] pb-[0px] m:pt-[50px] m:pb-[50px] xl:pt-[70px] xl:pb-20px] 
-                            text-[#171717] text-[48px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[120px] lg:text-[80px] md:text-[60px] uppercase'>
+                            text-[#171717] text-[48px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[120px] lg:text-[80px] md:text-[60px]'>
                             Hey, I'm Ryan
                         </h2>
                         <div className="landing-flex-container p-[30px] rounded-md md:mt-5 w-[85vw] max-w-[1800px] ease-in duration-200">
@@ -108,13 +109,13 @@ function index() {
                         transition: { duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className='text-left w-fit overflow-hidden lowercase mt-[50px] ml-[20px] sm:ml-[100px] md:ml-[200px] rounded-[10px] 
+                    <h2 className='text-left w-fit overflow-hidden uppercase mt-[50px] ml-[20px] sm:ml-[100px] md:ml-[200px] rounded-[10px] 
                     font-[Takota] text-[#171717] text-[55px] md:text-[60px] lg:text-[85px] xl:text-[125px] dark:text-[#f9f5e9] ease-in duration-200'>
                         A bit about me
                     </h2>
                 </motion.div>
             </Parallax>
-            <section className='block ml-auto mr-auto mt-[20px] p-[30px] text-justify w-[50vw] min-w-[300px] mb-[200px]'>
+            <section className='block ml-auto mr-auto mt-[20px] pt-[30px] pl-[30px] pr-[30px] text-justify w-[50vw] min-w-[300px] mb-[0px]'>
                 <motion.div
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
@@ -123,7 +124,7 @@ function index() {
                         transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className="uppercase text-[25px] text-left lg:text-[45px] max-w-[600px]">
+                    <h2 className="uppercase text-[25px] text-left w-[60vw] lg:text-[45px] max-w-[600px]">
                         I'm a developer who became intrigued with programming and technology
                         in my first year of college.
                     </h2>
@@ -137,27 +138,43 @@ function index() {
                         transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className="uppercase text-[25px] text-right lg:text-[45px] max-w-[600px] ml-auto">
+                    <h2 className="uppercase text-[25px] text-right w-[60vw] lg:text-[45px] max-w-[600px] ml-auto">
                         I began taking a web design class which
                         then quickly turned to courses on algorithms, python,
                         java, web app development, and software engineering.
                     </h2>
                 </motion.div>
                 <Midi />
-                <motion.div
-                    initial={{ opacity: 0, transform: "translateY(100px)" }}
-                    whileInView={{
-                        opacity: 1,
-                        transform: "translateY(0px)",
-                        transition: { delay: 0.2, duration: 0.7 }
-                    }}
-                    viewport={{ once: true }}>
-                    <h2 className="uppercase text-justify text-[25px] lg:text-[45px] max-w-[600px]">
-                        Some of my interests are web development, software design, blockchain,
-                        music, tennis, skating, and video games.
-                    </h2>
-                </motion.div>
             </section>
+            <motion.div
+                className="mt-[100px]"
+                initial={{ opacity: 0, transform: "translateY(100px)" }}
+                whileInView={{
+                    opacity: 1,
+                    transform: "translateY(0px)",
+                    transition: { duration: 0.7 }
+                }}
+                viewport={{ once: true }}>
+                <h2 className="uppercase text-center block ml-auto mr-auto text-[35px] lg:text-[50px] max-w-[600px]">
+                    I'm interested in
+                </h2>
+            </motion.div>
+            <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
+            block ml-auto mr-auto pb-[75px] lg:pb-[120px]' />
+            <div className='flex flex-wrap justify-center pt-[10px] pb-[125px] w-[50vw] md:w-[50vw] min-w-[320px] max-w-[600px] ml-auto mr-auto'>
+                <InterestItem title="web development" />
+                <InterestItem title="web design" />
+                <InterestItem title="software development" />
+                <InterestItem title="data science" />
+                <InterestItem title="blockchain" />
+                <InterestItem title="music" />
+                <InterestItem title="teaching" />
+                <InterestItem title="tennis" />
+                <InterestItem title="skating" />
+                <InterestItem title="video games" />
+                <InterestItem title="art" />
+                <InterestItem title="food" />
+            </div>
 
             <Laptop className="hover:cursor-pointer" />
             <section id="portfolio" className='mt-[250px] mb-[10px]'>
@@ -184,7 +201,7 @@ function index() {
                             }}
                             viewport={{ once: true }}>
                             <h2 className='text-left overflow-hidden uppercase w-[45vw] min-w-[375px] mt-[50px] ml-[50px] lg:ml-[300px] rounded-[10px] 
-                    font-[Takota] text-[#171717] text-[55px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[90px] lg:text-[70px] md:text-[60px]'>
+                    font-[Takota] text-[#171717] text-[55px] md:text-[60px] lg:text-[85px] xl:text-[125px] dark:text-[#f9f5e9] ease-in duration-200'>
                                 Projects
                             </h2>
                         </motion.div>
@@ -207,7 +224,7 @@ function index() {
                             marqueeText="You're already on it" />
                         <ProjectCard
                             name="TCS Curriculum"
-                            nameSize="text-[37px] mt-[10px] pt-[19px] pb-[4px]"
+                            nameSize="text-[37px] mt-[10px] pt-[18px] pb-[4px]"
                             phrase="I like to teach things."
                             description="I'm encouraged to have unique projects to teach students at The Coder School, and as such I have created a
                             list of 30+ self made and open source projects. Material includes scratch programs, python games, web apps, and more. 
