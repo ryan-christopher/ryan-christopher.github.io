@@ -27,8 +27,11 @@ function index() {
             <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="min-h-[1500px] lg:h-[110vh] xl:h-[115vh] max-w-[100vw]">
                 <ParallaxBannerLayer image="boston2.jpg" speed={10} />
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
+                    {/*}
                     <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] relative mt-[100px] md:w-[200px] xl:w-[250px] border-[1px] 
                         border-[#171717]" />
+    */}
+                    <img src="cartoonRyan.png" alt="My portrait." className="w-[300px] lg:w-[500px] mt-[100px] mb-[-30px] md:mb-[-20px] block ml-auto mr-auto" />
                     <div className="content w-[92vw] pb-[30px] rounded-sm mt-[30px] md:mt-5 bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-sm border-[1px] 
                         border-[#171717] dark:border-[#dfd5c1] ease-in duration-200">
                         <h2 id="introtext" className='glitch text-center pt-[40px] pb-[0px] m:pt-[50px] m:pb-[50px] xl:pt-[100px] xl:pb-[100px] 
@@ -105,8 +108,8 @@ function index() {
                         transition: { duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className='text-center overflow-hidden uppercase w-[45vw] min-w-[375px] l:ml-[-100px] rounded-[10px] 
-                    font-[Takota] scale-y-[1.25] text-[#171717] text-[55px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[90px] lg:text-[70px] md:text-[60px] '>
+                    <h2 className='text-center overflow-hidden lowercase w-[45vw] min-w-[375px] l:ml-[-100px] rounded-[10px] 
+                    font-[Takota] text-[#171717] text-[55px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[90px] lg:text-[70px] md:text-[60px] '>
                         A bit about me
                     </h2>
                 </motion.div>
@@ -135,8 +138,8 @@ function index() {
                     }}
                     viewport={{ once: true }}>
                     <h2 className="uppercase text-[25px] text-right lg:text-[45px] max-w-[600px] ml-auto">
-                        I started off taking a web design class which
-                        then quickly turned to classes on algorithms, python,
+                        I began taking a web design class which
+                        then quickly turned to courses on algorithms, python,
                         java, web app development, and software engineering.
                     </h2>
                 </motion.div>
@@ -149,7 +152,7 @@ function index() {
                         transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className="uppercase text-left text-[25px] lg:text-[45px] max-w-[600px]">
+                    <h2 className="uppercase text-justify text-[25px] lg:text-[45px] max-w-[600px]">
                         Some of my interests are web development, software design, blockchain,
                         music, tennis, skating, and video games.
                     </h2>

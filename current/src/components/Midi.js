@@ -19,8 +19,6 @@ function Midi() {
         <div>
             <Canvas frameloop="demand" camera={{ position: [0, 0, -20] }}
                 className='!w-[250px] !h-[300px] lg:!w-[500px] lg:!h-[400px] block lg:mt-[50px] lg:mb-[20px] ml-auto mr-auto hover:cursor-pointer'>
-                <ambientLight intensity={1} />
-                <directionalLight color="#bbbbbb" position={[6, 3, 3]} />
                 <Suspense fallback={null}>
                     <OrbitControls autoRotate={true} enableZoom={false} enablePan={false} />
                     <Model />

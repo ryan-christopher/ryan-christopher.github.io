@@ -20,8 +20,7 @@ function CoffeeCup() {
     return (
         <div>
             <Canvas frameloop="demand" className='!w-[200px] !h-[200px] lg:!w-[300px] lg:!h-[300px] block ml-auto mr-auto mt-[50px] mb-[50px] hover:cursor-pointer'>
-                <ambientLight intensity={1} />
-                <directionalLight color="#bbbbbb" position={[6, 3, 3]} />
+                <ambientLight intensity={1.5} />
                 <Suspense fallback={null}>
                     <OrbitControls autoRotate={true} enableZoom={false} enablePan={false} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} />
                     <Model />

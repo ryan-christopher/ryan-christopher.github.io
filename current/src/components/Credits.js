@@ -12,7 +12,6 @@ function Navbar() {
                 Credits
             </div>
             <div className="creditmenu bg-[#f9f5e9] dark:bg-[#171717]">
-
                 <div className="creditmenu-body bg-[#f9f5e9] dark:bg-[#171717]">
                     <div className="creditmenu-overlay"></div>
                     <div className="creditmenu-container font-[Atami]">
