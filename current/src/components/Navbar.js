@@ -27,7 +27,7 @@ function Navbar() {
                     <div className="burgerbottom bg-[#171717] dark:bg-[#f9f5e9] ease-in duration-200"></div>
                 </div>
                 <div className="mobilemenu-body bg-[#f9f5e9] dark:bg-[#171717]">
-                    <div className='mobilebuttonclose absolute top-[14px] right-[22px] font-["Atami_Display"] text-[35px] 
+                    <div className='mobilebuttonclose absolute top-[20px] right-[22px] font-["Atami_Display"] text-[35px] 
                     text-red-400 hover:cursor-pointer hover:scale-[1.25] border-[1.5px] w-[45px] h-[45px] bg-transparent text-center 
                     border-[#171717] dark:border-[#dfd5c1] leading-[1.2] rounded-sm ease-in duration-100 z-10'>
                         X
@@ -51,7 +51,6 @@ function menutoggle() {
 
 (function () {
     $(document).on("click", ".mobilemenu-group", function () {
-        $(this).find(".mobilemenu-section").toggleClass('active');
         $(".mobilemenu-overlay").toggleClass('active');
     });
     $(document).on("click", ".mobilemenu-link", function () {
@@ -73,15 +72,13 @@ function menutoggle() {
     });
     $(document).on("click", ".mobilemenu-overlay", function () {
         $(this).toggleClass('active');
-        return $(".mobilemenu-section").removeClass('active');
     });
     $(document).on("click", ".mask", function () {
         $(this).toggleClass('active');
         $('.mobilemenu').toggleClass('active');
         $('.text').toggleClass('active');
         $('.mobilebutton').toggleClass('active');
-        $(".mobilemenu-overlay").removeClass('active');
-        return $(".mobilemenu-section").removeClass('active');
+        return $(".mobilemenu-overlay").removeClass('active');
     });
 }).call(this);
 

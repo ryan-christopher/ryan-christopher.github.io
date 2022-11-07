@@ -87,11 +87,6 @@
     transition: all 0.45s;
 }
 
-.mobilemenu-sublink {
-    padding: 25px 0 25px 10px;
-    margin-right: 40px;
-}
-
 .mobilemenu-overlay {
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -133,29 +128,6 @@
     right: 0;
 }
 
-.mobilemenu-section {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    background-color: #171717;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    z-index: 3;
-    width: 230px;
-    padding-top: 80px;
-    right: -250px;
-}
-
-.mobilemenu-section.active {
-    right: 0;
-}
-
-.mobilemenu-sublink {
-    padding: 25px 0 25px 10px;
-    margin: 0 0 0 0;
-}
-
 .mobilebutton {
     cursor: pointer;
     height: 58px;
@@ -167,27 +139,6 @@
     width: 60px;
     z-index: 3;
     padding: 10px 14px 10px 14px;
-}
-
-.mobilebutton.active .burgertop {
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -o-transform: translateY(-5px);
-    transform: translateY(-5px);
-    pointer-events: none;
-    /*
-    background: #ec5151;
-    */
-}
-
-.mobilebutton.active .burgerbottom {
-    -moz-transform: translateY(5px);
-    -ms-transform: translateY(5px);
-    -o-transform: translateY(5px);
-    transform: translateY(5px);
-    /*
-    background: #ec5151;
-    */
 }
 
 .mobilebutton.active .burgermiddle,
