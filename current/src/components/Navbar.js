@@ -1,22 +1,21 @@
 import React from 'react'
 import '../styles/Menu.css';
-import { Link } from 'react-router-dom';
 import $ from 'jquery'
-import Preloader from './Preloader';
 
 function Navbar() {
     let links;
 
     links =
         <div>
-            <Link className="mobilemenu-link text-[#171717] dark:text-[#f9f5e9]" to="/" onClick={() => { Preloader(); menutoggle(); }}>Home</Link>
-            <Link className="mobilemenu-link text-[#171717] dark:text-[#f9f5e9]" to="/portfolio" onClick={() => { Preloader(); menutoggle(); }}>Portfolio</Link>
-            <Link className="mobilemenu-link text-[#171717] dark:text-[#f9f5e9]" to="/about" onClick={() => { Preloader(); menutoggle(); }}>About Me</Link>
+            <a href="#home" className="mobilemenu-link text-[#171717] dark:text-[#f9f5e9]" onClick={menutoggle()}>Home</a>
+            <a href="#about" className="mobilemenu-link text-[#171717] dark:text-[#f9f5e9]" onClick={menutoggle()}>About</a>
+            <a href="#portfolio" className="mobilemenu-link text-[#171717] dark:text-[#f9f5e9]" onClick={menutoggle()}>Projects</a>
+            <a href="#contact" className="mobilemenu-link text-[#171717] dark:text-[#f9f5e9]" onClick={menutoggle()}>Contact</a>
         </div>
 
     return (
         <div>
-            <h3 id="headername" className='text-[#171717] dark:text-[#f9f5e9] ease-in duration-200'>RYAN CHRISTOPHER</h3>
+            <h3 id="headername" className='text-[#171717] dark:text-[#f9f5e9] ease-in duration-200 uppercase'>Ryan Christopher</h3>
 
             <div className="mobilenavbar bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.5)] backdrop-blur-sm ease-in duration-200">
             </div>
@@ -28,6 +27,11 @@ function Navbar() {
                     <div className="burgerbottom bg-[#171717] dark:bg-[#f9f5e9] ease-in duration-200"></div>
                 </div>
                 <div className="mobilemenu-body bg-[#f9f5e9] dark:bg-[#171717]">
+                    <div className='mobilebuttonclose absolute top-[14px] right-[22px] font-["Atami_Display"] text-[35px] 
+                    text-red-400 hover:cursor-pointer hover:scale-[1.25] border-[1.5px] w-[45px] h-[45px] bg-transparent text-center 
+                    border-[#171717] dark:border-[#dfd5c1] leading-[1.2] rounded-sm ease-in duration-100 z-10'>
+                        X
+                    </div>
                     <div className="mobilemenu-overlay"></div>
                     <div className="mobilemenu-container">
                         {links}
@@ -50,11 +54,19 @@ function menutoggle() {
         $(this).find(".mobilemenu-section").toggleClass('active');
         $(".mobilemenu-overlay").toggleClass('active');
     });
-    $(document).on("click", ".mobilemenu-link-back", function () {
-        $(".mobilemenu-section").toggleClass('active');
+    $(document).on("click", ".mobilemenu-link", function () {
+        $('.mobilemenu').toggleClass('active');
+        $('.mask').toggleClass('active')
+        $('.mobilebutton').toggleClass('active');
     });
     $(document).on("click", ".mobilebutton", function () {
         $(this).toggleClass('active');
+        $('.mobilemenu').toggleClass('active');
+        $('.text').toggleClass('active');
+        return $('.mask').toggleClass('active');
+    });
+    $(document).on("click", ".mobilebuttonclose", function () {
+        $('.mobilebutton').toggleClass('active');
         $('.mobilemenu').toggleClass('active');
         $('.text').toggleClass('active');
         return $('.mask').toggleClass('active');

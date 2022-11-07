@@ -23,7 +23,7 @@ import { CgMusic } from "react-icons/cg"
 
 function index() {
     return (
-        <div className='bg-[#dfd5c1] dark:bg-[#171717] ease-in duration-200'>
+        <div id="home" className='bg-[#dfd5c1] dark:bg-[#171717] ease-in duration-200'>
             <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="min-h-[1500px] lg:h-[110vh] xl:h-[115vh] max-w-[100vw]">
                 <ParallaxBannerLayer image="boston2.jpg" speed={10} />
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
@@ -31,14 +31,14 @@ function index() {
                     <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] relative mt-[100px] md:w-[200px] xl:w-[250px] border-[1px] 
                         border-[#171717]" />
     */}
-                    <img src="cartoonRyan.png" alt="My portrait." className="w-[300px] lg:w-[500px] mt-[100px] mb-[-30px] md:mb-[-20px] block ml-auto mr-auto" />
-                    <div className="content w-[92vw] pb-[30px] rounded-sm mt-[30px] md:mt-5 bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-sm border-[1px] 
+                    <img src="cartoonRyan.png" alt="A painting of me." className="w-[250px] mt-[75px] lg:w-[350px] lg:mt-[100px] mb-[-30px] md:mb-[-20px] block ml-auto mr-auto" />
+                    <div className="content w-[85vw] max-w-[1800px] pb-[30px] rounded-sm mt-[30px] md:mt-5 bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-sm border-[1px] 
                         border-[#171717] dark:border-[#dfd5c1] ease-in duration-200">
-                        <h2 id="introtext" className='glitch text-center pt-[40px] pb-[0px] m:pt-[50px] m:pb-[50px] xl:pt-[100px] xl:pb-[100px] 
+                        <h2 id="introtext" className='glitch text-center pt-[40px] pb-[0px] m:pt-[50px] m:pb-[50px] xl:pt-[70px] xl:pb-20px] 
                             text-[#171717] text-[48px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[120px] lg:text-[80px] md:text-[60px] uppercase'>
                             Hey, I'm Ryan
                         </h2>
-                        <div className="landing-flex-container p-[30px] rounded-md md:mt-5 ease-in duration-200">
+                        <div className="landing-flex-container p-[30px] rounded-md md:mt-5 w-[85vw] max-w-[1800px] ease-in duration-200">
                             <div className="landing-flex-item-left">
                                 <div id="slantText" className="scale-[0.9] min-w-[450px] w-[100vw] md:w-[100%] translate-x-[-130px] sm:translate-x-[-60px] 
                                 xl:mt-[30px] xl:scale-[1.25] ease-in duration-200">
@@ -80,7 +80,7 @@ function index() {
                             </div>
                         </div>
                     </div>
-                    <span className='block ml-auto mr-auto w-[100vw] align-center text-center mt-[50px]'>
+                    <span className='asteriskcontainer block ml-auto mr-auto w-[100vw] align-center text-center mt-[50px]'>
                         <Parallax rotate={[0, 360]} className="w-[10vw] min-w-[40px] inline-block max-w-[55px] mt-[50px] ease-linear duration-[50ms] mr-[8vw] ml-[8vw]">
                             <img src="whiteasterisk.png" alt="" className="asterisk p-[0px] opacity-100 ease-in duration-200" aria-hidden="true" />
                         </Parallax>
@@ -88,7 +88,7 @@ function index() {
                 </ParallaxBannerLayer>
             </ParallaxBanner>
 
-            <section className='mt-[25px] pb-[100px]'>
+            <section id="about" className='mt-[25px] pb-[100px]'>
                 <CarouselText baseVelocity={-3}>
                     <IoLogoPython className="marqueeicon text-[45px] xl:text-[60px] text-yellow-200" />
                     <IoLogoHtml5 className="marqueeicon text-[45px] xl:text-[60px] text-red-500" />
@@ -108,8 +108,8 @@ function index() {
                         transition: { duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className='text-center overflow-hidden lowercase w-[45vw] min-w-[375px] l:ml-[-100px] rounded-[10px] 
-                    font-[Takota] text-[#171717] text-[55px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[90px] lg:text-[70px] md:text-[60px] '>
+                    <h2 className='text-left w-fit overflow-hidden lowercase mt-[50px] ml-[20px] sm:ml-[100px] md:ml-[200px] rounded-[10px] 
+                    font-[Takota] text-[#171717] text-[55px] md:text-[60px] lg:text-[85px] xl:text-[125px] dark:text-[#f9f5e9] ease-in duration-200'>
                         A bit about me
                     </h2>
                 </motion.div>
@@ -160,7 +160,7 @@ function index() {
             </section>
 
             <Laptop className="hover:cursor-pointer" />
-            <section className='mt-[250px] mb-[10px]'>
+            <section id="portfolio" className='mt-[250px] mb-[10px]'>
                 <CarouselText baseVelocity={-2}>
                     <h2 className="min-w-[45vw] ml-[30px]">console.log("Hello world -Ryan")</h2>
                     <h2 className="text-red-500 ml-[30px] text-center xl:w-[30vw]">|</h2>
@@ -171,21 +171,20 @@ function index() {
                 </CarouselText>
                 <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[95vw] block ml-auto mr-auto mt-[0px] pb-[5px]' />
             </section>
-            <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="h-[3000px] min-h-[1350px] xl:h-[100vh]">
+            <ParallaxBanner style={{ aspectRatio: '1 / 1' }} id="projectCardsContainer" className="h-[2850px] min-h-[1350px] xl:h-[100vh]">
                 <ParallaxBannerLayer image="birmingham.jpg" speed={10} />
                 <ParallaxBannerLayer className='bg-[#75757544] dark:bg-[#00000066] ease-in duration-200' speed={0}>
-                    <Parallax speed={5} className="rounded-lg bg-opacity-50 overflow-hidden pt-[70px] pb-[30px]">
+                    <Parallax speed={5} className="rounded-lg bg-opacity-50">
                         <motion.div
-                            initial={{ opacity: 0, transform: "translateX(300px)" }}
+                            initial={{ opacity: 0, transform: "translateX(-300px)" }}
                             whileInView={{
                                 opacity: 1,
-                                transform: "translateX(30px)",
+                                transform: "translateX(0px)",
                                 transition: { duration: 0.7 }
                             }}
                             viewport={{ once: true }}>
-                            <h2 className='text-center uppercase z-[11] block ml-auto  overflow-hidden w-[40vw] min-w-[400px] rounded-[10px] font-[Takota] 
-                                scale-y-[1.25] dark:bg-[rgba(0,0,0,0)] 
-                                text-[60px] dark:text-[#f9f5e9] text-[#171717] ease-in duration-200 xl:text-[100px] lg:text-[80px] md:text-[60px] '>
+                            <h2 className='text-left overflow-hidden uppercase w-[45vw] min-w-[375px] mt-[50px] ml-[50px] lg:ml-[300px] rounded-[10px] 
+                    font-[Takota] text-[#171717] text-[55px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[90px] lg:text-[70px] md:text-[60px]'>
                                 Projects
                             </h2>
                         </motion.div>
@@ -195,10 +194,10 @@ function index() {
                             name="Portfolio"
                             nameSize="text-[45px]"
                             phrase="The site that you're on."
-                            description="This site is a culmination of many sketches, debugging sessions, trial and error,
-                                        and of course stack overflow pages viewed between the hours of 8pm and 4am.
-                                        It was made to host my portfolio as well as serve as an entry in my
-                                        list of works. I used the React framework along with Tailwind CSS
+                            description="The culmination of many sketches, debugging sessions, trial and error,
+                                        and stack overflow pages viewed between 8pm and 4am.
+                                        Created to host my portfolio as well as serve as an entry in my
+                                        list of works. Made with React, Tailwind CSS
                                         and NPM packages such as THREE.js, Framer Motion, and React Scroll
                                         Parallax."
                             iconList={[0, 1, 2, 3, 4]}
@@ -210,10 +209,9 @@ function index() {
                             name="TCS Curriculum"
                             nameSize="text-[37px] mt-[10px] pt-[19px] pb-[4px]"
                             phrase="I like to teach things."
-                            description="I am encouraged to have unique projects to teach students at The Coder School, and as such I have created a
-                            list of 30+ self made and open source projects. Material includes scratch programs, python games, web apps, and more.
-                            There are also some step by step tutorials on how to create certain projects. The curriculum I have made is now regularly
-                            used by teachers at The Coder School."
+                            description="I'm encouraged to have unique projects to teach students at The Coder School, and as such I have created a
+                            list of 30+ self made and open source projects. Material includes scratch programs, python games, web apps, and more. 
+                            The curriculum is regularly used by teachers at The Coder School."
                             iconList={[5, 6, 7, 8, 9]}
                             imageUrl="tcspreview.png"
                             borderCol="border-[#24DB3F]"
@@ -225,8 +223,7 @@ function index() {
                             phrase="Senior year CS project."
                             description="For my final semester of college I was placed in a team for a software engineering course. Planit is a web app with
                             a decoupled architecture using a React front end and Flask back end. It allows users to quickly see
-                            areas of interest near to them with step by step instructions through API calls to Yelp and GraphHopper. I was
-                            the front end developer and frequently assisted back end development as well."
+                            areas of interest near to them with step by step instructions through API calls to Yelp and GraphHopper."
                             iconList={[10, 11, 12, 13, 14]}
                             imageUrl="planitpreview.png"
                             borderCol="border-[#0F60F0]"

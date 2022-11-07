@@ -1,6 +1,8 @@
 import React from 'react'
 import '../styles/credits.css';
 import $ from 'jquery'
+import CreditHeader from './CreditHeader';
+import CreditLink from './CreditLink';
 
 function Navbar() {
 
@@ -11,46 +13,23 @@ function Navbar() {
             <div className="creditbutton hover:cursor-pointer">
                 Credits
             </div>
-            <div className="creditmenu bg-[#f9f5e9] dark:bg-[#171717]">
-                <div className="creditmenu-body bg-[#f9f5e9] dark:bg-[#171717]">
+            <div className="creditmenu bg-[#dfd5c1] dark:bg-[#171717] overflow-y-scroll">
+                <div className="creditmenu-body bg-[#dfd5c1] dark:bg-[#171717]">
                     <div className="creditmenu-overlay"></div>
-                    <div className="creditmenu-container font-[Atami]">
-                        <h2 className='text-[25px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] w-fit bg-[#dfd5c1] 
-            dark:bg-[#171717] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[10px]'>
-                            Fonts
-                        </h2>
-                        <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
-            block ml-auto mr-auto relative top-[-29px] z-0 overflow-hidden' />
-                        <div className='pl-[25px] pt-[10px] text-[18px]'>
-                            <a className="underline decoration-inherit hover:decoration-gray-500 ease-in duration-100" href="https://andrewherndon.gumroad.com/l/atami" target="_blank" rel="noreferrer">Atami</a>
-                            <br />
-                            <p className="font-[Atami]">Takota</p>
-                        </div>
-
-                        <h2 className='text-[25px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] w-fit bg-[#dfd5c1] 
-            dark:bg-[#171717] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[10px]'>
-                            Images
-                        </h2>
-                        <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
-            block ml-auto mr-auto relative top-[-29px] z-0 overflow-hidden' />
-                        <div className='pl-[25px] pt-[10px] text-[18px]'>
-                            <p className="font-[Atami]">High-rise buildings by <br /> Todd Kent</p>
-                            <br />
-                            <p className="font-[Atami]">River Painting by <br /> Birmingham Museums Trust</p>
-                        </div>
-                        <h2 className='text-[25px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] w-fit bg-[#dfd5c1] 
-            dark:bg-[#171717] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[10px]'>
-                            3D Models
-                        </h2>
-                        <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
-            block ml-auto mr-auto relative top-[-29px] z-0 overflow-hidden' />
-                        <div className='pl-[25px] pt-[10px] text-[18px]'>
-                            <p className="font-[Atami]">Paper Coffee Cup by <br /> Crazy_8</p>
-                            <br />
-                            <p className="font-[Atami]">MIDI by <br /> igorsavchuk</p>
-                            <br />
-                            <p className="font-[Atami]">Floating Laptop by <br /> drcmda</p>
-                        </div>
+                    <div className="creditmenu-container font-[Atami] text-[18px] pb-[20px]">
+                        <div
+                            className="creditbuttonclose w-[40px] font-['Atami_Display'] text-red-400 hover:cursor-pointer hover:scale-[1.25] text-[30px] text-center 
+                        leading-[1.25] block ml-auto mr-[20px] relative top-[5px] border-[1.5px] border-[#171717] dark:border-[#dfd5c1] h-[40px] ease-in duration-100">X</div>
+                        <CreditHeader title="Fonts" />
+                        <CreditLink title="Atami" link="https://andrewherndon.gumroad.com/l/atami" />
+                        <CreditLink title="Takota" link="https://www.dafont.com/takota.font" />
+                        <CreditHeader title="Images" />
+                        <CreditLink title="High-rise buildings by Todd Kent" link="https://unsplash.com/photos/iRKv_XiN--M" />
+                        <CreditLink title="River Painting by Birmingham Museums Trust" link="https://unsplash.com/photos/6fv0MEf3FUE" />
+                        <CreditHeader title="3D Models" />
+                        <CreditLink title="Paper Coffee Cup by Crazy_8" link="https://sketchfab.com/3d-models/paper-coffee-cup-e77b65a844324452a385bf4c1275515f" />
+                        <CreditLink title="MIDI by igorsavchuk" link="https://sketchfab.com/3d-models/midi-6cac83e283ff40d1b08e14a4c46c919b" />
+                        <CreditLink title="Floating Laptop by drcmda" link="https://codesandbox.io/s/floating-laptop-q23sw" />
                     </div>
                 </div>
             </div>
@@ -69,6 +48,12 @@ function Navbar() {
         $(".creditmenu-section").toggleClass('active');
     });
     $(document).on("click", ".creditbutton", function () {
+        $(this).toggleClass('active');
+        $('.creditmenu').toggleClass('active');
+        $('.text').toggleClass('active');
+        return $('.creditmask').toggleClass('active');
+    });
+    $(document).on("click", ".creditbuttonclose", function () {
         $(this).toggleClass('active');
         $('.creditmenu').toggleClass('active');
         $('.text').toggleClass('active');

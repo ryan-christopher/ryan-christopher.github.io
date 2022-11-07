@@ -113,6 +113,15 @@ code {
   font-family: "Atami Display";
 }
 
+@media (max-width: 370px) {
+  #introtext {
+    font-size: 40px;
+  }
+  #headername {
+    font-size: 2px;
+  }
+}
+
 #headerpic {
   /*
   width: 8vw;
@@ -187,6 +196,12 @@ input:checked + .slideBtnTg:before {
   margin-right:auto;
 }
 
+@media only screen and (max-width: 370px) {
+  .landing-flex-container {
+      margin-top:-40px;
+  }
+}
+
 .landing-flex-item-left {
   padding: 10px;
   flex: 50%;
@@ -198,7 +213,6 @@ input:checked + .slideBtnTg:before {
 
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
 @media (max-width: 800px) {
-  
   .landing-flex-item-right, .landing-flex-item-left {
     flex: 100%;
   }

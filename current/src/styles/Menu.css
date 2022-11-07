@@ -170,30 +170,30 @@
 }
 
 .mobilebutton.active .burgertop {
-    -webkit-transform: translateY(11px) rotate(45deg);
-    -moz-transform: translateY(11px) rotate(45deg);
-    -ms-transform: translateY(11px) rotate(45deg);
-    -o-transform: translateY(11px) rotate(45deg);
-    transform: translateY(11px) rotate(45deg);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transform: translateY(-5px);
+    pointer-events: none;
     /*
     background: #ec5151;
     */
-    ;
-}
-
-.mobilebutton.active .burgermiddle {
-    opacity: 0;
 }
 
 .mobilebutton.active .burgerbottom {
-    -webkit-transform: translateY(-11px) rotate(-45deg);
-    -moz-transform: translateY(-11px) rotate(-45deg);
-    -ms-transform: translateY(-11px) rotate(-45deg);
-    -o-transform: translateY(-11px) rotate(-45deg);
-    transform: translateY(-11px) rotate(-45deg);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
+    transform: translateY(5px);
     /*
     background: #ec5151;
     */
+}
+
+.mobilebutton.active .burgermiddle,
+.mobilebutton.active .burgertop,
+.mobilebutton.active .burgerbottom {
+    opacity: 0;
 }
 
 .mobilebutton .burgertop,
@@ -204,15 +204,15 @@
     margin: 8px auto;
     border-radius: 2px;
     backface-visibility: hidden;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
 }
 
 .mobilebutton {
     visibility: visible;
     opacity: 1;
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 
@@ -246,14 +246,14 @@ ul>li:hover>ul {
     transform: translateY(0px);
     opacity: 1;
     z-index: 5;
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 ul>li>ul.activesubmenu {
     visibility: visible;
     transform: translateY(0px);
     opacity: 1;
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 .mobilenavbar {
@@ -281,12 +281,12 @@ ul>li>ul.activesubmenu {
     margin-top: 10px;
     margin-left: 10px;
     width: 50px;
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 .cornerlogo>img:hover {
     transform: scale(1.2);
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 h3#headername {
@@ -307,3 +307,9 @@ h3#headername {
         top: 20px;
     }
 }
+@media (max-width: 370px) {
+    h3#headername {
+      font-size: 20px;
+      top: 23px;
+    }
+  }

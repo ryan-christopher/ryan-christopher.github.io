@@ -40,7 +40,7 @@ function ProjectCard({ name, nameSize, phrase, description, iconList, imageUrl, 
                     {icons[iconList[4]]}
                 </span>
                 <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[75%] block ml-auto mr-auto mt-[20px]' />
-                <p className='text-[18px] w-[85%] text-justify block ml-auto mr-auto mt-[20px] leading-[28px] xl:h-[300px]'>
+                <p className='text-[18px] w-[85%] max-w-[600px] text-justify block ml-auto mr-auto mt-[20px] leading-[28px] xl:h-[275px] 2xl:h-[225px] lg:text-[20px] align-middle'>
                     {description}</p>
                 <img src={imageUrl} alt="Landing page of this website."
                     className={`w-[65%] min-w-[200px] max-w-[400px] block ml-auto mr-auto mt-[30px] mb-[30px] xl:mb-[60px] rounded-md border-2 ${borderCol}`} />

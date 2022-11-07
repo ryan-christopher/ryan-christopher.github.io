@@ -25,10 +25,12 @@
     background: rgb(57, 57, 57) !important;
 }
 html {
+    scroll-behavior: smooth;
     background-color: #f9f5e9;
     color: #1f1f1f;
     transition: all ease-in 200ms;
 }
+
 
 .dark{
     background-color: #1f1f1f;
@@ -218,5 +220,26 @@ div#slantText{
         font-size: 45px;
         padding-right: 40px;
         margin-left: -5px;
+    }
+    .asteriskcontainer{
+      margin-top:0px;
+    }
+  }
+
+  @media only screen and (max-width: 370px) {
+    .perspective-text {
+        transform:scale(0.8);
+        font-size: 45px;
+        padding-right: 40px;
+        margin-left: -50px;
+    }
+    #darkModeIcon, #lightModeIcon{
+      font-size: 35px;
+      padding: 2px;
+      top: 20px;
+      right: 90px;
+    }
+    #projectCardsContainer{
+      height:3050px;
     }
   }
