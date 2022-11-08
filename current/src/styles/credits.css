@@ -67,11 +67,10 @@
 
 
 .creditbutton {
-    height: 58px;
+    height: fit-content;
     position: relative;
     text-align: center;
-    transform: translateX(0%);
-    width: 60px;
+    width: fit-content;
     z-index: 3;
     padding: 10px 14px 10px 14px;
 }
@@ -79,6 +78,6 @@
 .creditbutton {
     visibility: visible;
     opacity: 1;
-    transition: all 0.5s;
+    transition: all 0.25s;
 }
 

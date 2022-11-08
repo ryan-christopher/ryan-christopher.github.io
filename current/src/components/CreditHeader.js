@@ -8,7 +8,7 @@ function CreditHeader({ title }) {
                 {title}
             </h2>
             <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[100%] 
-            block ml-auto mr-auto relative top-[-29px] z-0 overflow-hidden' />
+            block ml-auto mr-auto relative top-[-25px] z-0 overflow-hidden' />
         </div>
     )
 }

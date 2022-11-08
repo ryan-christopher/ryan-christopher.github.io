@@ -1,6 +1,7 @@
 import React from 'react'
 import { IoLogoGithub } from 'react-icons/io';
 import "../styles/footer.css"
+import Credits from './Credits';
 
 function Footer() {
     return (
@@ -18,6 +19,7 @@ function Footer() {
                     <br />
                 </div>
             </div>
+            <Credits />
             <img src="./ryanmoji.png" alt="An emoji of me on a computer." className='relative bottom-[0px] block ml-auto mr-auto hover:mt-[50px] w-[200px] overflow-hidden ease-in duration-1000' />
         </div>
     )

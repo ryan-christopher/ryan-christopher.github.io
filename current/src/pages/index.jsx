@@ -2,9 +2,9 @@
 import "../styles/App.css"
 import "../styles/index.css"
 // Components
+import SectionHeader from "../components/SectionHeader"
 import Footer from '../components/Footer'
 import Laptop from '../components/Laptop'
-import Credits from '../components/Credits'
 import CoffeeCup from '../components/CoffeeCup'
 import Midi from '../components/Midi'
 import InterestItem from '../components/InterestItem'
@@ -31,8 +31,7 @@ function index() {
                     <img src="cartoonRyan.png" alt="A painting of me." className="w-[250px] mt-[75px] lg:w-[350px] lg:mt-[100px] mb-[-30px] md:mb-[-20px] block ml-auto mr-auto" />
                     <div className="content w-[85vw] max-w-[1800px] pb-[30px] rounded-sm mt-[30px] md:mt-5 bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-sm border-[1px] 
                         border-[#171717] dark:border-[#dfd5c1] ease-in duration-200">
-                        {/** put glitch back */}
-                        <h2 id="introtext" className='text-center pt-[40px] pb-[0px] m:pt-[50px] m:pb-[50px] xl:pt-[70px] xl:pb-20px] 
+                        <h2 id="introtext" className='glitch text-center pt-[40px] pb-[0px] m:pt-[50px] m:pb-[50px] xl:pt-[70px] xl:pb-20px] 
                             text-[#171717] text-[48px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[120px] lg:text-[80px] md:text-[60px]'>
                             Hey, I'm Ryan
                         </h2>
@@ -57,8 +56,8 @@ function index() {
                                 </div>
                             </div>
                             <div className="landing-flex-item-right">
-                                <p className="block ml-auto mr-auto w-[95%] lg:w-[60%] lg:mt-[-10px] mb-[10px] text-[22px] text-justify">
-                                    <span className="font-['Atami_Display'] uppercase">I'm</span> a recent Boston University grad who studied computer science and music.
+                                <p className="block ml-auto mr-auto w-[100%] lg:w-[60%] lg:mt-[-10px] mb-[10px] text-[22px] text-justify">
+                                    I'm a recent Boston University grad who studied computer science and music.
                                 </p>
                                 <br />
                                 <hr className="h-[2px] w-[55%] min-w-[225px] block ml-auto mr-auto border-none rounded-sm bg-[#171717] dark:bg-[#dfd5c1] ease-in duration-200" />
@@ -71,9 +70,9 @@ function index() {
                                 </div>
                                 <hr className="h-[2px] w-[55%] min-w-[225px] block ml-auto mr-auto border-none rounded-sm bg-[#171717] dark:bg-[#dfd5c1] ease-in duration-200" />
                                 <br />
-                                <p className="block ml-auto mr-auto w-[95%] lg:w-[60%] m-[10px] text-[22px] text-justify">
-                                    I’m a classically trained musician turned programmer from Las Vegas aiming to use my
-                                    interests in technology to build and design websites, web apps, and software.
+                                <p className="block ml-auto mr-auto w-[100%] lg:w-[60%] m-[10px] text-[22px] text-justify">
+                                    A classically trained musician turned programmer from Las Vegas aiming to use my
+                                    interests in technology to build and design meaningful websites, web apps, software, and more.
                                 </p>
                             </div>
                         </div>
@@ -85,8 +84,7 @@ function index() {
                     </span>
                 </ParallaxBannerLayer>
             </ParallaxBanner>
-
-            <section id="about" className='mt-[25px] pb-[100px]'>
+            <section id="about" className='mt-[50px]  lg:mt-[100px] lg:pb-[75px]'>
                 <CarouselText baseVelocity={-3}>
                     <IoLogoPython className="marqueeicon text-[45px] xl:text-[60px] text-yellow-200" />
                     <IoLogoHtml5 className="marqueeicon text-[45px] xl:text-[60px] text-red-500" />
@@ -96,25 +94,10 @@ function index() {
                     <IoLogoGithub className="marqueeicon text-[45px] xl:text-[60px] text-purple-400" />
                 </CarouselText>
             </section>
-
-            <Parallax speed={5} className="rounded-lg bg-opacity-50">
-                <motion.div
-                    initial={{ opacity: 0, transform: "translateX(-300px)" }}
-                    whileInView={{
-                        opacity: 1,
-                        transform: "translateX(0px)",
-                        transition: { duration: 0.7 }
-                    }}
-                    viewport={{ once: true }}>
-                    <h2 className='text-left w-fit overflow-hidden uppercase mt-[50px] ml-[20px] sm:ml-[100px] md:ml-[200px] rounded-[10px] 
-                    font-[Takota] text-[#171717] text-[55px] md:text-[60px] lg:text-[85px] xl:text-[125px] dark:text-[#f9f5e9] ease-in duration-200'>
-                        A bit about me
-                    </h2>
-                </motion.div>
-            </Parallax>
+            <SectionHeader title="A bit about me" />
             <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] md:w-[175px] xl:w-[200px] xl:mb-[50px] border-[1px] 
                         border-[#171717]" />
-            <section className='block ml-auto mr-auto mt-[10px] pt-[10px] pl-[30px] pr-[30px] text-justify w-[100vw] md:w-[50vw] min-w-[300px] mb-[0px]'>
+            <section className='block ml-auto mr-auto mt-[50px] pt-[10px] pl-[30px] pr-[30px] text-justify w-[100vw] md:w-[50vw] min-w-[300px] mb-[0px]'>
                 <motion.div
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
@@ -138,9 +121,9 @@ function index() {
                     }}
                     viewport={{ once: true }}>
                     <h2 className="uppercase text-[25px] text-right w-[70vw] lg:text-[45px] max-w-[600px] ml-auto">
-                        I began taking a web design class which
-                        then quickly turned to courses on algorithms, python,
-                        java, web app development, and software engineering.
+                        What started as a web design class quickly became
+                        courses on algorithms, python, java, computer systems,
+                        web app development, and software engineering.
                     </h2>
                 </motion.div>
                 <Midi />
@@ -174,7 +157,6 @@ function index() {
                 <InterestItem title="video games" align="ml-auto" />
                 <InterestItem title="food" align="mr-auto" />
             </div>
-
             <Laptop className="hover:cursor-pointer" />
             <section id="portfolio" className='mt-[250px] mb-[10px]'>
                 <CarouselText baseVelocity={-2}>
@@ -190,21 +172,7 @@ function index() {
             <ParallaxBanner style={{ aspectRatio: '1 / 1' }} id="projectCardsContainer" className="h-[2850px] min-h-[1350px] xl:h-[100vh]">
                 <ParallaxBannerLayer image="birmingham.jpg" speed={10} />
                 <ParallaxBannerLayer className='bg-[#75757544] dark:bg-[#00000066] ease-in duration-200' speed={0}>
-                    <Parallax speed={5} className="rounded-lg bg-opacity-50">
-                        <motion.div
-                            initial={{ opacity: 0, transform: "translateX(-300px)" }}
-                            whileInView={{
-                                opacity: 1,
-                                transform: "translateX(0px)",
-                                transition: { duration: 0.7 }
-                            }}
-                            viewport={{ once: true }}>
-                            <h2 className='text-left overflow-hidden uppercase w-[45vw] min-w-[375px] mt-[50px] ml-[50px] lg:ml-[300px] rounded-[10px] 
-                    font-[Takota] text-[55px] md:text-[60px] lg:text-[85px] xl:text-[125px] text-[#f9f5e9] ease-in duration-200'>
-                                Projects
-                            </h2>
-                        </motion.div>
-                    </Parallax>
+                    <SectionHeader title="Projects" />
                     <div className="flex flex-col xl:flex-row justify-between w-[90vw] ml-[5vw]">
                         <ProjectCard
                             name="Portfolio"
@@ -265,34 +233,8 @@ function index() {
                 <MarqueeLink title="Scratch Tic Tac Toe" link="https://scratch.mit.edu/projects/622549017/" />
                 <MarqueeLink title="Wallet Watch (WIP)" link="https://github.com/ryan-christopher/walletwatch" />
             </div>
-
-            <Parallax speed={5} className="rounded-lg bg-opacity-50">
-                <motion.div
-                    initial={{ opacity: 0, transform: "translateX(-300px)" }}
-                    whileInView={{
-                        opacity: 1,
-                        transform: "translateX(0px)",
-                        transition: { duration: 0.7 }
-                    }}
-                    viewport={{ once: true }}>
-                    <h2 className='text-left w-fit overflow-hidden uppercase mt-[50px] ml-[20px] sm:ml-[100px] md:ml-[200px] rounded-[10px] 
-                    font-[Takota] text-[#171717] text-[55px] md:text-[60px] lg:text-[85px] xl:text-[125px] dark:text-[#f9f5e9] ease-in duration-200'>
-                        Get in touch
-                    </h2>
-                </motion.div>
-                <motion.div
-                    initial={{ opacity: 0, transform: "translateY(100px)" }}
-                    whileInView={{
-                        opacity: 1,
-                        transform: "translateY(0px)",
-                        transition: { delay: 0.2, duration: 0.7 }
-                    }}
-                    viewport={{ once: true }}>
-
-                </motion.div>
-            </Parallax>
-
-            <Credits />
+            <div id="contact"></div>
+            <SectionHeader title="Get in touch" />
             <Footer />
         </div >
     )
