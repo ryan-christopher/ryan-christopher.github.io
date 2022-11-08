@@ -82,7 +82,7 @@ function index() {
                         </div>
                     </div>
                     <span className='asteriskcontainer block ml-auto mr-auto w-[100vw] align-center text-center mt-[50px]'>
-                        <Parallax rotate={[0, 360]} className="w-[10vw] min-w-[40px] inline-block max-w-[55px] mt-[50px] ease-linear duration-[50ms] mr-[8vw] ml-[8vw]">
+                        <Parallax rotate={[0, 360]} className="w-[10vw] min-w-[40px] inline-block max-w-[55px] mt-[30px] ease-linear duration-[50ms] mr-[8vw] ml-[8vw]">
                             <img src="whiteasterisk.png" alt="" className="asterisk p-[0px] opacity-100 ease-in duration-200" aria-hidden="true" />
                         </Parallax>
                     </span>
@@ -115,7 +115,9 @@ function index() {
                     </h2>
                 </motion.div>
             </Parallax>
-            <section className='block ml-auto mr-auto mt-[20px] pt-[30px] pl-[30px] pr-[30px] text-justify w-[100vw] md:w-[50vw] min-w-[300px] mb-[0px]'>
+            <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] md:w-[175px] xl:w-[200px] xl:mb-[50px] border-[1px] 
+                        border-[#171717]" />
+            <section className='block ml-auto mr-auto mt-[10px] pt-[10px] pl-[30px] pr-[30px] text-justify w-[100vw] md:w-[50vw] min-w-[300px] mb-[0px]'>
                 <motion.div
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
@@ -160,20 +162,20 @@ function index() {
                 </h2>
             </motion.div>
             <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
-            block ml-auto mr-auto pb-[50px] lg:pb-[50px]' />
-            <div className='pt-[10px] pb-[125px] w-[50vw] md:w-[50vw] min-w-[320px] max-w-[600px] ml-auto mr-auto'>
+            block ml-auto mr-auto pb-[25px] lg:pb-[50px]' />
+            <div className='pt-[10px] pb-[25px] w-[50vw] md:w-[50vw] min-w-[320px] max-w-[600px] ml-auto mr-auto'>
                 <InterestItem title="software development" align="mr-auto" />
                 <InterestItem title="web development" align="mr-auto ml-auto" />
                 <InterestItem title="data science" align="ml-auto" />
                 <InterestItem title="web design" align="mr-auto ml-auto" />
-                <InterestItem title="blockchain" align="mr-auto" />
-                <InterestItem title="music" align="mr-auto ml-auto" />
-                <InterestItem title="teaching" align="ml-auto" />
-                <InterestItem title="tennis" align="mr-auto ml-auto" />
-                <InterestItem title="skating" align="mr-auto" />
-                <InterestItem title="video games" align="mr-auto ml-auto" />
-                <InterestItem title="art" align="ml-auto" />
-                <InterestItem title="food" align="mr-auto ml-auto" />
+                <InterestItem title="coffee" align="mr-auto" />
+                <InterestItem title="blockchain" align="mr-auto ml-auto" />
+                <InterestItem title="music" align="ml-auto" />
+                <InterestItem title="art" align="mr-auto ml-auto" />
+                <InterestItem title="tennis" align="mr-auto" />
+                <InterestItem title="skating" align="mr-auto ml-auto" />
+                <InterestItem title="video games" align="ml-auto" />
+                <InterestItem title="food" align="mr-auto" />
             </div>
 
             <Laptop className="hover:cursor-pointer" />
@@ -201,7 +203,7 @@ function index() {
                             }}
                             viewport={{ once: true }}>
                             <h2 className='text-left overflow-hidden uppercase w-[45vw] min-w-[375px] mt-[50px] ml-[50px] lg:ml-[300px] rounded-[10px] 
-                    font-[Takota] text-[#171717] text-[55px] md:text-[60px] lg:text-[85px] xl:text-[125px] dark:text-[#f9f5e9] ease-in duration-200'>
+                    font-[Takota] text-[55px] md:text-[60px] lg:text-[85px] xl:text-[125px] text-[#f9f5e9] ease-in duration-200'>
                                 Projects
                             </h2>
                         </motion.div>
@@ -249,23 +251,50 @@ function index() {
                     </div>
                 </ParallaxBannerLayer>
             </ParallaxBanner>
-            <h2 className='text-[47px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] w-[200px] bg-[#dfd5c1] 
-            dark:bg-[#171717] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[100px]'>
+            <h2 className='text-[40px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] w-[200px] bg-[#dfd5c1] 
+            dark:bg-[#171717] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[50px]'>
                 More
             </h2>
             <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
-            block ml-auto mr-auto relative top-[-40px] z-0 overflow-hidden' />
-            <div className='flex flex-wrap justify-center pt-[50px] w-[90vw] md:w-[50vw] min-w-[320px] ml-auto mr-auto'>
-                <MarqueeLink title="My Wordle" link="https://ryan-christopher.github.io/wordle/" />
+            block ml-auto mr-auto relative top-[-36px] z-0 overflow-hidden' />
+            <div className='flex flex-wrap justify-center pt-[50px] w-[90vw] md:w-[45vw] min-w-[320px] ml-auto mr-auto'>
                 <MarqueeLink title="Beacon Street Records" link="https://ryan-christopher.github.io/beaconstreetrecords/" />
                 <MarqueeLink title="Conway's Game of Life" link="https://github.com/ryan-christopher/tcs/blob/main/python/games/gameoflife.py" />
                 <MarqueeLink title="Arts Internship Site" link="https://ryan-christopher.github.io/fa550project/" />
                 <MarqueeLink title="Shakespeare Bot" link="https://github.com/ryan-christopher/tcs/blob/main/python/games/shakespearebot.py" />
+                <MarqueeLink title="My Wordle" link="https://ryan-christopher.github.io/wordle/" />
                 <MarqueeLink title="Modal HTML Tutorial" link="https://github.com/ryan-christopher/tcs/tree/main/webroxcamp/ourcamp" />
                 <MarqueeLink title="FizzBuzz (of course!)" link="https://github.com/ryan-christopher/tcs/blob/main/python/applications/fizzbuzz.py" />
                 <MarqueeLink title="Scratch Tic Tac Toe" link="https://scratch.mit.edu/projects/622549017/" />
                 <MarqueeLink title="Wallet Watch (WIP)" link="https://github.com/ryan-christopher/walletwatch" />
             </div>
+
+            <Parallax speed={5} className="rounded-lg bg-opacity-50">
+                <motion.div
+                    initial={{ opacity: 0, transform: "translateX(-300px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        transform: "translateX(0px)",
+                        transition: { duration: 0.7 }
+                    }}
+                    viewport={{ once: true }}>
+                    <h2 className='text-left w-fit overflow-hidden uppercase mt-[50px] ml-[20px] sm:ml-[100px] md:ml-[200px] rounded-[10px] 
+                    font-[Takota] text-[#171717] text-[55px] md:text-[60px] lg:text-[85px] xl:text-[125px] dark:text-[#f9f5e9] ease-in duration-200'>
+                        Get in touch
+                    </h2>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, transform: "translateY(100px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        transform: "translateY(0px)",
+                        transition: { delay: 0.2, duration: 0.7 }
+                    }}
+                    viewport={{ once: true }}>
+
+                </motion.div>
+            </Parallax>
+
             <Credits />
             <Footer />
         </div >

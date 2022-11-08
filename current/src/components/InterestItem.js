@@ -21,7 +21,7 @@ function MarqueeLink({ title, align }) {
                         {title}
                     </span>
                     <Marquee
-                        className='!absolute top-0 left-0 w-[100%] !h-[100%] rounded-[50px] bg-[#171717] text-[#f9f5e9] opacity-0 hover:opacity-100 ease-linear duration-150'
+                        className='!absolute top-0 left-0 w-[100%] !h-[100%] bg-[#171717] text-[#f9f5e9] opacity-0 hover:opacity-100 ease-linear duration-150'
                         speed={125}
                         gradient={false}
                         direction={'left'}>
