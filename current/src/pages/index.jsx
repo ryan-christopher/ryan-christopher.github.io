@@ -115,7 +115,7 @@ function index() {
                     </h2>
                 </motion.div>
             </Parallax>
-            <section className='block ml-auto mr-auto mt-[20px] pt-[30px] pl-[30px] pr-[30px] text-justify w-[50vw] min-w-[300px] mb-[0px]'>
+            <section className='block ml-auto mr-auto mt-[20px] pt-[30px] pl-[30px] pr-[30px] text-justify w-[100vw] md:w-[50vw] min-w-[300px] mb-[0px]'>
                 <motion.div
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
@@ -124,7 +124,7 @@ function index() {
                         transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className="uppercase text-[25px] text-left w-[60vw] lg:text-[45px] max-w-[600px]">
+                    <h2 className="uppercase text-[25px] text-left w-[70vw] lg:text-[45px] max-w-[600px]">
                         I'm a developer who became intrigued with programming and technology
                         in my first year of college.
                     </h2>
@@ -138,7 +138,7 @@ function index() {
                         transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className="uppercase text-[25px] text-right w-[60vw] lg:text-[45px] max-w-[600px] ml-auto">
+                    <h2 className="uppercase text-[25px] text-right w-[70vw] lg:text-[45px] max-w-[600px] ml-auto">
                         I began taking a web design class which
                         then quickly turned to courses on algorithms, python,
                         java, web app development, and software engineering.
@@ -160,20 +160,20 @@ function index() {
                 </h2>
             </motion.div>
             <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
-            block ml-auto mr-auto pb-[75px] lg:pb-[120px]' />
-            <div className='flex flex-wrap justify-center pt-[10px] pb-[125px] w-[50vw] md:w-[50vw] min-w-[320px] max-w-[600px] ml-auto mr-auto'>
-                <InterestItem title="web development" />
-                <InterestItem title="web design" />
-                <InterestItem title="software development" />
-                <InterestItem title="data science" />
-                <InterestItem title="blockchain" />
-                <InterestItem title="music" />
-                <InterestItem title="teaching" />
-                <InterestItem title="tennis" />
-                <InterestItem title="skating" />
-                <InterestItem title="video games" />
-                <InterestItem title="art" />
-                <InterestItem title="food" />
+            block ml-auto mr-auto pb-[50px] lg:pb-[50px]' />
+            <div className='pt-[10px] pb-[125px] w-[50vw] md:w-[50vw] min-w-[320px] max-w-[600px] ml-auto mr-auto'>
+                <InterestItem title="software development" align="mr-auto" />
+                <InterestItem title="web development" align="mr-auto ml-auto" />
+                <InterestItem title="data science" align="ml-auto" />
+                <InterestItem title="web design" align="mr-auto ml-auto" />
+                <InterestItem title="blockchain" align="mr-auto" />
+                <InterestItem title="music" align="mr-auto ml-auto" />
+                <InterestItem title="teaching" align="ml-auto" />
+                <InterestItem title="tennis" align="mr-auto ml-auto" />
+                <InterestItem title="skating" align="mr-auto" />
+                <InterestItem title="video games" align="mr-auto ml-auto" />
+                <InterestItem title="art" align="ml-auto" />
+                <InterestItem title="food" align="mr-auto ml-auto" />
             </div>
 
             <Laptop className="hover:cursor-pointer" />

@@ -6,7 +6,7 @@ function MarqueeLink({ title, link }) {
     return (
         <div>
             <motion.div
-                className='lg:m-[10px]'
+                className='lg:m-[10px] hover:scale-[1.2]'
                 initial={{ opacity: 0, transform: "translateY(100px)" }}
                 whileInView={{
                     opacity: 1,
