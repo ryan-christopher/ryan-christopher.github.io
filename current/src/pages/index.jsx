@@ -28,14 +28,11 @@ function index() {
             <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="min-h-[1500px] lg:h-[110vh] xl:h-[115vh] max-w-[100vw]">
                 <ParallaxBannerLayer image="boston2.jpg" speed={10} />
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
-                    {/*}
-                    <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] relative mt-[100px] md:w-[200px] xl:w-[250px] border-[1px] 
-                        border-[#171717]" />
-    */}
                     <img src="cartoonRyan.png" alt="A painting of me." className="w-[250px] mt-[75px] lg:w-[350px] lg:mt-[100px] mb-[-30px] md:mb-[-20px] block ml-auto mr-auto" />
                     <div className="content w-[85vw] max-w-[1800px] pb-[30px] rounded-sm mt-[30px] md:mt-5 bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-sm border-[1px] 
                         border-[#171717] dark:border-[#dfd5c1] ease-in duration-200">
-                        <h2 id="introtext" className='glitch text-center pt-[40px] pb-[0px] m:pt-[50px] m:pb-[50px] xl:pt-[70px] xl:pb-20px] 
+                        {/** put glitch back */}
+                        <h2 id="introtext" className='text-center pt-[40px] pb-[0px] m:pt-[50px] m:pb-[50px] xl:pt-[70px] xl:pb-20px] 
                             text-[#171717] text-[48px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[120px] lg:text-[80px] md:text-[60px]'>
                             Hey, I'm Ryan
                         </h2>
@@ -61,7 +58,7 @@ function index() {
                             </div>
                             <div className="landing-flex-item-right">
                                 <p className="block ml-auto mr-auto w-[95%] lg:w-[60%] lg:mt-[-10px] mb-[10px] text-[22px] text-justify">
-                                    I'm a recent Boston University grad who studied computer science and music.
+                                    <span className="font-['Atami_Display'] uppercase">I'm</span> a recent Boston University grad who studied computer science and music.
                                 </p>
                                 <br />
                                 <hr className="h-[2px] w-[55%] min-w-[225px] block ml-auto mr-auto border-none rounded-sm bg-[#171717] dark:bg-[#dfd5c1] ease-in duration-200" />
@@ -163,7 +160,7 @@ function index() {
             </motion.div>
             <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
             block ml-auto mr-auto pb-[25px] lg:pb-[50px]' />
-            <div className='pt-[10px] pb-[25px] w-[50vw] md:w-[50vw] min-w-[320px] max-w-[600px] ml-auto mr-auto'>
+            <div className='pt-[10px] pb-[150px] w-[50vw] md:w-[50vw] min-w-[320px] max-w-[600px] ml-auto mr-auto'>
                 <InterestItem title="software development" align="mr-auto" />
                 <InterestItem title="web development" align="mr-auto ml-auto" />
                 <InterestItem title="data science" align="ml-auto" />
