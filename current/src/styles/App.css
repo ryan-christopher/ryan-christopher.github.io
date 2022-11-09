@@ -242,4 +242,10 @@ div#slantText{
     #projectCardsContainer{
       height:3050px;
     }
+    .mobileEmailButton{
+      font-size: 33px;
+    }
+    .sectionHeader{
+      font-size: 45px;
+    }
   }

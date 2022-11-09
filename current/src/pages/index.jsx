@@ -248,7 +248,7 @@ function index() {
                         Have a job, website, project, or want to connect?
                     </h2>
                 </motion.div>
-                <a href="mailto:ryanchristopher.dev@gmail.com?subject=Hello from your website!" className='contactbutton text-[33px] sm:text-[40px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] rounded-[10px] dark:text-[#e6e0d3] text-[#171717] w-fit bg-[#ffecc8] 
+                <a href="mailto:ryanchristopher.dev@gmail.com?subject=Hello from your website!" className='mobileEmailButton contactbutton text-[40px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] rounded-[10px] dark:text-[#e6e0d3] text-[#171717] w-fit bg-[#ffecc8] 
             dark:bg-[#414141] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[40px] hover:scale-[1.2] ease-in duration-200'>
                     Contact Me
                 </a>

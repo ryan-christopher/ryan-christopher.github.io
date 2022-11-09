@@ -1,6 +1,7 @@
 import React from 'react'
 import { Parallax } from 'react-scroll-parallax';
 import { motion } from 'framer-motion';
+import "../styles/App.css"
 
 function SectionHeader({ title }) {
     return (
@@ -14,8 +15,8 @@ function SectionHeader({ title }) {
                         transition: { duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className='text-left w-fit overflow-hidden uppercase pr-[7px] mt-[50px] ml-[20px] sm:ml-[100px] md:ml-[200px] rounded-[10px] 
-                    font-[Takota] text-[#171717] text-[45px] sm:text-[50px] md:text-[60px] lg:text-[85px] xl:text-[125px] dark:text-[#f9f5e9] ease-in duration-200'>
+                    <h2 className='sectionHeader text-left w-fit overflow-hidden uppercase pr-[7px] mt-[50px] ml-[20px] sm:ml-[100px] md:ml-[200px] rounded-[10px] 
+                    font-[Takota] text-[#171717] text-[53px] md:text-[60px] lg:text-[85px] xl:text-[125px] dark:text-[#f9f5e9] ease-in duration-200'>
                         {title}
                     </h2>
                 </motion.div>
