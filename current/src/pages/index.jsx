@@ -25,7 +25,7 @@ import { CgMusic } from "react-icons/cg"
 function index() {
     return (
         <div id="home" className='bg-[#dfd5c1] dark:bg-[#171717] ease-in duration-200'>
-            <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="min-h-[1500px] lg:h-[110vh] xl:h-[115vh] max-w-[100vw]">
+            <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="min-h-[1400px] lg:h-[100vh] xl:h-[100vh] max-w-[100vw]">
                 <ParallaxBannerLayer image="boston2.jpg" speed={10} />
                 <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
                     <img src="cartoonRyan.png" alt="A painting of me." className="w-[250px] mt-[75px] lg:w-[350px] lg:mt-[100px] mb-[-30px] md:mb-[-20px] block ml-auto mr-auto" />
@@ -35,8 +35,8 @@ function index() {
                             text-[#171717] text-[48px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[120px] lg:text-[80px] md:text-[60px]'>
                             Hey, I'm Ryan
                         </h2>
-                        <div className="landing-flex-container p-[30px] rounded-md md:mt-5 w-[85vw] max-w-[1800px] ease-in duration-200">
-                            <div className="landing-flex-item-left">
+                        <div className="landing-flex-container rounded-md md:mt-5 w-[85vw] max-w-[1800px] ease-in duration-200">
+                            <div className="landing-flex-item-left p-[30px]">
                                 <div id="slantText" className="scale-[0.9] min-w-[450px] w-[100vw] md:w-[100%] translate-x-[-130px] sm:translate-x-[-60px] 
                                 xl:mt-[30px] xl:scale-[1.25] ease-in duration-200">
                                     <div className="[-webkit-text-stroke:2px_#171717] perspective-text dark:[-webkit-text-stroke:2px_#f9f5e9]">
@@ -55,9 +55,9 @@ function index() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="landing-flex-item-right">
-                                <p className="block ml-auto mr-auto w-[100%] lg:w-[60%] lg:mt-[-10px] mb-[10px] text-[22px] text-justify">
-                                    I'm a recent Boston University grad who studied computer science and music.
+                            <div className="landing-flex-item-right p-0">
+                                <p className="block ml-auto mr-auto w-[90%] lg:w-[60%] lg:mt-[10px] mb-[10px] text-[20px] text-justify">
+                                    I'm a Boston University grad from Las Vegas who studied computer science and music.
                                 </p>
                                 <br />
                                 <hr className="h-[2px] w-[55%] min-w-[225px] block ml-auto mr-auto border-none rounded-sm bg-[#171717] dark:bg-[#dfd5c1] ease-in duration-200" />
@@ -70,9 +70,9 @@ function index() {
                                 </div>
                                 <hr className="h-[2px] w-[55%] min-w-[225px] block ml-auto mr-auto border-none rounded-sm bg-[#171717] dark:bg-[#dfd5c1] ease-in duration-200" />
                                 <br />
-                                <p className="block ml-auto mr-auto w-[100%] lg:w-[60%] m-[10px] text-[22px] text-justify">
-                                    A classically trained musician turned programmer from Las Vegas aiming to use my
-                                    interests in technology to build and design meaningful websites, web apps, software, and more.
+                                <p className="block ml-auto mr-auto w-[90%] lg:w-[60%] m-[10px] text-[20px] text-justify">
+                                    As a classical musician turned programmer I aim to use my
+                                    interests in technology to build meaningful websites, web apps, software, and more.
                                 </p>
                             </div>
                         </div>
@@ -233,8 +233,49 @@ function index() {
                 <MarqueeLink title="Scratch Tic Tac Toe" link="https://scratch.mit.edu/projects/622549017/" />
                 <MarqueeLink title="Wallet Watch (WIP)" link="https://github.com/ryan-christopher/walletwatch" />
             </div>
-            <div id="contact"></div>
+            <div id="contact" className="h-[100px]"></div>
             <SectionHeader title="Get in touch" />
+            <section className='block ml-auto mr-auto mt-[50px] pt-[10px] pl-[30px] pr-[30px] text-justify w-[100vw] md:w-[50vw] min-w-[300px] mb-[0px]'>
+                <motion.div
+                    initial={{ opacity: 0, transform: "translateY(100px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        transform: "translateY(0px)",
+                        transition: { delay: 0.2, duration: 0.7 }
+                    }}
+                    viewport={{ once: true }}>
+                    <h2 className="uppercase text-[25px] text-left w-[70vw] lg:text-[45px] max-w-[600px]">
+                        Have a job, website, project, or want to connect?
+                    </h2>
+                </motion.div>
+                <a href="mailto:ryanchristopher.dev@gmail.com?subject=Hello from your website!" className='contactbutton text-[40px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] rounded-[10px] dark:text-[#e6e0d3] text-[#171717] w-fit bg-[#ffecc8] 
+            dark:bg-[#414141] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[40px] hover:scale-[1.2] ease-in duration-200'>
+                    Contact Me
+                </a>
+                <motion.div
+                    className="ml-auto mr-auto"
+                    initial={{ width: "0px" }}
+                    whileInView={{
+                        width: "95%",
+                        transition: { delay: 0, duration: 1 }
+                    }}
+                    viewport={{ once: true }}>
+                    <hr className={`text-[#171717] border-[#171717] dark:border-[#dfd5c1] md:w-[100%] 
+            block ml-auto mr-auto relative top-[-37px] z-0 overflow-hidden`} />
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, transform: "translateY(100px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        transform: "translateY(0px)",
+                        transition: { delay: 0.2, duration: 0.7 }
+                    }}
+                    viewport={{ once: true }}>
+                    <h2 className="uppercase text-[25px] mt-[45px] text-right w-[70vw] lg:text-[45px] max-w-[600px] ml-auto">
+                        Let's talk.
+                    </h2>
+                </motion.div>
+            </section>
             <Footer />
         </div >
     )

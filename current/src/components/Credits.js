@@ -10,7 +10,7 @@ function Credits() {
         <div>
             <div className="creditnavbar bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.5)] backdrop-blur-sm ease-in duration-200">
             </div>
-            <div className="creditbutton hover:cursor-pointer hover:scale-[1.2] origin-center block ml-auto mr-[5vw] text-[20px] underline">
+            <div className="creditbutton hover:cursor-pointer hover:scale-[1.2] top-[150px] origin-center block ml-auto mr-[8vw] text-[20px] underline">
                 Credits
             </div>
             <div className="creditmenu bg-[#dfd5c1] dark:bg-[#171717] overflow-y-scroll">

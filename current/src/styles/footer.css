@@ -70,18 +70,16 @@ img#footerpicture {
 
 .social-link {
     display: block;
-    padding: 10px;
-    width: 65px;
-    height: 65px;
+    background-color: #171717;
+    padding: 5px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     transform: scale(1);
     transition: all 0.4s;
 }
 
 .social-link:hover {
-    background-color: rgb(22, 27, 34);
-    color: #f9f5e9;
-    border: 2px solid #6e5494;
-    transform: scale(1.1);
-    transition: all 0.4s;
+    transform: scale(1.4);
+    transition: all 0.2s;
 }
