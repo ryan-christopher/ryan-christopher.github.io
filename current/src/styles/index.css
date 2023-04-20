@@ -32,13 +32,13 @@ code {
 .preload-finish {
   opacity: 0;
   pointer-events: none;
-  transition: all 0.75s ease 1s;
+  transition: all 1s ease 1s;
 }
 
 .resultsload-finish {
   opacity: 0;
   pointer-events: none;
-  transition: all 0.75s ease 1s;
+  transition: all 1s ease 1s;
 }
 
 #loading-pic {
