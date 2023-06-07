@@ -4,7 +4,7 @@ import "../styles/index.css"
 // Components
 import SectionHeader from "../components/SectionHeader"
 import Footer from '../components/Footer'
-import Laptop from '../components/Laptop'
+//import Laptop from '../components/Laptop'
 import CoffeeCup from '../components/CoffeeCup'
 import Midi from '../components/Midi'
 import InterestItem from '../components/InterestItem'
@@ -13,13 +13,13 @@ import MarqueeLink from '../components/MarqueeLink'
 // Moving Text
 import { Parallax } from 'react-scroll-parallax';
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
-import CarouselText from '../components/CarouselText.tsx';
+//import CarouselText from '../components/CarouselText.tsx';
 import { motion } from 'framer-motion';
 // Icons
-import { SiJavascript } from "react-icons/si"
-import { IoLogoPython, IoLogoHtml5, IoLogoCss3, IoLogoGithub } from "react-icons/io"
+//import { SiJavascript } from "react-icons/si"
+//import { IoLogoPython, IoLogoHtml5, IoLogoCss3, IoLogoGithub } from "react-icons/io"
 import { IoCodeSlash } from "react-icons/io5"
-import { FaReact } from "react-icons/fa"
+//import { FaReact } from "react-icons/fa"
 import { CgMusic } from "react-icons/cg"
 
 function index() {
@@ -27,53 +27,39 @@ function index() {
         <div id="home" className='bg-[#dfd5c1] dark:bg-[#171717] ease-in duration-200'>
             <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="min-h-[1400px] lg:h-[100vh] xl:h-[100vh] max-w-[100vw]">
                 <ParallaxBannerLayer image="boston2.jpg" speed={10} />
-                <ParallaxBannerLayer className='bg-[#2a2a2abb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
-                    <img src="cartoonRyan.png" alt="A painting of me." className="w-[250px] mt-[75px] lg:w-[350px] lg:mt-[100px] mb-[-30px] md:mb-[-20px] block ml-auto mr-auto" />
-                    <div className="content w-[85vw] max-w-[1800px] pb-[30px] rounded-sm mt-[30px] md:mt-5 bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-sm border-[1px] 
+                <ParallaxBannerLayer className='bg-[#525252bb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
+                    <h2 id="introtext" className='text-left mt-[100px] ml-[7vw]
+                            text-[#f9f5e9] text-[70px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[170px] lg:text-[150px] md:text-[120px]'>
+                        Hi, I'm Ryan
+                    </h2>
+                    <p id="introtext" className='text-left mt-[0px] ml-[7vw] 
+                            text-[#f9f5e9] text-[30px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[50px] lg:text-[40px] md:text-[30px] w-[50vw] min-w-[250px] max-w-[800px]'>
+                        a classically trained musician turned avid tech enthusiast.
+                    </p>
+                    <img src="cartoonRyan.png" alt="A painting of me." className="w-[250px] lg:w-[350px] mb-[-30px] md:mb-[-20px] block ml-auto mr-auto" />
+                    <div className="content w-[90vw] flex justify-center md:w-[55vw] max-w-[700px] pb-[30px] rounded-sm mt-[30px] md:mt-5 bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-sm border-[1px] 
                         border-[#171717] dark:border-[#dfd5c1] ease-in duration-200">
-                        <h2 id="introtext" className='glitch text-center pt-[40px] pb-[0px] m:pt-[50px] m:pb-[50px] xl:pt-[70px] xl:pb-20px] 
-                            text-[#171717] text-[48px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[120px] lg:text-[80px] md:text-[60px]'>
-                            Hey, I'm Ryan
-                        </h2>
-                        <div className="landing-flex-container rounded-md md:mt-5 w-[85vw] max-w-[1800px] ease-in duration-200">
-                            <div className="landing-flex-item-left p-[30px]">
-                                <div id="slantText" className="scale-[0.9] min-w-[450px] w-[100vw] md:w-[100%] translate-x-[-130px] sm:translate-x-[-60px] 
-                                xl:mt-[30px] xl:scale-[1.25] ease-in duration-200">
-                                    <div className="[-webkit-text-stroke:2px_#171717] perspective-text dark:[-webkit-text-stroke:2px_#f9f5e9]">
-                                        <div className="perspective-line hover:text-[#171717] dark:hover:text-[#dfd5c1] ease-linear duration-200">
-                                            <p>Coder</p>
-                                            <p>Designer</p>
-                                        </div>
-                                        <div className="perspective-line hover:text-[#171717] dark:hover:text-[#dfd5c1] ease-in duration-200">
-                                            <p>Musician</p>
-                                            <p>Developer</p>
-                                        </div>
-                                        <div className="perspective-line hover:text-[#171717] dark:hover:text-[#dfd5c1] ease-in duration-200">
-                                            <p>Teacher</p>
-                                            <p>Producer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="landing-flex-item-right p-0">
-                                <p className="block ml-auto mr-auto w-[90%] lg:w-[60%] lg:mt-[10px] mb-[10px] text-[20px] text-justify">
-                                    I'm a Boston University grad from Las Vegas who studied computer science and music.
+                        <div className="rounded-md md:mt-5 w-[90vw] md:w-[55vw] max-w-[700px] ease-in duration-200">
+                            <div className="block ml-auto mr-auto p-[10px] pt-[30px] w-[100%]">
+                                <p className="block ml-auto mr-auto w-[90%] lg:w-[70%] lg:mt-[10px] mb-[10px] text-[25px]">
+                                    I'm a Boston University grad from Las Vegas who studied computer science and music with a background
+                                    in education, programming, management, and music.
                                 </p>
                                 <br />
+                                {/*
                                 <hr className="h-[2px] w-[55%] min-w-[225px] block ml-auto mr-auto border-none rounded-sm bg-[#171717] dark:bg-[#dfd5c1] ease-in duration-200" />
-                                <div className="w-[50%] min-w-[225px] max-w-[500px] block ml-auto mr-auto pt-[10px] pb-[10px]">
+    */}
+                                <div className="w-[70%] min-w-[225px] max-w-[500px] block ml-auto mr-auto pt-[10px] pb-[10px]">
                                     <div className="w-[100%] inline-flex justify-center items-center">
-                                        <IoCodeSlash className="w-[100px] text-[50px] " />
+                                        <IoCodeSlash className="w-[100px] text-[40px] " />
                                         <img className="w-[125px] p-[10px]  ml-auto mr-auto" src="bulogo.png" alt="The Boston University logo." />
-                                        <CgMusic className="w-[100px] text-[50px]" />
+                                        <CgMusic className="w-[100px] text-[40px]" />
                                     </div>
                                 </div>
+                                {/*
                                 <hr className="h-[2px] w-[55%] min-w-[225px] block ml-auto mr-auto border-none rounded-sm bg-[#171717] dark:bg-[#dfd5c1] ease-in duration-200" />
+*/}
                                 <br />
-                                <p className="block ml-auto mr-auto w-[90%] lg:w-[60%] m-[10px] text-[20px] text-justify">
-                                    As a classical musician turned programmer I aim to use my
-                                    interests in technology to build meaningful websites, web apps, software, and more.
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -85,6 +71,7 @@ function index() {
                 </ParallaxBannerLayer>
             </ParallaxBanner>
             <section id="about" className='mt-[50px]  lg:mt-[100px] lg:pb-[75px]'>
+                {/*
                 <CarouselText baseVelocity={-3}>
                     <IoLogoPython className="marqueeicon text-[45px] xl:text-[60px] text-yellow-200" />
                     <IoLogoHtml5 className="marqueeicon text-[45px] xl:text-[60px] text-red-500" />
@@ -93,11 +80,12 @@ function index() {
                     <FaReact className="marqueeicon text-[45px] xl:text-[60px] text-blue-400" />
                     <IoLogoGithub className="marqueeicon text-[45px] xl:text-[60px] text-purple-400" />
                 </CarouselText>
+    */}
             </section>
             <SectionHeader title="A bit about me" />
             <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] md:w-[175px] xl:w-[200px] xl:mb-[50px] border-[1px] 
                         border-[#171717]" />
-            <section className='block ml-auto mr-auto mt-[50px] pt-[10px] pl-[30px] pr-[30px] text-justify w-[100vw] md:w-[50vw] min-w-[300px] mb-[0px]'>
+            <section className='block ml-auto mr-auto mt-[50px] pt-[10px] pl-[30px] pr-[30px] text-justify w-[100vw] lg:w-[70vw] md:w-[80vw] min-w-[300px] mb-[0px]'>
                 <motion.div
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
@@ -106,7 +94,7 @@ function index() {
                         transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className="uppercase text-[25px] text-left w-[70vw] lg:text-[45px] max-w-[600px]">
+                    <h2 className="text-[25px] text-left w-[70vw] lg:text-[45px] max-w-[600px]">
                         I'm a developer who became intrigued with programming and technology
                         in my first year of college.
                     </h2>
@@ -120,7 +108,7 @@ function index() {
                         transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className="uppercase text-[25px] text-right w-[70vw] lg:text-[45px] max-w-[600px] ml-auto">
+                    <h2 className="text-[25px] text-right w-[70vw] lg:text-[45px] max-w-[600px] ml-auto">
                         What started as a web design class quickly became
                         courses on algorithms, python, java, computer systems,
                         web app development, and software engineering.
@@ -137,13 +125,13 @@ function index() {
                     transition: { duration: 0.7 }
                 }}
                 viewport={{ once: true }}>
-                <h2 className="uppercase text-center block ml-auto mr-auto text-[33px] lg:text-[50px] max-w-[600px]">
+                <h2 className="uppercase font-['Room_205'] text-center block ml-auto mr-auto text-[33px] sm:text-[50px] max-w-[600px]">
                     I'm interested in
                 </h2>
             </motion.div>
             <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
             block ml-auto mr-auto pb-[25px] lg:pb-[50px]' />
-            <div className='pt-[10px] pb-[150px] w-[50vw] md:w-[50vw] min-w-[320px] max-w-[600px] ml-auto mr-auto'>
+            <div className='pt-[10px] pb-[100px] w-[50vw] md:w-[50vw] min-w-[320px] max-w-[600px] ml-auto mr-auto'>
                 <InterestItem title="software development" align="mr-auto" />
                 <InterestItem title="web development" align="mr-auto ml-auto" />
                 <InterestItem title="data science" align="ml-auto" />
@@ -157,8 +145,11 @@ function index() {
                 <InterestItem title="video games" align="ml-auto" />
                 <InterestItem title="food" align="mr-auto" />
             </div>
+            {/*
             <Laptop className="hover:cursor-pointer" />
-            <section id="portfolio" className='mt-[250px] mb-[10px]'>
+            */}
+            <section id="portfolio" className='pt-[80px] mb-[10px]'>
+                {/*
                 <CarouselText baseVelocity={-2}>
                     <h2 className="min-w-[45vw] ml-[30px]">console.log("Hello world -Ryan")</h2>
                     <h2 className="text-red-500 ml-[30px] text-center xl:w-[30vw]">|</h2>
@@ -167,12 +158,15 @@ function index() {
                     <h2 className="min-w-[45vw] ml-[30px]">System.out.print("Hello world -Ryan")</h2>
                     <h2 className="text-blue-500 ml-[20px] text-center xl:w-[30vw]">|</h2>
                 </CarouselText>
+        */}
                 <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[95vw] block ml-auto mr-auto mt-[0px] pb-[5px]' />
             </section>
             <ParallaxBanner style={{ aspectRatio: '1 / 1' }} id="projectCardsContainer" className="h-[2850px] min-h-[1350px] xl:h-[100vh]">
                 <ParallaxBannerLayer image="birmingham.jpg" speed={10} />
-                <ParallaxBannerLayer className='bg-[#75757544] dark:bg-[#00000066] ease-in duration-200' speed={0}>
-                    <SectionHeader title="Projects" />
+                <ParallaxBannerLayer className='bg-[#5c5c5c44] dark:bg-[#00000066] ease-in duration-200' speed={0}>
+                    <div className="text-[#f9f5e9]">
+                        <SectionHeader title="Projects" />
+                    </div>
                     <div className="flex flex-col xl:flex-row justify-between w-[90vw] ml-[5vw]">
                         <ProjectCard
                             name="Portfolio"
@@ -216,12 +210,12 @@ function index() {
                     </div>
                 </ParallaxBannerLayer>
             </ParallaxBanner>
-            <h2 className='text-[40px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] w-[200px] bg-[#dfd5c1] 
+            <h2 className='text-[40px] pt-[10px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Room_205"] w-[200px] bg-[#dfd5c1] 
             dark:bg-[#171717] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[50px]'>
                 More
             </h2>
             <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
-            block ml-auto mr-auto relative top-[-36px] z-0 overflow-hidden' />
+            block ml-auto mr-auto relative top-[-40px] z-0 overflow-hidden' />
             <div className='flex flex-wrap justify-center pt-[50px] w-[90vw] md:w-[45vw] min-w-[320px] ml-auto mr-auto'>
                 <MarqueeLink title="Beacon Street Records" link="https://ryan-christopher.github.io/beaconstreetrecords/" />
                 <MarqueeLink title="Conway's Game of Life" link="https://github.com/ryan-christopher/tcs/blob/main/python/games/gameoflife.py" />
@@ -244,11 +238,11 @@ function index() {
                         transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className="uppercase text-[25px] text-left w-[70vw] lg:text-[45px] max-w-[600px]">
+                    <h2 className="text-[25px] text-left w-[50vw] lg:text-[45px] max-w-[600px]">
                         Have a job, website, project, or want to connect?
                     </h2>
                 </motion.div>
-                <a href="mailto:ryanchristopher.dev@gmail.com?subject=Hello from your website!" className='mobileEmailButton contactbutton text-[40px] pt-[5px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Atami_Display"] rounded-[10px] dark:text-[#e6e0d3] text-[#171717] w-fit bg-[#ffecc8] 
+                <a href="mailto:ryanchristopher.dev@gmail.com?subject=Hello from your website!" className='mobileEmailButton contactbutton text-[40px] pt-[15px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Room_205"] rounded-[10px] dark:text-[#e6e0d3] text-[#171717] w-fit bg-[#ffecc8] 
             dark:bg-[#414141] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[40px] hover:scale-[1.2] ease-in duration-200'>
                     Contact Me
                 </a>
@@ -261,7 +255,7 @@ function index() {
                     }}
                     viewport={{ once: true }}>
                     <hr className={`text-[#171717] border-[#171717] dark:border-[#dfd5c1] md:w-[100%] 
-            block ml-auto mr-auto relative top-[-37px] z-0 overflow-hidden`} />
+            block ml-auto mr-auto relative top-[-41px] z-0 overflow-hidden`} />
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
@@ -271,7 +265,7 @@ function index() {
                         transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className="uppercase text-[25px] mt-[45px] text-right w-[70vw] lg:text-[45px] max-w-[600px] ml-auto">
+                    <h2 className="text-[25px] mt-[45px] text-right w-[45vw] lg:text-[45px] max-w-[600px] ml-auto">
                         Let's talk.
                     </h2>
                 </motion.div>

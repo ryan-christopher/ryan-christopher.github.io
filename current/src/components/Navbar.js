@@ -15,7 +15,7 @@ function Navbar() {
 
     return (
         <div>
-            <h3 id="headername" className='text-[#171717] dark:text-[#f9f5e9] ease-in duration-200 uppercase'>Ryan Christopher</h3>
+            <h3 id="headername" className='text-[#171717] dark:text-[#f9f5e9] ease-in duration-200'>Ryan Christopher</h3>
 
             <div className="mobilenavbar bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.5)] backdrop-blur-sm ease-in duration-200">
             </div>

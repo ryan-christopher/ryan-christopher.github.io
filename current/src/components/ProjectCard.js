@@ -20,7 +20,7 @@ function ProjectCard({ name, nameSize, phrase, description, iconList, imageUrl, 
         <div>
             <motion.div
                 className='w-[100%] xl:w-[29vw] mt-[25px] mb-[25px] min-h-[500px] flex-col justify-center text-center rounded-[10px] 
-                            bg-[#e7e2d664] dark:bg-[rgba(0,0,0,0.3)] backdrop-blur-md border-[1px] 
+                            bg-[#e7e2d688] dark:bg-[rgba(0,0,0,0.3)] backdrop-blur-md border-[1px] 
                             border-[#171717]'
                 initial={{ opacity: 0, transform: "translateY(100px)" }}
                 whileInView={{
@@ -29,7 +29,7 @@ function ProjectCard({ name, nameSize, phrase, description, iconList, imageUrl, 
                     transition: { delay: 0, duration: 0.7 }
                 }}
                 viewport={{ once: true }}>
-                <h3 className={`${nameSize} uppercase font-['Atami'] pt-[20px]`}>{name}</h3>
+                <h3 className={`${nameSize} uppercase font-['Room_205'] pt-[20px]`}>{name}</h3>
                 <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[75%] block ml-auto mr-auto pb-[10px]' />
                 <p className='text-[20px]'>{phrase}</p>
                 <span className='mt-[20px] w-[74%] flex ml-[13%] justify-between text-[30px]'>
@@ -47,9 +47,9 @@ function ProjectCard({ name, nameSize, phrase, description, iconList, imageUrl, 
                 <a href={marqueeLink} target={"_blank"} rel="noreferrer"
                     className={`relative ml-[50%] translate-x-[-125px] text-[30px] uppercase flex justify-center items-center h-[50px] 
                                 border-2 ${borderCol} rounded-[50px] w-[250px] text-center mb-[30px]`}>
-                    <span className='inline-block align-baseline text-center opacity-100 hover:opacity-0 ease-linear duration-200'>Check it out</span>
+                    <span className='inline-block font-["Room_205"] align-baseline text-center opacity-100 hover:opacity-0 ease-linear duration-200'>Check it out</span>
                     <Marquee
-                        className='!absolute top-0 left-0 w-[100%] !h-[100%] rounded-[50px] bg-[#171717] text-[#f9f5e9] opacity-0 hover:opacity-100 ease-linear duration-150'
+                        className='!absolute font-["Room_205"] top-0 left-0 w-[100%] !h-[100%] rounded-[50px] bg-[#171717] text-[#f9f5e9] opacity-0 hover:opacity-100 ease-linear duration-150'
                         speed={125}
                         gradient={false}
                         direction={'left'}>

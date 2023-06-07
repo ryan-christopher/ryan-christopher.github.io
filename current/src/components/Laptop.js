@@ -71,7 +71,7 @@ function Laptop() {
                 style={{ opacity: props.open.to([0, 1], [1, 0]), transform: props.open.to((o) => `translateY(${o * 50 + 150}px)`) }}>
                 I like to <br /> use this...
             </web.h5>
-            <Canvas dpr={1} camera={{ position: [0, 0, -30], fov: 35 }}>
+            <Canvas frameloop="demand" dpr={1} camera={{ position: [0, 0, -30], fov: 35 }}>
                 <ambientLight intensity={1} />
                 <three.pointLight position={[0, 10, 5]} intensity={1.5} color={props.open.to([0, 1], ['#CABFBC', '#f9f5e9'])} />
                 <Suspense fallback={null}>

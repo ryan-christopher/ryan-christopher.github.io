@@ -17,6 +17,11 @@
   src: url("./Atami/Atami-Display-Bold.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Room 205";
+  src: url("./Room205/Room205-Regular.otf") format("opentype");
+}
+
 .scrollbar-track{
     background: none !important;
     width: 6px !important;

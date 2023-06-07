@@ -15,8 +15,8 @@ function SectionHeader({ title }) {
                         transition: { duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className='sectionHeader text-left w-fit overflow-hidden uppercase pr-[7px] mt-[50px] ml-[20px] sm:ml-[100px] md:ml-[200px] rounded-[10px] 
-                    font-[Takota] text-[#171717] text-[53px] md:text-[60px] lg:text-[85px] xl:text-[125px] dark:text-[#f9f5e9] ease-in duration-200'>
+                    <h2 className='sectionHeader text-left w-fit overflow-hidden uppercase pr-[7px] mt-[50px] ml-[10px] sm:ml-[100px] lg:ml-[100px] xl:ml-[180px] rounded-[10px] 
+                    font-["Room_205"] text-[60px] md:text-[70px] lg:text-[95px] xl:text-[125px] ease-in duration-200'>
                         {title}
                     </h2>
                 </motion.div>

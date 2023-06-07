@@ -9,10 +9,8 @@ import { Suspense } from 'react'
 const Model = () => {
     const coffeefbx = useLoader(FBXLoader, "./coffee_cup_fbx/Paper_coffee_cup.fbx");
     coffeefbx.position.y = -0.5
-    coffeefbx.rotation.x = 0
-    coffeefbx.rotation.z = 0
-    coffeefbx.rotation.x += 0.1;
-    coffeefbx.rotation.z -= 0.05
+    coffeefbx.rotation.x = 0.1;
+    coffeefbx.rotation.z = -0.05
     return <primitive object={coffeefbx} scale={0.011} />;
 };
 

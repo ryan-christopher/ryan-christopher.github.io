@@ -110,15 +110,12 @@ code {
 }
 
 #introtext {
-  font-family: "Atami Display";
+  font-family: "Room 205";
 }
 
 @media (max-width: 370px) {
   #introtext {
     font-size: 40px;
-  }
-  #headername {
-    font-size: 2px;
   }
 }
 

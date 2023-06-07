@@ -22,7 +22,7 @@ function Credits() {
                         leading-[1.25] block ml-auto mr-[20px] relative top-[5px] border-[1.5px] border-[#171717] dark:border-[#dfd5c1] h-[40px] ease-in duration-100">X</div>
                         <CreditHeader title="Fonts" />
                         <CreditLink title="Atami" link="https://andrewherndon.gumroad.com/l/atami" />
-                        <CreditLink title="Takota" link="https://www.dafont.com/takota.font" />
+                        <CreditLink title="Room 205" link="https://creativemarket.com/simon_letters/3701313-Room-205" />
                         <CreditHeader title="Images" />
                         <CreditLink title="High-rise buildings by Todd Kent" link="https://unsplash.com/photos/iRKv_XiN--M" />
                         <CreditLink title="River Painting by Birmingham Museums Trust" link="https://unsplash.com/photos/6fv0MEf3FUE" />

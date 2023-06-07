@@ -21,8 +21,8 @@ function Footer() {
                     </div>
                 </div>
                 <div className="flex-item-right">
-                    <h3 className="footertext uppercase pt-[50px] sm:pt-0">Ryan Christopher</h3>
-                    <h3 className="text-[12px]">&copy; 2022</h3>
+                    <h3 className="footertext pt-[50px] sm:pt-0">Ryan Christopher</h3>
+                    <h3 className="text-[20px] font-['Room_205']">&copy; 2023</h3>
                     <br />
                 </div>
             </div>
