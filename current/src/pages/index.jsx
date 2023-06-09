@@ -152,13 +152,7 @@ function index() {
                                 link="https://www.hackerrank.com/certificates/70236a51cec3"
                             />
                             <Course
-                                title="Introduction to Blockchain and Crypto"
-                                from="Codecademy"
-                                iconNum={3}
-                                link="https://www.codecademy.com/profiles/ryanChristopher1605358121/certificates/029aafc1045f406d9df401b3376a17a3"
-                            />
-                            <Course
-                                title="Basics of Blockchain with Python"
+                                title="Blockchain with Python"
                                 from="Codecademy"
                                 iconNum={1}
                                 link="https://www.codecademy.com/profiles/ryanChristopher1605358121/certificates/f21a464d190cb43e78b83ca8d1f0c6b0"

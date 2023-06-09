@@ -20,7 +20,7 @@ function Course({ title, from, iconNum, link }) {
             <div className='p-[15px]'>
                 <h2 className="font-['Room_205'] text-[30px] md:text-[30px]">{title}</h2>
                 <p className='mt-[10px]'>from {from}</p>
-                <div className='absolute bottom-[100px] left-0 w-[100%]'>
+                <div className='relative top-[40px] left-0 w-[100%]'>
                     <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[55%] block ml-auto mr-auto' />
                     <span className='mt-[20px] flex justify-center text-[40px]'>
                         {icons[iconNum]}
@@ -29,8 +29,8 @@ function Course({ title, from, iconNum, link }) {
                 </div>
             </div>
 
-            <a className='absolute bottom-0 rounded-b-[9px] italic font-["Room_205"] 
-            text-[25px] p-[15px] w-[100%] text-center dark:bg-[#dfd5c1] bg-[#2f2f2f] 
+            <a className='block relative top-[70px] rounded-b-[9px] italic font-["Room_205"] 
+            text-[25px] p-[15px] !w-[100%] text-center dark:bg-[#dfd5c1] bg-[#2f2f2f] 
             text-[#e6e0d3] dark:text-[#171717] border-[#171717] hover:text-[30px] ease-in duration-150'
                 href={link} rel="noreferrer" target='_blank'>
                 View
