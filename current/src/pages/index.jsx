@@ -18,10 +18,10 @@ import Marquee from "react-fast-marquee";
 //import CarouselText from '../components/CarouselText.tsx';
 import { motion } from 'framer-motion';
 // Icons
-import { SiJavascript } from "react-icons/si"
-import { IoLogoPython, IoLogoHtml5, IoLogoCss3, IoLogoGithub } from "react-icons/io"
+//import { SiJavascript } from "react-icons/si"
+//import { IoLogoPython, IoLogoHtml5, IoLogoCss3, IoLogoGithub } from "react-icons/io"
 import { IoCodeSlash } from "react-icons/io5"
-import { FaReact } from "react-icons/fa"
+//import { FaReact } from "react-icons/fa"
 import { CgMusic } from "react-icons/cg"
 
 function index() {
@@ -79,6 +79,7 @@ function index() {
                 </ParallaxBannerLayer>
             </ParallaxBanner>
             <section id="about" className='pt-[50px] lg:pt-[100px] lg:pb-[75px]'>
+                {/*
                 <Marquee
                     speed={60}
                     gradient={false}>
@@ -89,6 +90,7 @@ function index() {
                     <FaReact className="marqueeicon text-[45px] xl:text-[60px] text-blue-400" />
                     <IoLogoGithub className="marqueeicon text-[45px] xl:text-[60px] text-purple-400" />
                 </Marquee>
+*/}
             </section>
             {/* ======ABOUT SECTION====== */}
             <SectionHeader title="A bit about me" />
