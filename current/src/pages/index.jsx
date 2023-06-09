@@ -10,16 +10,18 @@ import Midi from '../components/Midi'
 import InterestItem from '../components/InterestItem'
 import ProjectCard from '../components/ProjectCard'
 import MarqueeLink from '../components/MarqueeLink'
+import Course from '../components/Course'
 // Moving Text
 import { Parallax } from 'react-scroll-parallax';
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import Marquee from "react-fast-marquee";
 //import CarouselText from '../components/CarouselText.tsx';
 import { motion } from 'framer-motion';
 // Icons
-//import { SiJavascript } from "react-icons/si"
-//import { IoLogoPython, IoLogoHtml5, IoLogoCss3, IoLogoGithub } from "react-icons/io"
+import { SiJavascript } from "react-icons/si"
+import { IoLogoPython, IoLogoHtml5, IoLogoCss3, IoLogoGithub } from "react-icons/io"
 import { IoCodeSlash } from "react-icons/io5"
-//import { FaReact } from "react-icons/fa"
+import { FaReact } from "react-icons/fa"
 import { CgMusic } from "react-icons/cg"
 
 function index() {
@@ -27,17 +29,22 @@ function index() {
         <div id="home" className='bg-[#dfd5c1] dark:bg-[#171717] ease-in duration-200'>
             <ParallaxBanner style={{ aspectRatio: '1 / 1' }} className="min-h-[1400px] lg:h-[100vh] xl:h-[100vh] max-w-[100vw]">
                 <ParallaxBannerLayer image="boston2.jpg" speed={10} />
-                <ParallaxBannerLayer className='bg-[#525252bb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
+                <ParallaxBannerLayer className='bg-[#2c2c2cbb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
                     <h2 id="introtext" className='text-left mt-[100px] ml-[7vw]
-                            text-[#f9f5e9] text-[70px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[170px] lg:text-[150px] md:text-[120px]'>
+                            text-[#f9f5e9] text-[70px] dark:text-[#f9f5e9] 
+                            ease-in duration-200 xl:text-[170px] lg:text-[150px] md:text-[120px]'>
                         Hi, I'm Ryan
                     </h2>
                     <p id="introtext" className='text-left mt-[0px] ml-[7vw] 
-                            text-[#f9f5e9] text-[30px] dark:text-[#f9f5e9] ease-in duration-200 xl:text-[50px] lg:text-[40px] md:text-[30px] w-[50vw] min-w-[250px] max-w-[800px]'>
+                            text-[#f9f5e9] text-[30px] dark:text-[#f9f5e9] ease-in duration-200 
+                            xl:text-[50px] lg:text-[40px] md:text-[30px] w-[50vw] min-w-[250px] max-w-[800px]'>
                         a classically trained musician turned avid tech enthusiast.
                     </p>
-                    <img src="cartoonRyan.png" alt="A painting of me." className="w-[250px] lg:w-[350px] mb-[-30px] md:mb-[-20px] block ml-auto mr-auto" />
-                    <div className="content w-[90vw] flex justify-center md:w-[55vw] max-w-[700px] pb-[30px] rounded-sm mt-[30px] md:mt-5 bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.2)] backdrop-blur-sm border-[1px] 
+                    <img src="cartoonRyan.png" alt="A painting of me." className="w-[250px] lg:w-[350px] 
+                    mb-[-30px] md:mb-[-20px] block ml-auto mr-auto" />
+                    <div className="content w-[90vw] flex justify-center md:w-[55vw] max-w-[700px] 
+                    pb-[30px] rounded-sm mt-[30px] md:mt-5 bg-[#dfd5c1b3] dark:bg-[rgba(0,0,0,0.2)] 
+                    backdrop-blur-sm border-[1px] 
                         border-[#171717] dark:border-[#dfd5c1] ease-in duration-200">
                         <div className="rounded-md md:mt-5 w-[90vw] md:w-[55vw] max-w-[700px] ease-in duration-200">
                             <div className="block ml-auto mr-auto p-[10px] pt-[30px] w-[100%]">
@@ -48,7 +55,7 @@ function index() {
                                 <br />
                                 {/*
                                 <hr className="h-[2px] w-[55%] min-w-[225px] block ml-auto mr-auto border-none rounded-sm bg-[#171717] dark:bg-[#dfd5c1] ease-in duration-200" />
-    */}
+                                */}
                                 <div className="w-[70%] min-w-[225px] max-w-[500px] block ml-auto mr-auto pt-[10px] pb-[10px]">
                                     <div className="w-[100%] inline-flex justify-center items-center">
                                         <IoCodeSlash className="w-[100px] text-[40px] " />
@@ -64,28 +71,32 @@ function index() {
                         </div>
                     </div>
                     <span className='asteriskcontainer block ml-auto mr-auto w-[100vw] align-center text-center mt-[50px]'>
-                        <Parallax rotate={[0, 360]} className="w-[10vw] min-w-[40px] inline-block max-w-[55px] mt-[30px] ease-linear duration-[50ms] mr-[8vw] ml-[8vw]">
+                        <Parallax rotate={[0, 360]} className="w-[10vw] min-w-[40px] inline-block max-w-[55px] mt-[30px] 
+                        ease-linear duration-[50ms] mr-[8vw] ml-[8vw]">
                             <img src="whiteasterisk.png" alt="" className="asterisk p-[0px] opacity-100 ease-in duration-200" aria-hidden="true" />
                         </Parallax>
                     </span>
                 </ParallaxBannerLayer>
             </ParallaxBanner>
-            <section id="about" className='mt-[50px]  lg:mt-[100px] lg:pb-[75px]'>
-                {/*
-                <CarouselText baseVelocity={-3}>
+            <section id="about" className='pt-[50px] lg:pt-[100px] lg:pb-[75px]'>
+                <Marquee
+                    speed={60}
+                    gradient={false}>
                     <IoLogoPython className="marqueeicon text-[45px] xl:text-[60px] text-yellow-200" />
                     <IoLogoHtml5 className="marqueeicon text-[45px] xl:text-[60px] text-red-500" />
                     <IoLogoCss3 className="marqueeicon text-[45px] xl:text-[60px] text-blue-500" />
                     <SiJavascript className="marqueeicon text-[45px] xl:text-[60px] text-yellow-400" />
                     <FaReact className="marqueeicon text-[45px] xl:text-[60px] text-blue-400" />
                     <IoLogoGithub className="marqueeicon text-[45px] xl:text-[60px] text-purple-400" />
-                </CarouselText>
-    */}
+                </Marquee>
             </section>
+            {/* ======ABOUT SECTION====== */}
             <SectionHeader title="A bit about me" />
-            <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] md:w-[175px] xl:w-[200px] xl:mb-[50px] border-[1px] 
+            <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] md:w-[175px] xl:w-[200px] 
+            xl:mb-[50px] border-[1px] 
                         border-[#171717]" />
-            <section className='block ml-auto mr-auto mt-[50px] pt-[10px] pl-[30px] pr-[30px] text-justify w-[100vw] lg:w-[70vw] md:w-[80vw] min-w-[300px] mb-[0px]'>
+            <section className='block ml-auto mr-auto mt-[50px] pt-[10px] pl-[30px] pr-[30px] text-justify w-[100vw] 
+            lg:w-[70vw] md:w-[80vw] min-w-[300px] mb-[0px]'>
                 <motion.div
                     initial={{ opacity: 0, transform: "translateY(100px)" }}
                     whileInView={{
@@ -94,7 +105,7 @@ function index() {
                         transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className="text-[25px] text-left w-[70vw] lg:text-[45px] max-w-[600px]">
+                    <h2 className="text-[25px] text-left w-[70vw] lg:text-[40px] max-w-[600px]">
                         I'm a developer who became intrigued with programming and technology
                         in my first year of college.
                     </h2>
@@ -108,14 +119,76 @@ function index() {
                         transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className="text-[25px] text-right w-[70vw] lg:text-[45px] max-w-[600px] ml-auto">
+                    <h2 className="text-[25px] text-right w-[70vw] lg:text-[40px] max-w-[600px] ml-auto">
                         What started as a web design class quickly became
-                        courses on algorithms, python, java, computer systems,
+                        courses on algorithm design,
+                        python, java, computer systems,
                         web app development, and software engineering.
                     </h2>
                 </motion.div>
-                <Midi />
+
             </section>
+            {/* ======Certifications====== */}
+            <ParallaxBanner style={{ aspectRatio: '2 / 1' }} id="projectCardsContainer" className="h-[600px] mt-[75px] mb-[50px]">
+                <ParallaxBannerLayer image="trylon.jpeg" speed={10} />
+                <ParallaxBannerLayer className='bg-[#2c2c2cbb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
+                    <h2 className='text-[40px] pt-[10px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto 
+                    font-["Room_205"] w-fit bg-[#dfd5c1] 
+            dark:bg-[#434343] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[50px]'>
+                        Certifications
+                    </h2>
+                    <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
+            block ml-auto mr-auto relative top-[-40px] z-0 overflow-hidden' />
+                    <div className='flex flex-wrap justify-center pt-[50px] w-[100vw]'>
+                        <Marquee
+                            speed={55}
+                            gradient={false}
+                            direction={'left'}
+                            pauseOnHover={'true'}>
+                            <Course
+                                title={<div>CSS <br />Certificate</div>}
+                                from="HackerRank"
+                                iconNum={2}
+                                link="https://www.hackerrank.com/certificates/70236a51cec3"
+                            />
+                            <Course
+                                title="Introduction to Blockchain and Crypto"
+                                from="Codecademy"
+                                iconNum={3}
+                                link="https://www.codecademy.com/profiles/ryanChristopher1605358121/certificates/029aafc1045f406d9df401b3376a17a3"
+                            />
+                            <Course
+                                title="Basics of Blockchain with Python"
+                                from="Codecademy"
+                                iconNum={1}
+                                link="https://www.codecademy.com/profiles/ryanChristopher1605358121/certificates/f21a464d190cb43e78b83ca8d1f0c6b0"
+                            />
+                            <Course
+                                title={<div>Learn <br />Javascript</div>}
+                                from="Codecademy"
+                                iconNum={0}
+                                link="https://www.codecademy.com/profiles/ryanChristopher1605358121/certificates/705dcb15de0da4dd9d9fc4f3274b430e"
+                            />
+                            <Course
+                                title={<div>Learn <br />Python 3</div>}
+                                from="Codecademy"
+                                iconNum={1}
+                                link="https://www.codecademy.com/profiles/ryanChristopher1605358121/certificates/6c152bd262967f8c941c9707ed636bda"
+                            />
+                            <Course
+                                title={<div>Learn <br />SQL</div>}
+                                from="Codecademy"
+                                iconNum={4}
+                                link="https://www.codecademy.com/profiles/ryanChristopher1605358121/certificates/042a4e5884e3eb6ea1f2a12be6abb851"
+                            />
+                        </Marquee>
+                    </div>
+                </ParallaxBannerLayer>
+            </ParallaxBanner>
+
+            <Midi />
+
+            {/* ======INTERESTS====== */}
             <motion.div
                 className="mt-[100px]"
                 initial={{ opacity: 0, transform: "translateY(100px)" }}
@@ -158,9 +231,10 @@ function index() {
                     <h2 className="min-w-[45vw] ml-[30px]">System.out.print("Hello world -Ryan")</h2>
                     <h2 className="text-blue-500 ml-[20px] text-center xl:w-[30vw]">|</h2>
                 </CarouselText>
-        */}
+                */}
                 <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[95vw] block ml-auto mr-auto mt-[0px] pb-[5px]' />
             </section>
+            {/* ======PROJECTS====== */}
             <ParallaxBanner style={{ aspectRatio: '1 / 1' }} id="projectCardsContainer" className="h-[2850px] min-h-[1350px] xl:h-[100vh]">
                 <ParallaxBannerLayer image="birmingham.jpg" speed={10} />
                 <ParallaxBannerLayer className='bg-[#5c5c5c44] dark:bg-[#00000066] ease-in duration-200' speed={0}>
@@ -210,13 +284,13 @@ function index() {
                     </div>
                 </ParallaxBannerLayer>
             </ParallaxBanner>
-            <h2 className='text-[40px] pt-[10px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Room_205"] w-[200px] bg-[#dfd5c1] 
+            <h2 className='text-[40px] pt-[10px] pb-[5px] pl-[30px] pr-[30px] text-center block ml-auto mr-auto font-["Room_205"] w-fit bg-[#dfd5c1] 
             dark:bg-[#171717] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[50px]'>
                 More
             </h2>
             <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
             block ml-auto mr-auto relative top-[-40px] z-0 overflow-hidden' />
-            <div className='flex flex-wrap justify-center pt-[50px] w-[90vw] md:w-[45vw] min-w-[320px] ml-auto mr-auto'>
+            <div className='flex flex-wrap justify-center pt-[50px] w-[90vw] lg:w-[75vw] min-w-[320px] max-w-[1200px] ml-auto mr-auto'>
                 <MarqueeLink title="Beacon Street Records" link="https://ryan-christopher.github.io/beaconstreetrecords/" />
                 <MarqueeLink title="Conway's Game of Life" link="https://github.com/ryan-christopher/tcs/blob/main/python/games/gameoflife.py" />
                 <MarqueeLink title="Arts Internship Site" link="https://ryan-christopher.github.io/fa550project/" />
@@ -227,6 +301,7 @@ function index() {
                 <MarqueeLink title="Scratch Tic Tac Toe" link="https://scratch.mit.edu/projects/622549017/" />
                 <MarqueeLink title="Wallet Watch (WIP)" link="https://github.com/ryan-christopher/walletwatch" />
             </div>
+            {/* ======CONTACT SECTION====== */}
             <div id="contact" className="h-[100px]"></div>
             <SectionHeader title="Get in touch" />
             <section className='block ml-auto mr-auto mt-[50px] pt-[10px] pl-[30px] pr-[30px] text-justify w-[100vw] md:w-[50vw] min-w-[300px] mb-[0px]'>
@@ -238,12 +313,15 @@ function index() {
                         transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className="text-[25px] text-left w-[50vw] lg:text-[45px] max-w-[600px]">
+                    <h2 className="text-[25px] text-left w-[50vw] lg:text-[40px] max-w-[600px]">
                         Have a job, website, project, or want to connect?
                     </h2>
                 </motion.div>
-                <a href="mailto:ryanchristopher.dev@gmail.com?subject=Hello from your website!" className='mobileEmailButton contactbutton text-[40px] pt-[15px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto font-["Room_205"] rounded-[10px] dark:text-[#e6e0d3] text-[#171717] w-fit bg-[#ffecc8] 
-            dark:bg-[#414141] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[40px] hover:scale-[1.2] ease-in duration-200'>
+                <a href="mailto:ryanchristopher.dev@gmail.com?subject=Hello from your website!"
+                    className='mobileEmailButton contactbutton text-[40px] pt-[15px] pb-[5px] pl-[15px] pr-[15px] 
+                            text-center block ml-auto mr-auto font-["Room_205"] rounded-[10px] dark:text-[#e6e0d3] 
+                            text-[#171717] w-fit bg-[#ffecc8] dark:bg-[#414141] border-[1px] border-[#171717] 
+                            dark:border-[#dfd5c1] uppercase relative z-[1] mt-[40px] hover:scale-[1.2] ease-in duration-200'>
                     Contact Me
                 </a>
                 <motion.div
@@ -265,7 +343,7 @@ function index() {
                         transition: { delay: 0.2, duration: 0.7 }
                     }}
                     viewport={{ once: true }}>
-                    <h2 className="text-[25px] mt-[45px] text-right w-[45vw] lg:text-[45px] max-w-[600px] ml-auto">
+                    <h2 className="text-[25px] mt-[45px] text-right w-[45vw] lg:text-[40px] max-w-[600px] ml-auto">
                         Let's talk.
                     </h2>
                 </motion.div>
