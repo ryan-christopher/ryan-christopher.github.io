@@ -131,19 +131,19 @@ function index() {
 
             </section>
             {/* ======Certifications====== */}
-            <ParallaxBanner style={{ aspectRatio: '2 / 1' }} id="projectCardsContainer" className="h-[600px] mt-[75px] mb-[50px]">
+            <ParallaxBanner style={{ aspectRatio: '2 / 1' }} id="projectCardsContainer" className="h-[520px] mt-[75px] mb-[50px]">
                 <ParallaxBannerLayer image="trylon.jpeg" speed={10} />
                 <ParallaxBannerLayer className='bg-[#2c2c2cbb] dark:bg-[#000000bb] ease-in duration-200' speed={0}>
-                    <h2 className='text-[40px] pt-[10px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto 
+                    <h2 className='text-[30px] pt-[10px] pb-[5px] pl-[15px] pr-[15px] text-center block ml-auto mr-auto 
                     font-["Room_205"] w-fit bg-[#dfd5c1] 
-            dark:bg-[#434343] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[50px]'>
+            dark:bg-[#434343] border-[1px] border-[#171717] dark:border-[#dfd5c1] uppercase relative z-[1] mt-[30px]'>
                         Certifications
                     </h2>
                     <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
-            block ml-auto mr-auto relative top-[-40px] z-0 overflow-hidden' />
+            block ml-auto mr-auto relative top-[-33px] z-0 overflow-hidden' />
                     <div className='flex flex-wrap justify-center pt-[50px] w-[100vw]'>
                         <Marquee
-                            speed={55}
+                            speed={40}
                             gradient={false}
                             direction={'left'}
                             pauseOnHover={'true'}>
