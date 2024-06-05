@@ -94,7 +94,7 @@ function index() {
             </section>
             {/* ======ABOUT SECTION====== */}
             <SectionHeader title="A bit about me" />
-            <img src="headerpic.jpg" alt="My portrait." id="headerpic" className="w-[150px] md:w-[175px] xl:w-[200px] 
+            <img src="ryanpfpbw.jpg" alt="My portrait." id="headerpic" className="w-[150px] md:w-[175px] xl:w-[200px] 
             xl:mb-[50px] border-[1px] 
                         border-[#171717]" />
             <section className='block ml-auto mr-auto mt-[50px] pt-[10px] pl-[30px] pr-[30px] text-justify w-[100vw] 
@@ -145,8 +145,7 @@ function index() {
                         <Marquee
                             speed={40}
                             gradient={false}
-                            direction={'left'}
-                            pauseOnHover={'true'}>
+                            direction={'left'}>
                             <Course
                                 title={<div>CSS <br />Certificate</div>}
                                 from="HackerRank"
