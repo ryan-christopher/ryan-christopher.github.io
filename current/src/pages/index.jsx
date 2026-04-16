@@ -200,18 +200,17 @@ function index() {
             <hr className='text-[#171717] border-[#171717] dark:border-[#dfd5c1] w-[90vw] 
             block ml-auto mr-auto pb-[25px] lg:pb-[50px]' />
             <div className='pt-[10px] pb-[100px] w-[50vw] md:w-[50vw] min-w-[320px] max-w-[600px] ml-auto mr-auto'>
-                <InterestItem title="software development" align="mr-auto" />
-                <InterestItem title="web development" align="mr-auto ml-auto" />
-                <InterestItem title="data science" align="ml-auto" />
-                <InterestItem title="web design" align="mr-auto ml-auto" />
+                <InterestItem title="cybersecurity" align="mr-auto" />
+                <InterestItem title="programming" align="mr-auto ml-auto" />
+                <InterestItem title="cryptography" align="ml-auto" />
+                <InterestItem title="DJing" align="mr-auto ml-auto" />
                 <InterestItem title="coffee" align="mr-auto" />
                 <InterestItem title="blockchain" align="mr-auto ml-auto" />
                 <InterestItem title="music" align="ml-auto" />
                 <InterestItem title="art" align="mr-auto ml-auto" />
                 <InterestItem title="tennis" align="mr-auto" />
-                <InterestItem title="skating" align="mr-auto ml-auto" />
-                <InterestItem title="video games" align="ml-auto" />
-                <InterestItem title="food" align="mr-auto" />
+                <InterestItem title="video games" align="mr-auto ml-auto" />
+                <InterestItem title="food" align="ml-auto" />
             </div>
             {/*
             <Laptop className="hover:cursor-pointer" />
